@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using CongDoanCoreApp.Data;
 using CongDoanCoreApp.Models;
 using CongDoanCoreApp.Services;
+using CongDoanCoreApp.Data.EF;
+using CongDoanCoreApp.Data.Entities;
 
 namespace CongDoanCoreApp
 {
@@ -26,11 +28,12 @@ namespace CongDoanCoreApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), 
+                o => o.MigrationsAssembly("CongDoanCoreApp.Data.EF")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddIdentity<AppUser, AppRole>()
+                .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
             // Add application services.
