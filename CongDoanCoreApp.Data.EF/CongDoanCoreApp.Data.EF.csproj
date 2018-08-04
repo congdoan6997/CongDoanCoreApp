@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CongDoanCoreApp.Data\CongDoanCoreApp.Data.csproj" />
+    <ProjectReference Include="..\CongDoanCoreApp.Utilities\CongDoanCoreApp.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

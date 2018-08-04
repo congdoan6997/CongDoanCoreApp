@@ -37,13 +37,18 @@ namespace CongDoanCoreApp
                 .AddDefaultTokenProviders();
 
             // Add application services.
+            services.AddScoped<UserManager<AppUser>>();
+            services.AddScoped<RoleManager<AppRole>>();
+
+            services.AddTransient<DbInitializer>();
+
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -66,6 +71,8 @@ namespace CongDoanCoreApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            dbInitializer.Seed().Wait();
         }
     }
 }
