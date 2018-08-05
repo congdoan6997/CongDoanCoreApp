@@ -23,8 +23,8 @@ namespace CongDoanCoreApp.Data.Entities
         [StringLength(255)]
         public string Content { get; set; }
 
-        [StringLength(450)]
-        public string UserId { get; set; }
+
+        public Guid UserId { get; set; }
 
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }

@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using CongDoanCoreApp.Application.Implementation;
+using CongDoanCoreApp.Application.Interfaces;
+using CongDoanCoreApp.Data.EF;
+using CongDoanCoreApp.Data.EF.Repositories;
+using CongDoanCoreApp.Data.Entities;
+using CongDoanCoreApp.Data.IRepositories;
+using CongDoanCoreApp.Services;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using CongDoanCoreApp.Data;
-using CongDoanCoreApp.Models;
-using CongDoanCoreApp.Services;
-using CongDoanCoreApp.Data.EF;
-using CongDoanCoreApp.Data.Entities;
-using AutoMapper;
-using CongDoanCoreApp.Application.Interfaces;
-using CongDoanCoreApp.Application.Implementation;
-using CongDoanCoreApp.Data.IRepositories;
-using CongDoanCoreApp.Data.EF.Repositories;
+using System;
 
 namespace CongDoanCoreApp
 {
@@ -34,19 +29,43 @@ namespace CongDoanCoreApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), 
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
                 o => o.MigrationsAssembly("CongDoanCoreApp.Data.EF")));
 
-            services.AddIdentity<AppUser, AppRole>()
+            services.AddIdentity<AppUser, AppRole>(
+            options =>
+            // Password settings
+            {
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 7;
+                options.Password.RequiredUniqueChars = 2;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+
+                // Lockout settings
+                options.Lockout.AllowedForNewUsers = true;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                options.Lockout.MaxFailedAccessAttempts = 5;
+
+                // Signin settings
+                options.SignIn.RequireConfirmedEmail = false;
+                options.SignIn.RequireConfirmedPhoneNumber = false;
+
+                // User settings
+                options.User.RequireUniqueEmail = true;
+            })
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddAutoMapper();
 
             // Add application services.
             services.AddScoped<UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>>();
 
-            services.AddSingleton(Mapper.Configuration);
-            services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
+            //services.AddSingleton(Mapper.Configuration);
+            //services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
 
             services.AddTransient<DbInitializer>();
 
@@ -58,7 +77,7 @@ namespace CongDoanCoreApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DbInitializer dbInitializer)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -81,8 +100,6 @@ namespace CongDoanCoreApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-
-            dbInitializer.Seed().Wait();
         }
     }
 }

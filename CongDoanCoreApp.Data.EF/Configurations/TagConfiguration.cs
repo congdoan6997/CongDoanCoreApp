@@ -12,6 +12,7 @@ namespace CongDoanCoreApp.Data.EF.Configurations
     {
         public override void Configure(EntityTypeBuilder<Tag> entity)
         {
+
             entity.Property(x => x.Id).HasMaxLength(50).IsRequired().HasColumnType("varchar(50)");
         }
     }

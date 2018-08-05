@@ -52,8 +52,8 @@ namespace CongDoanCoreApp.Data.Entities
 
         public string SeoPageTitle { get; set; }
 
-        [Column(TypeName = "varchar")]
-        [StringLength(255)]
+        [Column(TypeName = "varchar(255)")]
+        //[StringLength(255)]
         public string SeoAlias { get; set; }
 
         [StringLength(255)]

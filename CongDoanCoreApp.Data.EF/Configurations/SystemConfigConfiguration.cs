@@ -1,5 +1,6 @@
 ﻿using CongDoanCoreApp.Data.EF.Extensions;
 using CongDoanCoreApp.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CongDoanCoreApp.Data.EF.Configurations
@@ -8,8 +9,8 @@ namespace CongDoanCoreApp.Data.EF.Configurations
     {
         public override void Configure(EntityTypeBuilder<SystemConfig> entity)
         {
-            entity.HasKey(x => x.Id);
-            entity.Property(c => c.Id).HasMaxLength(250).IsRequired();
+    
+            entity.Property(c => c.Id).HasMaxLength(50).IsRequired().HasColumnType("varchar(50)");
             // etc.
         }
     }

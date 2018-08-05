@@ -9,8 +9,9 @@ namespace CongDoanCoreApp.Data.EF.Configurations
     {
         public override void Configure(EntityTypeBuilder<ProductTag> entity)
         {
-            entity.Property(c => c.TagId).HasMaxLength(250).IsRequired()
-            .HasColumnType("varchar(250)");
+          
+            entity.Property(c => c.TagId).HasMaxLength(50).IsRequired()
+            .HasColumnType("varchar(50)");
             // etc.
         }
     }

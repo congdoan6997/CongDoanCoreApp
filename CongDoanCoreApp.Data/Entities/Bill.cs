@@ -17,7 +17,7 @@ namespace CongDoanCoreApp.Data.Entities
         }
 
         public Bill(string customerName, string customerAddress, string customerMobile, string customerMessage,
-                    BillStatus billStatus, PaymentMethod paymentMethod, Status status, string customerId)
+                    BillStatus billStatus, PaymentMethod paymentMethod, Status status, Guid customerId)
         {
             CustomerName = customerName;
             CustomerAddress = customerAddress;
@@ -30,7 +30,7 @@ namespace CongDoanCoreApp.Data.Entities
         }
 
         public Bill(int id, string customerName, string customerAddress, string customerMobile, string customerMessage,
-           BillStatus billStatus, PaymentMethod paymentMethod, Status status, string customerId)
+           BillStatus billStatus, PaymentMethod paymentMethod, Status status, Guid customerId)
         {
             Id = id;
             CustomerName = customerName;
@@ -63,8 +63,8 @@ namespace CongDoanCoreApp.Data.Entities
 
         public BillStatus BillStatus { get; set; }
 
-        [StringLength(450)]
-        public string CustomerId { get; set; }
+ 
+        public Guid CustomerId { get; set; }
 
         [ForeignKey("CustomerId")]
         public virtual AppUser AppUser { get; set; }

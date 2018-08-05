@@ -1,9 +1,7 @@
 ﻿using CongDoanCoreApp.Data.EF.Extensions;
 using CongDoanCoreApp.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CongDoanCoreApp.Data.EF.Configurations
 {
@@ -11,7 +9,8 @@ namespace CongDoanCoreApp.Data.EF.Configurations
     {
         public override void Configure(EntityTypeBuilder<AdvertistmentPosition> entity)
         {
-            entity.Property(x=> x.Id).HasMaxLength(20).IsRequired();
+
+            entity.Property(x => x.Id).HasMaxLength(50).IsRequired().HasColumnType("varchar(50)");
         }
     }
 }

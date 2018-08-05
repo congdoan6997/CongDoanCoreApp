@@ -1,4 +1,5 @@
 ﻿using CongDoanCoreApp.Infrastructure.SharedKernel;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,11 +8,10 @@ namespace CongDoanCoreApp.Data.Entities
     [Table("Permissions")]
     public class Permission : DomainEntity<int>
     {
-        [Required]
-        [StringLength(450)]
-        public string RoleId { get; set; }
 
-        [StringLength(128)]
+        public Guid RoleId { get; set; }
+
+        [StringLength(50)]
         [Required]
         public string FunctionId { get; set; }
 

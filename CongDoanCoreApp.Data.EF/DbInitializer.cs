@@ -109,6 +109,7 @@ namespace CongDoanCoreApp.Data.EF
                     new Color() {Name="Xanh", Code="#1000ff" },
                 };
                 _context.Colors.AddRange(listColor);
+                _context.SaveChanges();
             }
             if (_context.AdvertistmentPages.Count() == 0)
             {
@@ -127,6 +128,7 @@ namespace CongDoanCoreApp.Data.EF
                     } },
                 };
                 _context.AdvertistmentPages.AddRange(pages);
+                _context.SaveChanges();
             }
 
             if (_context.Slides.Count() == 0)
@@ -150,6 +152,7 @@ namespace CongDoanCoreApp.Data.EF
                     new Slide() {Name="Slide 11",Image="/client-side/images/brand11.png",Url="#",DisplayOrder = 11,GroupAlias = "brand",Status = Status.Active },
                 };
                 _context.Slides.AddRange(slides);
+                _context.SaveChanges();
             }
 
             if (_context.Sizes.Count() == 0)
@@ -164,6 +167,7 @@ namespace CongDoanCoreApp.Data.EF
                     new Size() { Name="XS" }
                 };
                 _context.Sizes.AddRange(listSize);
+                _context.SaveChanges();
             }
 
             if (_context.ProductCategories.Count() == 0)
@@ -209,6 +213,7 @@ namespace CongDoanCoreApp.Data.EF
                         }}
                 };
                 _context.ProductCategories.AddRange(listProductCategory);
+                _context.SaveChanges();
             }
 
             if (!_context.SystemConfigs.Any(x => x.Id == "HomeTitle"))
@@ -220,6 +225,7 @@ namespace CongDoanCoreApp.Data.EF
                     Value1 = "Trang chủ TeduShop",
                     Status = Status.Active
                 });
+                _context.SaveChanges();
             }
             if (!_context.SystemConfigs.Any(x => x.Id == "HomeMetaKeyword"))
             {
@@ -230,6 +236,7 @@ namespace CongDoanCoreApp.Data.EF
                     Value1 = "Trang chủ TeduShop",
                     Status = Status.Active
                 });
+                _context.SaveChanges();
             }
             if (!_context.SystemConfigs.Any(x => x.Id == "HomeMetaDescription"))
             {
@@ -240,6 +247,7 @@ namespace CongDoanCoreApp.Data.EF
                     Value1 = "Trang chủ TeduShop",
                     Status = Status.Active
                 });
+                _context.SaveChanges();
             }
         }
     }

@@ -9,7 +9,8 @@ namespace CongDoanCoreApp.Data.EF.Configurations
     {
         public override void Configure(EntityTypeBuilder<BlogTag> entity)
         {
-            entity.Property(x => x.Id).HasMaxLength(250).IsRequired().HasColumnType("varchar(250)");
+      
+            entity.Property(x => x.Id).HasMaxLength(50).IsRequired().HasColumnType("varchar(50)");
         }
     }
 }

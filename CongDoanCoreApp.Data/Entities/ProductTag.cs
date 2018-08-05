@@ -9,8 +9,8 @@ namespace CongDoanCoreApp.Data.Entities
     {
         public int ProductId { get; set; }
 
-        [Column(TypeName = "varchar")]
-        [StringLength(50)]
+        [Column(TypeName = "varchar(50)")]
+       // [StringLength(50)]
         public string TagId { get; set; }
 
         [ForeignKey("ProductId")]

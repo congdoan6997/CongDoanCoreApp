@@ -12,7 +12,7 @@ namespace CongDoanCoreApp.Data.EF.Configurations
         public override void Configure(EntityTypeBuilder<Page> entity)
         {
             entity.HasKey(c => c.Id);
-            entity.Property(c => c.Id).HasMaxLength(250).IsRequired();
+            entity.Property(c => c.Id).HasMaxLength(50).IsRequired();
         }
     }
 }

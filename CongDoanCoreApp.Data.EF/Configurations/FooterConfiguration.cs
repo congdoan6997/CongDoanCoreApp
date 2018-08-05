@@ -14,8 +14,8 @@ namespace CongDoanCoreApp.Data.EF.Configurations
         public override void Configure(EntityTypeBuilder<Footer> entity)
         {
             entity.HasKey(c => c.Id);
-            entity.Property(c => c.Id).HasMaxLength(250)
-                .HasColumnType("varchar(250)").IsRequired();
+            entity.Property(c => c.Id).HasMaxLength(50)
+                .HasColumnType("varchar(50)").IsRequired();
         }
     }
 }

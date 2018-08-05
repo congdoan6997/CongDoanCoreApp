@@ -47,8 +47,8 @@ namespace CongDoanCoreApp.Data.Entities
         public int SortOrder { get; set; }
         public Status Status { get; set; }
         public string SeoPageTitle { get; set; }
-        [Column(TypeName ="varchar")]
-        [StringLength(255)]
+        [Column(TypeName ="varchar(255)")]
+        //[StringLength(255)]
         public string SeoAlias { get; set; }
         public string SeoKeywords { get; set; }
         public string SeoDescription { get; set; }
