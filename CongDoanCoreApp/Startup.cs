@@ -13,6 +13,11 @@ using CongDoanCoreApp.Models;
 using CongDoanCoreApp.Services;
 using CongDoanCoreApp.Data.EF;
 using CongDoanCoreApp.Data.Entities;
+using AutoMapper;
+using CongDoanCoreApp.Application.Interfaces;
+using CongDoanCoreApp.Application.Implementation;
+using CongDoanCoreApp.Data.IRepositories;
+using CongDoanCoreApp.Data.EF.Repositories;
 
 namespace CongDoanCoreApp
 {
@@ -40,10 +45,15 @@ namespace CongDoanCoreApp
             services.AddScoped<UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>>();
 
+            services.AddSingleton(Mapper.Configuration);
+            services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
+
             services.AddTransient<DbInitializer>();
 
             services.AddTransient<IEmailSender, EmailSender>();
 
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductCategoryService, ProductCategoryService>();
             services.AddMvc();
         }
 

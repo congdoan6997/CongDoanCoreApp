@@ -5,10 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Implementation\" />
-    <Folder Include="AutoMapper\" />
-    <Folder Include="ViewModels\" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CongDoanCoreApp.Data.EF\CongDoanCoreApp.Data.EF.csproj" />
+    <ProjectReference Include="..\CongDoanCoreApp.Data\CongDoanCoreApp.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="IRepositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CongDoanCoreApp.Infrastructure\CongDoanCoreApp.Infrastructure.csproj" />
   </ItemGroup>
 
