@@ -50,14 +50,14 @@
         <div class="login_wrapper">
             <div class="animate form login_form">
                 <section class="login_content">
-                    <form>
+                    <form id="frmLogin">
                         @Html.AntiForgeryToken()
                         <h1>Đăng nhập</h1>
                         <div>
-                            <input type="text" class="form-control" placeholder="Tên đăng nhập" required="" id="txtUserName" name="userName" />
+                            <input type="text"  class="form-control" placeholder="Tên đăng nhập"  id="txtUserName" name="userName" />
                         </div>
                         <div>
-                            <input type="password" class="form-control" placeholder="Mật khẩu" id="txtPassword" required="" name="password" />
+                            <input type="password"  class="form-control" placeholder="Mật khẩu" id="txtPassword"  name="password" />
                         </div>
                         <div>
                             <a class="btn btn-default submit" id="btnLogin" href="#">Đăng nhập</a>
@@ -76,9 +76,9 @@
                             <br />
 
                             @*<div>
-                                <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                                <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                            </div>*@
+                                    <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                                    <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                                </div>*@
                         </div>
                     </form>
                 </section>
@@ -127,12 +127,16 @@
     <!--v3.3.7-->
     @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
     <!--v2.2.4-->
-
     <script src="~/lib/jquery/test v2.2.4/jquery.js"></script>
+
     <!--notifyjs-->
     <script src="~/lib/notifyjs/dist/notify.js"></script>
     <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
-
+    <!--validate-->
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation/licalization/messages_vi.js"></script>
     <!--congdoan js-->
     <script src="~/app/shared/congdoan.js"></script>
     <script src="~/app/controllers/login/index.js"></script>

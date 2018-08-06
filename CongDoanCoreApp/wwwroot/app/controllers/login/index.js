@@ -1,15 +1,31 @@
-﻿/// <reference path="../../../lib/jquery/dist/jquery.js" />
+﻿/// <reference path="../../../lib/jquery-validation/dist/jquery.validate.js" />
+/// <reference path="../../../lib/jquery/dist/jquery.js" />
 
 var loginController = function () {
     this.initialize = function () {
         registerEvents();
     };
     var registerEvents = function () {
+        $("#frmLogin").validate({
+            errorClass: 'red',
+            ignore: [],
+            lang: 'vi',
+            rules: {
+                userName: {
+                    required: true
+                },
+                password: {
+                    required: true
+                }
+            },
+        })
         $('#btnLogin').on('click', function (e) {
-            e.preventDefault();
-            var user = $('#txtUserName').val();
-            var password = $('#txtPassword').val();
-            login(user, password);
+            if ($("#frmLogin").valid()) {
+                e.preventDefault();
+                var user = $('#txtUserName').val();
+                var password = $('#txtPassword').val();
+                login(user, password);
+            }
         });
     };
 
