@@ -2533,3 +2533,640 @@ END" (0723d8ff)
 2018-08-06T15:23:45.6804112+03:00 0HLFRISPAR3UF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/login/index.js   (ca22a1cb)
 2018-08-06T15:23:45.7052326+03:00 0HLFRISPAR3UF:00000001 [INF] The file "/app/controllers/login/index.js" was not modified (f1f8d725)
 2018-08-06T15:23:45.7124707+03:00 0HLFRISPAR3UF:00000001 [INF] Request finished in 116.8053ms 304 application/javascript (791a596a)
+2018-08-06T18:50:02.1983915+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T18:50:02.2241692+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T18:50:02.2542692+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T18:50:02.2587088+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T18:50:02.2822977+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T18:50:02.2902165+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T18:50:02.3157195+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T18:50:02.4181437+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T18:50:02.9674640+03:00  [INF] Executed DbCommand ("71"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T18:50:03.2586716+03:00  [INF] Executed DbCommand ("54"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-06T18:50:03.5763033+03:00  [INF] Executed DbCommand ("28"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AppRoles] ([Id], [ConcurrencyStamp], [Description], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2018-08-06T18:50:03.6223757+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-06T18:50:03.6284982+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AppRoles] ([Id], [ConcurrencyStamp], [Description], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2018-08-06T18:50:03.6537051+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-06T18:50:03.6601759+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AppRoles] ([Id], [ConcurrencyStamp], [Description], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3, @p4);" (0723d8ff)
+2018-08-06T18:50:03.6910239+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T18:50:03.7966058+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T18:50:03.8485194+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0" (0723d8ff)
+2018-08-06T18:50:03.9645591+03:00  [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Decimal), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (DbType = DateTimeOffset), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (DbType = Boolean), @p21='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [Avatar], [Balance], [BirthDay], [ConcurrencyStamp], [DateCreated], [DateModified], [Email], [EmailConfirmed], [FullName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);" (0723d8ff)
+2018-08-06T18:50:03.9707464+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T18:50:04.0262999+03:00  [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-08-06T18:50:04.0872885+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid), @__get_Item_1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [AppUserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-08-06T18:50:04.1166275+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-08-06T18:50:04.1413192+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T18:50:04.1705433+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedEmail_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0" (0723d8ff)
+2018-08-06T18:50:04.2029821+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AppUserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);" (0723d8ff)
+2018-08-06T18:50:04.2378032+03:00  [INF] Executed DbCommand ("7"ms) [Parameters=["@p21='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Decimal), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (DbType = Boolean), @p20='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [AppUsers] SET [AccessFailedCount] = @p0, [Avatar] = @p1, [Balance] = @p2, [BirthDay] = @p3, [ConcurrencyStamp] = @p4, [DateCreated] = @p5, [DateModified] = @p6, [Email] = @p7, [EmailConfirmed] = @p8, [FullName] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [PasswordHash] = @p14, [PhoneNumber] = @p15, [PhoneNumberConfirmed] = @p16, [SecurityStamp] = @p17, [Status] = @p18, [TwoFactorEnabled] = @p19, [UserName] = @p20
+WHERE [Id] = @p21;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-08-06T18:50:04.2797008+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-06T18:50:04.3247328+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-06T18:50:04.3917461+03:00  [INF] Executed DbCommand ("12"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 4000), @p2='?' (Size = 50) (DbType = AnsiString), @p3='?' (Size = 4000), @p4='?' (Size = 255), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (Size = 255), @p9='?' (Size = 50) (DbType = AnsiString), @p10='?' (Size = 4000), @p11='?' (Size = 255), @p12='?' (Size = 255), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?' (Size = 255), @p16='?' (Size = 50) (DbType = AnsiString), @p17='?' (Size = 4000), @p18='?' (Size = 255), @p19='?' (Size = 255), @p20='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (Size = 255), @p23='?' (Size = 50) (DbType = AnsiString), @p24='?' (Size = 4000), @p25='?' (Size = 255), @p26='?' (Size = 255), @p27='?' (DbType = Int32), @p28='?' (DbType = Int32), @p29='?' (Size = 255), @p30='?' (Size = 50) (DbType = AnsiString), @p31='?' (Size = 4000), @p32='?' (Size = 255), @p33='?' (Size = 255), @p34='?' (DbType = Int32), @p35='?' (DbType = Int32), @p36='?' (Size = 255), @p37='?' (Size = 50) (DbType = AnsiString), @p38='?' (Size = 4000), @p39='?' (Size = 255), @p40='?' (Size = 255), @p41='?' (DbType = Int32), @p42='?' (DbType = Int32), @p43='?' (Size = 255), @p44='?' (Size = 50) (DbType = AnsiString), @p45='?' (Size = 4000), @p46='?' (Size = 255), @p47='?' (Size = 255), @p48='?' (DbType = Int32), @p49='?' (DbType = Int32), @p50='?' (Size = 255), @p51='?' (Size = 50) (DbType = AnsiString), @p52='?' (Size = 4000), @p53='?' (Size = 255), @p54='?' (Size = 255), @p55='?' (DbType = Int32), @p56='?' (DbType = Int32), @p57='?' (Size = 255), @p58='?' (Size = 50) (DbType = AnsiString), @p59='?' (Size = 4000), @p60='?' (Size = 255), @p61='?' (Size = 255), @p62='?' (DbType = Int32), @p63='?' (DbType = Int32), @p64='?' (Size = 255), @p65='?' (Size = 50) (DbType = AnsiString), @p66='?' (Size = 4000), @p67='?' (Size = 255), @p68='?' (Size = 255), @p69='?' (DbType = Int32), @p70='?' (DbType = Int32), @p71='?' (Size = 255), @p72='?' (Size = 50) (DbType = AnsiString), @p73='?' (Size = 4000), @p74='?' (Size = 255), @p75='?' (Size = 255), @p76='?' (DbType = Int32), @p77='?' (DbType = Int32), @p78='?' (Size = 255), @p79='?' (Size = 50) (DbType = AnsiString), @p80='?' (Size = 4000), @p81='?' (Size = 255), @p82='?' (Size = 255), @p83='?' (DbType = Int32), @p84='?' (DbType = Int32), @p85='?' (Size = 255), @p86='?' (Size = 50) (DbType = AnsiString), @p87='?' (Size = 4000), @p88='?' (Size = 255), @p89='?' (Size = 255), @p90='?' (DbType = Int32), @p91='?' (DbType = Int32), @p92='?' (Size = 255), @p93='?' (Size = 50) (DbType = AnsiString), @p94='?' (Size = 4000), @p95='?' (Size = 255), @p96='?' (Size = 255), @p97='?' (DbType = Int32), @p98='?' (DbType = Int32), @p99='?' (Size = 255), @p100='?' (Size = 50) (DbType = AnsiString), @p101='?' (Size = 4000), @p102='?' (Size = 255), @p103='?' (Size = 255), @p104='?' (DbType = Int32), @p105='?' (DbType = Int32), @p106='?' (Size = 255), @p107='?' (Size = 50) (DbType = AnsiString), @p108='?' (Size = 4000), @p109='?' (Size = 255), @p110='?' (Size = 255), @p111='?' (DbType = Int32), @p112='?' (DbType = Int32), @p113='?' (Size = 255), @p114='?' (Size = 50) (DbType = AnsiString), @p115='?' (Size = 4000), @p116='?' (Size = 255), @p117='?' (Size = 255), @p118='?' (DbType = Int32), @p119='?' (DbType = Int32), @p120='?' (Size = 255), @p121='?' (Size = 50) (DbType = AnsiString), @p122='?' (Size = 4000), @p123='?' (Size = 255), @p124='?' (Size = 255), @p125='?' (DbType = Int32), @p126='?' (DbType = Int32), @p127='?' (Size = 255), @p128='?' (Size = 50) (DbType = AnsiString), @p129='?' (Size = 4000), @p130='?' (Size = 255), @p131='?' (Size = 255), @p132='?' (DbType = Int32), @p133='?' (DbType = Int32), @p134='?' (Size = 255), @p135='?' (Size = 50) (DbType = AnsiString), @p136='?' (Size = 4000), @p137='?' (Size = 255), @p138='?' (Size = 255), @p139='?' (DbType = Int32), @p140='?' (DbType = Int32), @p141='?' (Size = 255), @p142='?' (Size = 50) (DbType = AnsiString), @p143='?' (Size = 4000), @p144='?' (Size = 255), @p145='?' (Size = 255), @p146='?' (DbType = Int32), @p147='?' (DbType = Int32), @p148='?' (Size = 255), @p149='?' (Size = 50) (DbType = AnsiString), @p150='?' (Size = 4000), @p151='?' (Size = 255), @p152='?' (Size = 255), @p153='?' (DbType = Int32), @p154='?' (DbType = Int32), @p155='?' (Size = 255), @p156='?' (Size = 50) (DbType = AnsiString), @p157='?' (Size = 4000), @p158='?' (Size = 255), @p159='?' (Size = 255), @p160='?' (DbType = Int32), @p161='?' (DbType = Int32), @p162='?' (Size = 255), @p163='?' (Size = 50) (DbType = AnsiString), @p164='?' (Size = 4000), @p165='?' (Size = 255), @p166='?' (Size = 255), @p167='?' (DbType = Int32), @p168='?' (DbType = Int32), @p169='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Footers] ([Id], [Content])
+VALUES (@p0, @p1);
+INSERT INTO [Functions] ([Id], [IconCss], [Name], [ParentId], [SortOrder], [Status], [Url])
+VALUES (@p2, @p3, @p4, @p5, @p6, @p7, @p8),
+(@p9, @p10, @p11, @p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22),
+(@p23, @p24, @p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34, @p35, @p36),
+(@p37, @p38, @p39, @p40, @p41, @p42, @p43),
+(@p44, @p45, @p46, @p47, @p48, @p49, @p50),
+(@p51, @p52, @p53, @p54, @p55, @p56, @p57),
+(@p58, @p59, @p60, @p61, @p62, @p63, @p64),
+(@p65, @p66, @p67, @p68, @p69, @p70, @p71),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78),
+(@p79, @p80, @p81, @p82, @p83, @p84, @p85),
+(@p86, @p87, @p88, @p89, @p90, @p91, @p92),
+(@p93, @p94, @p95, @p96, @p97, @p98, @p99),
+(@p100, @p101, @p102, @p103, @p104, @p105, @p106),
+(@p107, @p108, @p109, @p110, @p111, @p112, @p113),
+(@p114, @p115, @p116, @p117, @p118, @p119, @p120),
+(@p121, @p122, @p123, @p124, @p125, @p126, @p127),
+(@p128, @p129, @p130, @p131, @p132, @p133, @p134),
+(@p135, @p136, @p137, @p138, @p139, @p140, @p141),
+(@p142, @p143, @p144, @p145, @p146, @p147, @p148),
+(@p149, @p150, @p151, @p152, @p153, @p154, @p155),
+(@p156, @p157, @p158, @p159, @p160, @p161, @p162),
+(@p163, @p164, @p165, @p166, @p167, @p168, @p169);" (0723d8ff)
+2018-08-06T18:50:04.4212270+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-06T18:50:04.4944777+03:00  [INF] Executed DbCommand ("15"ms) [Parameters=["@p0='?' (Size = 255), @p1='?' (Size = 255), @p2='?' (Size = 255), @p3='?' (Size = 255), @p4='?' (Size = 255), @p5='?' (Size = 255), @p6='?' (Size = 255), @p7='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Colors] USING (
+VALUES (@p0, @p1, 0),
+(@p2, @p3, 1),
+(@p4, @p5, 2),
+(@p6, @p7, 3)) AS i ([Code], [Name], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Code], [Name])
+VALUES (i.[Code], i.[Name])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Colors] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2018-08-06T18:50:04.5424161+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-06T18:50:04.6116579+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AdvertistmentPages] ([Id], [Name])
+VALUES (@p0, @p1);" (0723d8ff)
+2018-08-06T18:50:04.6358285+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AdvertistmentPages] ([Id], [Name])
+VALUES (@p0, @p1);" (0723d8ff)
+2018-08-06T18:50:04.6608071+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AdvertistmentPages] ([Id], [Name])
+VALUES (@p0, @p1);" (0723d8ff)
+2018-08-06T18:50:04.6864728+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 255), @p2='?' (Size = 50) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AdvertistmentPositions] ([Id], [Name], [PageId])
+VALUES (@p0, @p1, @p2);" (0723d8ff)
+2018-08-06T18:50:04.7103720+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 255), @p2='?' (Size = 50) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AdvertistmentPositions] ([Id], [Name], [PageId])
+VALUES (@p0, @p1, @p2);" (0723d8ff)
+2018-08-06T18:50:04.7343514+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 255), @p2='?' (Size = 50) (DbType = AnsiString)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AdvertistmentPositions] ([Id], [Name], [PageId])
+VALUES (@p0, @p1, @p2);" (0723d8ff)
+2018-08-06T18:50:04.7639679+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-06T18:50:04.8185225+03:00  [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Size = 255), @p2='?' (DbType = Int32), @p3='?' (Size = 25), @p4='?' (Size = 255), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (Size = 255), @p8='?' (Size = 4000), @p9='?' (Size = 255), @p10='?' (DbType = Int32), @p11='?' (Size = 25), @p12='?' (Size = 255), @p13='?' (Size = 255), @p14='?' (DbType = Int32), @p15='?' (Size = 255), @p16='?' (Size = 4000), @p17='?' (Size = 255), @p18='?' (DbType = Int32), @p19='?' (Size = 25), @p20='?' (Size = 255), @p21='?' (Size = 255), @p22='?' (DbType = Int32), @p23='?' (Size = 255), @p24='?' (Size = 4000), @p25='?' (Size = 255), @p26='?' (DbType = Int32), @p27='?' (Size = 25), @p28='?' (Size = 255), @p29='?' (Size = 255), @p30='?' (DbType = Int32), @p31='?' (Size = 255), @p32='?' (Size = 4000), @p33='?' (Size = 255), @p34='?' (DbType = Int32), @p35='?' (Size = 25), @p36='?' (Size = 255), @p37='?' (Size = 255), @p38='?' (DbType = Int32), @p39='?' (Size = 255), @p40='?' (Size = 4000), @p41='?' (Size = 255), @p42='?' (DbType = Int32), @p43='?' (Size = 25), @p44='?' (Size = 255), @p45='?' (Size = 255), @p46='?' (DbType = Int32), @p47='?' (Size = 255), @p48='?' (Size = 4000), @p49='?' (Size = 255), @p50='?' (DbType = Int32), @p51='?' (Size = 25), @p52='?' (Size = 255), @p53='?' (Size = 255), @p54='?' (DbType = Int32), @p55='?' (Size = 255), @p56='?' (Size = 4000), @p57='?' (Size = 255), @p58='?' (DbType = Int32), @p59='?' (Size = 25), @p60='?' (Size = 255), @p61='?' (Size = 255), @p62='?' (DbType = Int32), @p63='?' (Size = 255), @p64='?' (Size = 4000), @p65='?' (Size = 255), @p66='?' (DbType = Int32), @p67='?' (Size = 25), @p68='?' (Size = 255), @p69='?' (Size = 255), @p70='?' (DbType = Int32), @p71='?' (Size = 255), @p72='?' (Size = 4000), @p73='?' (Size = 255), @p74='?' (DbType = Int32), @p75='?' (Size = 25), @p76='?' (Size = 255), @p77='?' (Size = 255), @p78='?' (DbType = Int32), @p79='?' (Size = 255), @p80='?' (Size = 4000), @p81='?' (Size = 255), @p82='?' (DbType = Int32), @p83='?' (Size = 25), @p84='?' (Size = 255), @p85='?' (Size = 255), @p86='?' (DbType = Int32), @p87='?' (Size = 255), @p88='?' (Size = 4000), @p89='?' (Size = 255), @p90='?' (DbType = Int32), @p91='?' (Size = 25), @p92='?' (Size = 255), @p93='?' (Size = 255), @p94='?' (DbType = Int32), @p95='?' (Size = 255), @p96='?' (Size = 4000), @p97='?' (Size = 255), @p98='?' (DbType = Int32), @p99='?' (Size = 25), @p100='?' (Size = 255), @p101='?' (Size = 255), @p102='?' (DbType = Int32), @p103='?' (Size = 255), @p104='?' (Size = 4000), @p105='?' (Size = 255), @p106='?' (DbType = Int32), @p107='?' (Size = 25), @p108='?' (Size = 255), @p109='?' (Size = 255), @p110='?' (DbType = Int32), @p111='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Slides] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, 0),
+(@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, 1),
+(@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, 2),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, 3),
+(@p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, 4),
+(@p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, 5),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, 6),
+(@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63, 7),
+(@p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, 8),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, 9),
+(@p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87, 10),
+(@p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95, 11),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103, 12),
+(@p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111, 13)) AS i ([Content], [Description], [DisplayOrder], [GroupAlias], [Image], [Name], [Status], [Url], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Content], [Description], [DisplayOrder], [GroupAlias], [Image], [Name], [Status], [Url])
+VALUES (i.[Content], i.[Description], i.[DisplayOrder], i.[GroupAlias], i.[Image], i.[Name], i.[Status], i.[Url])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Slides] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2018-08-06T18:50:04.8277057+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-06T18:50:04.8680630+03:00  [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (Size = 255), @p1='?' (Size = 255), @p2='?' (Size = 255), @p3='?' (Size = 255), @p4='?' (Size = 255), @p5='?' (Size = 255)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Sizes] USING (
+VALUES (@p0, 0),
+(@p1, 1),
+(@p2, 2),
+(@p3, 3),
+(@p4, 4),
+(@p5, 5)) AS i ([Name], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Name])
+VALUES (i.[Name])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Sizes] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2018-08-06T18:50:04.8964852+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-06T18:50:04.9924806+03:00  [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?', @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 255), @p7='?' (DbType = Int32), @p8='?' (Size = 255) (DbType = AnsiString), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?', @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (Size = 255), @p21='?' (DbType = Int32), @p22='?' (Size = 255) (DbType = AnsiString), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (DbType = Int32), @p27='?' (DbType = Int32), @p28='?' (DbType = DateTime2), @p29='?' (DbType = DateTime2), @p30='?' (Size = 4000), @p31='?', @p32='?' (DbType = Int32), @p33='?' (Size = 4000), @p34='?' (Size = 255), @p35='?' (DbType = Int32), @p36='?' (Size = 255) (DbType = AnsiString), @p37='?' (Size = 4000), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (DbType = Int32), @p41='?' (DbType = Int32), @p42='?' (DbType = DateTime2), @p43='?' (DbType = DateTime2), @p44='?' (Size = 4000), @p45='?', @p46='?' (DbType = Int32), @p47='?' (Size = 4000), @p48='?' (Size = 255), @p49='?' (DbType = Int32), @p50='?' (Size = 255) (DbType = AnsiString), @p51='?' (Size = 4000), @p52='?' (Size = 4000), @p53='?' (Size = 4000), @p54='?' (DbType = Int32), @p55='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [ProductCategories] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, 0),
+(@p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, 1),
+(@p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, 2),
+(@p42, @p43, @p44, @p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, 3)) AS i ([DateCreated], [DateModified], [Description], [HomeFlag], [HomeOrder], [Image], [Name], [ParentId], [SeoAlias], [SeoDescription], [SeoKeywords], [SeoPageTitle], [SortOrder], [Status], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([DateCreated], [DateModified], [Description], [HomeFlag], [HomeOrder], [Image], [Name], [ParentId], [SeoAlias], [SeoDescription], [SeoKeywords], [SeoPageTitle], [SortOrder], [Status])
+VALUES (i.[DateCreated], i.[DateModified], i.[Description], i.[HomeFlag], i.[HomeOrder], i.[Image], i.[Name], i.[ParentId], i.[SeoAlias], i.[SeoDescription], i.[SeoKeywords], i.[SeoPageTitle], i.[SortOrder], i.[Status])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [ProductCategories] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2018-08-06T18:50:05.0494454+03:00  [INF] Executed DbCommand ("31"ms) [Parameters=["@p56='?' (DbType = Int32), @p57='?' (Size = 4000), @p58='?' (DbType = DateTime2), @p59='?' (DbType = DateTime2), @p60='?' (Size = 255), @p61='?', @p62='?', @p63='?' (Size = 255), @p64='?' (Size = 255), @p65='?' (DbType = Decimal), @p66='?' (DbType = Decimal), @p67='?', @p68='?' (Size = 255) (DbType = AnsiString), @p69='?' (Size = 255), @p70='?' (Size = 255), @p71='?' (Size = 4000), @p72='?' (DbType = Int32), @p73='?' (Size = 255), @p74='?' (Size = 255), @p75='?' (DbType = Int32), @p76='?' (DbType = Int32), @p77='?' (Size = 4000), @p78='?' (DbType = DateTime2), @p79='?' (DbType = DateTime2), @p80='?' (Size = 255), @p81='?', @p82='?', @p83='?' (Size = 255), @p84='?' (Size = 255), @p85='?' (DbType = Decimal), @p86='?' (DbType = Decimal), @p87='?', @p88='?' (Size = 255) (DbType = AnsiString), @p89='?' (Size = 255), @p90='?' (Size = 255), @p91='?' (Size = 4000), @p92='?' (DbType = Int32), @p93='?' (Size = 255), @p94='?' (Size = 255), @p95='?' (DbType = Int32), @p96='?' (DbType = Int32), @p97='?' (Size = 4000), @p98='?' (DbType = DateTime2), @p99='?' (DbType = DateTime2), @p100='?' (Size = 255), @p101='?', @p102='?', @p103='?' (Size = 255), @p104='?' (Size = 255), @p105='?' (DbType = Decimal), @p106='?' (DbType = Decimal), @p107='?', @p108='?' (Size = 255) (DbType = AnsiString), @p109='?' (Size = 255), @p110='?' (Size = 255), @p111='?' (Size = 4000), @p112='?' (DbType = Int32), @p113='?' (Size = 255), @p114='?' (Size = 255), @p115='?' (DbType = Int32), @p116='?' (DbType = Int32), @p117='?' (Size = 4000), @p118='?' (DbType = DateTime2), @p119='?' (DbType = DateTime2), @p120='?' (Size = 255), @p121='?', @p122='?', @p123='?' (Size = 255), @p124='?' (Size = 255), @p125='?' (DbType = Decimal), @p126='?' (DbType = Decimal), @p127='?', @p128='?' (Size = 255) (DbType = AnsiString), @p129='?' (Size = 255), @p130='?' (Size = 255), @p131='?' (Size = 4000), @p132='?' (DbType = Int32), @p133='?' (Size = 255), @p134='?' (Size = 255), @p135='?' (DbType = Int32), @p136='?' (DbType = Int32), @p137='?' (Size = 4000), @p138='?' (DbType = DateTime2), @p139='?' (DbType = DateTime2), @p140='?' (Size = 255), @p141='?', @p142='?', @p143='?' (Size = 255), @p144='?' (Size = 255), @p145='?' (DbType = Decimal), @p146='?' (DbType = Decimal), @p147='?', @p148='?' (Size = 255) (DbType = AnsiString), @p149='?' (Size = 255), @p150='?' (Size = 255), @p151='?' (Size = 4000), @p152='?' (DbType = Int32), @p153='?' (Size = 255), @p154='?' (Size = 255), @p155='?' (DbType = Int32), @p156='?' (DbType = Int32), @p157='?' (Size = 4000), @p158='?' (DbType = DateTime2), @p159='?' (DbType = DateTime2), @p160='?' (Size = 255), @p161='?', @p162='?', @p163='?' (Size = 255), @p164='?' (Size = 255), @p165='?' (DbType = Decimal), @p166='?' (DbType = Decimal), @p167='?', @p168='?' (Size = 255) (DbType = AnsiString), @p169='?' (Size = 255), @p170='?' (Size = 255), @p171='?' (Size = 4000), @p172='?' (DbType = Int32), @p173='?' (Size = 255), @p174='?' (Size = 255), @p175='?' (DbType = Int32), @p176='?' (DbType = Int32), @p177='?' (Size = 4000), @p178='?' (DbType = DateTime2), @p179='?' (DbType = DateTime2), @p180='?' (Size = 255), @p181='?', @p182='?', @p183='?' (Size = 255), @p184='?' (Size = 255), @p185='?' (DbType = Decimal), @p186='?' (DbType = Decimal), @p187='?', @p188='?' (Size = 255) (DbType = AnsiString), @p189='?' (Size = 255), @p190='?' (Size = 255), @p191='?' (Size = 4000), @p192='?' (DbType = Int32), @p193='?' (Size = 255), @p194='?' (Size = 255), @p195='?' (DbType = Int32), @p196='?' (DbType = Int32), @p197='?' (Size = 4000), @p198='?' (DbType = DateTime2), @p199='?' (DbType = DateTime2), @p200='?' (Size = 255), @p201='?', @p202='?', @p203='?' (Size = 255), @p204='?' (Size = 255), @p205='?' (DbType = Decimal), @p206='?' (DbType = Decimal), @p207='?', @p208='?' (Size = 255) (DbType = AnsiString), @p209='?' (Size = 255), @p210='?' (Size = 255), @p211='?' (Size = 4000), @p212='?' (DbType = Int32), @p213='?' (Size = 255), @p214='?' (Size = 255), @p215='?' (DbType = Int32), @p216='?' (DbType = Int32), @p217='?' (Size = 4000), @p218='?' (DbType = DateTime2), @p219='?' (DbType = DateTime2), @p220='?' (Size = 255), @p221='?', @p222='?', @p223='?' (Size = 255), @p224='?' (Size = 255), @p225='?' (DbType = Decimal), @p226='?' (DbType = Decimal), @p227='?', @p228='?' (Size = 255) (DbType = AnsiString), @p229='?' (Size = 255), @p230='?' (Size = 255), @p231='?' (Size = 4000), @p232='?' (DbType = Int32), @p233='?' (Size = 255), @p234='?' (Size = 255), @p235='?' (DbType = Int32), @p236='?' (DbType = Int32), @p237='?' (Size = 4000), @p238='?' (DbType = DateTime2), @p239='?' (DbType = DateTime2), @p240='?' (Size = 255), @p241='?', @p242='?', @p243='?' (Size = 255), @p244='?' (Size = 255), @p245='?' (DbType = Decimal), @p246='?' (DbType = Decimal), @p247='?', @p248='?' (Size = 255) (DbType = AnsiString), @p249='?' (Size = 255), @p250='?' (Size = 255), @p251='?' (Size = 4000), @p252='?' (DbType = Int32), @p253='?' (Size = 255), @p254='?' (Size = 255), @p255='?' (DbType = Int32), @p256='?' (DbType = Int32), @p257='?' (Size = 4000), @p258='?' (DbType = DateTime2), @p259='?' (DbType = DateTime2), @p260='?' (Size = 255), @p261='?', @p262='?', @p263='?' (Size = 255), @p264='?' (Size = 255), @p265='?' (DbType = Decimal), @p266='?' (DbType = Decimal), @p267='?', @p268='?' (Size = 255) (DbType = AnsiString), @p269='?' (Size = 255), @p270='?' (Size = 255), @p271='?' (Size = 4000), @p272='?' (DbType = Int32), @p273='?' (Size = 255), @p274='?' (Size = 255), @p275='?' (DbType = Int32), @p276='?' (DbType = Int32), @p277='?' (Size = 4000), @p278='?' (DbType = DateTime2), @p279='?' (DbType = DateTime2), @p280='?' (Size = 255), @p281='?', @p282='?', @p283='?' (Size = 255), @p284='?' (Size = 255), @p285='?' (DbType = Decimal), @p286='?' (DbType = Decimal), @p287='?', @p288='?' (Size = 255) (DbType = AnsiString), @p289='?' (Size = 255), @p290='?' (Size = 255), @p291='?' (Size = 4000), @p292='?' (DbType = Int32), @p293='?' (Size = 255), @p294='?' (Size = 255), @p295='?' (DbType = Int32), @p296='?' (DbType = Int32), @p297='?' (Size = 4000), @p298='?' (DbType = DateTime2), @p299='?' (DbType = DateTime2), @p300='?' (Size = 255), @p301='?', @p302='?', @p303='?' (Size = 255), @p304='?' (Size = 255), @p305='?' (DbType = Decimal), @p306='?' (DbType = Decimal), @p307='?', @p308='?' (Size = 255) (DbType = AnsiString), @p309='?' (Size = 255), @p310='?' (Size = 255), @p311='?' (Size = 4000), @p312='?' (DbType = Int32), @p313='?' (Size = 255), @p314='?' (Size = 255), @p315='?' (DbType = Int32), @p316='?' (DbType = Int32), @p317='?' (Size = 4000), @p318='?' (DbType = DateTime2), @p319='?' (DbType = DateTime2), @p320='?' (Size = 255), @p321='?', @p322='?', @p323='?' (Size = 255), @p324='?' (Size = 255), @p325='?' (DbType = Decimal), @p326='?' (DbType = Decimal), @p327='?', @p328='?' (Size = 255) (DbType = AnsiString), @p329='?' (Size = 255), @p330='?' (Size = 255), @p331='?' (Size = 4000), @p332='?' (DbType = Int32), @p333='?' (Size = 255), @p334='?' (Size = 255), @p335='?' (DbType = Int32), @p336='?' (DbType = Int32), @p337='?' (Size = 4000), @p338='?' (DbType = DateTime2), @p339='?' (DbType = DateTime2), @p340='?' (Size = 255), @p341='?', @p342='?', @p343='?' (Size = 255), @p344='?' (Size = 255), @p345='?' (DbType = Decimal), @p346='?' (DbType = Decimal), @p347='?', @p348='?' (Size = 255) (DbType = AnsiString), @p349='?' (Size = 255), @p350='?' (Size = 255), @p351='?' (Size = 4000), @p352='?' (DbType = Int32), @p353='?' (Size = 255), @p354='?' (Size = 255), @p355='?' (DbType = Int32), @p356='?' (DbType = Int32), @p357='?' (Size = 4000), @p358='?' (DbType = DateTime2), @p359='?' (DbType = DateTime2), @p360='?' (Size = 255), @p361='?', @p362='?', @p363='?' (Size = 255), @p364='?' (Size = 255), @p365='?' (DbType = Decimal), @p366='?' (DbType = Decimal), @p367='?', @p368='?' (Size = 255) (DbType = AnsiString), @p369='?' (Size = 255), @p370='?' (Size = 255), @p371='?' (Size = 4000), @p372='?' (DbType = Int32), @p373='?' (Size = 255), @p374='?' (Size = 255), @p375='?' (DbType = Int32), @p376='?' (DbType = Int32), @p377='?' (Size = 4000), @p378='?' (DbType = DateTime2), @p379='?' (DbType = DateTime2), @p380='?' (Size = 255), @p381='?', @p382='?', @p383='?' (Size = 255), @p384='?' (Size = 255), @p385='?' (DbType = Decimal), @p386='?' (DbType = Decimal), @p387='?', @p388='?' (Size = 255) (DbType = AnsiString), @p389='?' (Size = 255), @p390='?' (Size = 255), @p391='?' (Size = 4000), @p392='?' (DbType = Int32), @p393='?' (Size = 255), @p394='?' (Size = 255), @p395='?' (DbType = Int32), @p396='?' (DbType = Int32), @p397='?' (Size = 4000), @p398='?' (DbType = DateTime2), @p399='?' (DbType = DateTime2), @p400='?' (Size = 255), @p401='?', @p402='?', @p403='?' (Size = 255), @p404='?' (Size = 255), @p405='?' (DbType = Decimal), @p406='?' (DbType = Decimal), @p407='?', @p408='?' (Size = 255) (DbType = AnsiString), @p409='?' (Size = 255), @p410='?' (Size = 255), @p411='?' (Size = 4000), @p412='?' (DbType = Int32), @p413='?' (Size = 255), @p414='?' (Size = 255), @p415='?' (DbType = Int32), @p416='?' (DbType = Int32), @p417='?' (Size = 4000), @p418='?' (DbType = DateTime2), @p419='?' (DbType = DateTime2), @p420='?' (Size = 255), @p421='?', @p422='?', @p423='?' (Size = 255), @p424='?' (Size = 255), @p425='?' (DbType = Decimal), @p426='?' (DbType = Decimal), @p427='?', @p428='?' (Size = 255) (DbType = AnsiString), @p429='?' (Size = 255), @p430='?' (Size = 255), @p431='?' (Size = 4000), @p432='?' (DbType = Int32), @p433='?' (Size = 255), @p434='?' (Size = 255), @p435='?' (DbType = Int32), @p436='?' (DbType = Int32), @p437='?' (Size = 4000), @p438='?' (DbType = DateTime2), @p439='?' (DbType = DateTime2), @p440='?' (Size = 255), @p441='?', @p442='?', @p443='?' (Size = 255), @p444='?' (Size = 255), @p445='?' (DbType = Decimal), @p446='?' (DbType = Decimal), @p447='?', @p448='?' (Size = 255) (DbType = AnsiString), @p449='?' (Size = 255), @p450='?' (Size = 255), @p451='?' (Size = 4000), @p452='?' (DbType = Int32), @p453='?' (Size = 255), @p454='?' (Size = 255), @p455='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Products] USING (
+VALUES (@p56, @p57, @p58, @p59, @p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, @p72, @p73, @p74, @p75, 0),
+(@p76, @p77, @p78, @p79, @p80, @p81, @p82, @p83, @p84, @p85, @p86, @p87, @p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95, 1),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, @p108, @p109, @p110, @p111, @p112, @p113, @p114, @p115, 2),
+(@p116, @p117, @p118, @p119, @p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127, @p128, @p129, @p130, @p131, @p132, @p133, @p134, @p135, 3),
+(@p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143, @p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151, @p152, @p153, @p154, @p155, 4),
+(@p156, @p157, @p158, @p159, @p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167, @p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175, 5),
+(@p176, @p177, @p178, @p179, @p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191, @p192, @p193, @p194, @p195, 6),
+(@p196, @p197, @p198, @p199, @p200, @p201, @p202, @p203, @p204, @p205, @p206, @p207, @p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215, 7),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223, @p224, @p225, @p226, @p227, @p228, @p229, @p230, @p231, @p232, @p233, @p234, @p235, 8),
+(@p236, @p237, @p238, @p239, @p240, @p241, @p242, @p243, @p244, @p245, @p246, @p247, @p248, @p249, @p250, @p251, @p252, @p253, @p254, @p255, 9),
+(@p256, @p257, @p258, @p259, @p260, @p261, @p262, @p263, @p264, @p265, @p266, @p267, @p268, @p269, @p270, @p271, @p272, @p273, @p274, @p275, 10),
+(@p276, @p277, @p278, @p279, @p280, @p281, @p282, @p283, @p284, @p285, @p286, @p287, @p288, @p289, @p290, @p291, @p292, @p293, @p294, @p295, 11),
+(@p296, @p297, @p298, @p299, @p300, @p301, @p302, @p303, @p304, @p305, @p306, @p307, @p308, @p309, @p310, @p311, @p312, @p313, @p314, @p315, 12),
+(@p316, @p317, @p318, @p319, @p320, @p321, @p322, @p323, @p324, @p325, @p326, @p327, @p328, @p329, @p330, @p331, @p332, @p333, @p334, @p335, 13),
+(@p336, @p337, @p338, @p339, @p340, @p341, @p342, @p343, @p344, @p345, @p346, @p347, @p348, @p349, @p350, @p351, @p352, @p353, @p354, @p355, 14),
+(@p356, @p357, @p358, @p359, @p360, @p361, @p362, @p363, @p364, @p365, @p366, @p367, @p368, @p369, @p370, @p371, @p372, @p373, @p374, @p375, 15),
+(@p376, @p377, @p378, @p379, @p380, @p381, @p382, @p383, @p384, @p385, @p386, @p387, @p388, @p389, @p390, @p391, @p392, @p393, @p394, @p395, 16),
+(@p396, @p397, @p398, @p399, @p400, @p401, @p402, @p403, @p404, @p405, @p406, @p407, @p408, @p409, @p410, @p411, @p412, @p413, @p414, @p415, 17),
+(@p416, @p417, @p418, @p419, @p420, @p421, @p422, @p423, @p424, @p425, @p426, @p427, @p428, @p429, @p430, @p431, @p432, @p433, @p434, @p435, 18),
+(@p436, @p437, @p438, @p439, @p440, @p441, @p442, @p443, @p444, @p445, @p446, @p447, @p448, @p449, @p450, @p451, @p452, @p453, @p454, @p455, 19)) AS i ([CategoryId], [Content], [DateCreated], [DateModified], [Description], [HomeFlag], [HotFlag], [Image], [Name], [OriginalPrice], [Price], [PromotionPrice], [SeoAlias], [SeoDescription], [SeoKeywords], [SeoPageTitle], [Status], [Tags], [Unit], [ViewCount], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CategoryId], [Content], [DateCreated], [DateModified], [Description], [HomeFlag], [HotFlag], [Image], [Name], [OriginalPrice], [Price], [PromotionPrice], [SeoAlias], [SeoDescription], [SeoKeywords], [SeoPageTitle], [Status], [Tags], [Unit], [ViewCount])
+VALUES (i.[CategoryId], i.[Content], i.[DateCreated], i.[DateModified], i.[Description], i.[HomeFlag], i.[HotFlag], i.[Image], i.[Name], i.[OriginalPrice], i.[Price], i.[PromotionPrice], i.[SeoAlias], i.[SeoDescription], i.[SeoKeywords], i.[SeoPageTitle], i.[Status], i.[Tags], i.[Unit], i.[ViewCount])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Products] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2018-08-06T18:50:05.0792938+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T18:50:05.1174550+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime2), @p7='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [SystemConfigs] ([Id], [Name], [Status], [Value1], [Value2], [Value3], [Value4], [Value5])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);" (0723d8ff)
+2018-08-06T18:50:05.1448627+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T18:50:05.1728557+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime2), @p7='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [SystemConfigs] ([Id], [Name], [Status], [Value1], [Value2], [Value3], [Value4], [Value5])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);" (0723d8ff)
+2018-08-06T18:50:05.1832172+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T18:50:05.1923394+03:00  [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 50) (DbType = AnsiString), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = DateTime2), @p7='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [SystemConfigs] ([Id], [Name], [Status], [Value1], [Value2], [Value3], [Value4], [Value5])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);" (0723d8ff)
+2018-08-06T18:50:05.6634802+03:00 0HLFRMH3NVG8I:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-06T18:50:05.6659887+03:00 0HLFRMH3NVG8H:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-06T18:50:05.6995033+03:00 0HLFRMH3NVG8I:00000001 [INF] Request finished in 86.1491ms 200  (791a596a)
+2018-08-06T18:50:05.7840500+03:00 0HLFRMH3NVG8H:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T18:50:05.7997156+03:00 0HLFRMH3NVG8H:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-08-06T18:50:05.8789470+03:00 0HLFRMH3NVG8H:00000001 [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2018-08-06T18:50:05.8873884+03:00 0HLFRMH3NVG8H:00000001 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-08-06T18:50:05.9110335+03:00 0HLFRMH3NVG8H:00000001 [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2018-08-06T18:50:05.9344425+03:00 0HLFRMH3NVG8H:00000001 [INF] "Identity.Application" was not authenticated. Failure message: "No principal." (48071232)
+2018-08-06T18:50:06.1247554+03:00 0HLFRMH3NVG8H:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-06T18:50:08.5928303+03:00 0HLFRMH3NVG8H:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-06T18:50:09.1029647+03:00 0HLFRMH3NVG8H:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 2998.9978ms (afa2e885)
+2018-08-06T18:50:09.1128948+03:00 0HLFRMH3NVG8H:00000001 [INF] Request finished in 3506.0493ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-06T18:50:09.1877387+03:00 0HLFRMH3NVG8I:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-06T18:50:09.2239851+03:00 0HLFRMH3NVG8I:00000002 [INF] The file "/lib/jquery/dist/jquery.js" was not modified (f1f8d725)
+2018-08-06T18:50:09.2333039+03:00 0HLFRMH3NVG8I:00000002 [INF] Request finished in 43.9054ms 304 application/javascript (791a596a)
+2018-08-06T22:38:25.1672065+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T22:38:25.1995282+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T22:38:25.2231316+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T22:38:25.2457308+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T22:38:25.2685360+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T22:38:25.2922029+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T22:38:25.2956312+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-06T22:38:25.4180114+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T22:38:25.8948913+03:00  [INF] Executed DbCommand ("32"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T22:38:25.9684960+03:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T22:38:26.0091403+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-06T22:38:26.0739820+03:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-06T22:38:26.1012475+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-06T22:38:26.1278219+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-06T22:38:26.1539387+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-06T22:38:26.1593749+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-06T22:38:26.1861024+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-06T22:38:26.2143390+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T22:38:26.2405999+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T22:38:26.2674314+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-06T22:38:26.6684623+03:00 0HLFRQGMUTV6V:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-06T22:38:26.6656419+03:00 0HLFRQGMUTV70:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-06T22:38:26.6982423+03:00 0HLFRQGMUTV70:00000001 [INF] Request finished in 82.1067ms 200  (791a596a)
+2018-08-06T22:38:26.8816700+03:00 0HLFRQGMUTV6V:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:38:29.0749094+03:00 0HLFRQGMUTV6V:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-06T22:38:29.5647604+03:00 0HLFRQGMUTV6V:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 2669.0241ms (afa2e885)
+2018-08-06T22:38:29.6018129+03:00 0HLFRQGMUTV6V:00000001 [INF] Request finished in 2958.1778ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-06T22:38:29.6282014+03:00 0HLFRQGMUTV70:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-06T22:38:29.6462417+03:00 0HLFRQGMUTV6V:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-06T22:38:29.6508625+03:00 0HLFRQGMUTV70:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-06T22:38:29.6809710+03:00 0HLFRQGMUTV6V:00000002 [INF] The file "/lib/jquery/dist/jquery.js" was not modified (f1f8d725)
+2018-08-06T22:38:29.6858178+03:00 0HLFRQGMUTV6V:00000002 [INF] Request finished in 41.8286ms 304 application/javascript (791a596a)
+2018-08-06T22:38:29.7242048+03:00 0HLFRQGMUTV70:00000002 [INF] Request finished in 119.2826ms 200 text/css (791a596a)
+2018-08-06T22:38:30.2451820+03:00 0HLFRQGMUTV6V:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-06T22:38:30.2542087+03:00 0HLFRQGMUTV6V:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:38:30.6076236+03:00 0HLFRQGMUTV6V:00000003 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-06T22:38:30.6755625+03:00 0HLFRQGMUTV6V:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 419.3812ms (afa2e885)
+2018-08-06T22:38:30.6865505+03:00 0HLFRQGMUTV6V:00000003 [INF] Request finished in 436.7834ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-06T22:38:30.8078067+03:00 0HLFRQGMUTV70:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-06T22:38:30.8662280+03:00 0HLFRQGMUTV6V:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/css/custom.css   (ca22a1cb)
+2018-08-06T22:38:30.8908449+03:00 0HLFRQGMUTV70:00000003 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-06T22:38:30.9810841+03:00 0HLFRQGMUTV71:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-06T22:38:30.9941402+03:00 0HLFRQGMUTV6V:00000004 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-06T22:38:31.0125536+03:00 0HLFRQGMUTV74:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-06T22:38:31.0327182+03:00 0HLFRQGMUTV73:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/animate.css/animate.css   (ca22a1cb)
+2018-08-06T22:38:31.0598309+03:00 0HLFRQGMUTV70:00000003 [INF] Request finished in 168.2855ms 200 text/css (791a596a)
+2018-08-06T22:38:31.1342153+03:00 0HLFRQGMUTV72:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-06T22:38:31.2068162+03:00 0HLFRQGMUTV72:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-06T22:38:31.2097548+03:00 0HLFRQGMUTV77:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-08-06T22:38:31.2379604+03:00 0HLFRQGMUTV74:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-08-06T22:38:31.2964539+03:00 0HLFRQGMUTV73:00000001 [INF] Sending file. Request path: '"/lib/animate.css/animate.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\animate.css\animate.css"' (27b0a520)
+2018-08-06T22:38:31.3002942+03:00 0HLFRQGMUTV74:00000001 [INF] Request finished in 510.0027ms 200 application/javascript (791a596a)
+2018-08-06T22:38:31.3217330+03:00 0HLFRQGMUTV77:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-08-06T22:38:31.3470573+03:00 0HLFRQGMUTV71:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-08-06T22:38:31.3841660+03:00 0HLFRQGMUTV75:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-06T22:38:31.3946329+03:00 0HLFRQGMUTV7A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/licalization/messages_vi.js   (ca22a1cb)
+2018-08-06T22:38:31.4284063+03:00 0HLFRQGMUTV78:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/login/index.js   (ca22a1cb)
+2018-08-06T22:38:31.4473168+03:00 0HLFRQGMUTV72:00000001 [INF] Request finished in 481.2323ms 200 text/css (791a596a)
+2018-08-06T22:38:31.4920004+03:00 0HLFRQGMUTV78:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-06T22:38:31.5866918+03:00 0HLFRQGMUTV79:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/test%20v2.2.4/jquery.js   (ca22a1cb)
+2018-08-06T22:38:31.5935203+03:00 0HLFRQGMUTV7A:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/licalization/messages_vi.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\licalization\messages_vi.js"' (27b0a520)
+2018-08-06T22:38:31.6203645+03:00 0HLFRQGMUTV75:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-06T22:38:31.6219322+03:00 0HLFRQGMUTV79:00000001 [INF] Sending file. Request path: '"/lib/jquery/test v2.2.4/jquery.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery\test v2.2.4\jquery.js"' (27b0a520)
+2018-08-06T22:38:31.6788482+03:00 0HLFRQGMUTV7A:00000001 [INF] Request finished in 274.7455ms 200 application/javascript (791a596a)
+2018-08-06T22:38:31.6803382+03:00 0HLFRQGMUTV7C:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-08-06T22:38:31.7504295+03:00 0HLFRQGMUTV78:00000001 [INF] Request finished in 101.7502ms 200 application/javascript (791a596a)
+2018-08-06T22:38:31.7726154+03:00 0HLFRQGMUTV7C:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-08-06T22:38:31.7752367+03:00 0HLFRQGMUTV76:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/dist/additional-methods.js   (ca22a1cb)
+2018-08-06T22:38:31.8480480+03:00 0HLFRQGMUTV7B:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/shared/congdoan.js   (ca22a1cb)
+2018-08-06T22:38:31.8739368+03:00 0HLFRQGMUTV76:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/additional-methods.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\dist\additional-methods.js"' (27b0a520)
+2018-08-06T22:38:31.9076748+03:00 0HLFRQGMUTV7B:00000001 [INF] Sending file. Request path: '"/app/shared/congdoan.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\shared\congdoan.js"' (27b0a520)
+2018-08-06T22:38:31.9106181+03:00 0HLFRQGMUTV71:00000001 [INF] Request finished in 1106.7582ms 200 text/css (791a596a)
+2018-08-06T22:38:31.9838852+03:00 0HLFRQGMUTV6V:00000004 [INF] Request finished in 1199.8785ms 200 text/css (791a596a)
+2018-08-06T22:38:31.9984116+03:00 0HLFRQGMUTV7B:00000001 [INF] Request finished in 394.6903ms 200 application/javascript (791a596a)
+2018-08-06T22:38:32.0086775+03:00 0HLFRQGMUTV77:00000001 [INF] Request finished in 701.6229ms 200 application/javascript (791a596a)
+2018-08-06T22:38:32.0665011+03:00 0HLFRQGMUTV7C:00000001 [INF] Request finished in 248.2837ms 200 application/javascript (791a596a)
+2018-08-06T22:38:32.1352598+03:00 0HLFRQGMUTV76:00000001 [INF] Request finished in 563.114ms 200 application/javascript (791a596a)
+2018-08-06T22:38:32.1616617+03:00 0HLFRQGMUTV75:00000001 [INF] Request finished in 877.3623ms 200 application/javascript (791a596a)
+2018-08-06T22:38:32.2140269+03:00 0HLFRQGMUTV73:00000001 [INF] Request finished in 1248.9055ms 200 text/css (791a596a)
+2018-08-06T22:38:32.2263437+03:00 0HLFRQGMUTV79:00000001 [INF] Request finished in 628.9265ms 200 application/javascript (791a596a)
+2018-08-06T22:38:41.1537779+03:00 0HLFRQGMUTV70:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-06T22:38:41.1781902+03:00 0HLFRQGMUTV70:00000004 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map"' (27b0a520)
+2018-08-06T22:38:41.2125350+03:00 0HLFRQGMUTV70:00000004 [INF] Request finished in 58.6769ms 200 text/plain (791a596a)
+2018-08-06T22:38:42.3495014+03:00 0HLFRQGMUTV72:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-06T22:38:42.3754956+03:00 0HLFRQGMUTV72:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:38:42.3839563+03:00 0HLFRQGMUTV72:00000002 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-06T22:38:42.3928627+03:00 0HLFRQGMUTV72:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 34.2719ms (afa2e885)
+2018-08-06T22:38:42.4987626+03:00 0HLFRQGMUTV72:00000002 [INF] Request finished in 67.5621ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-06T22:38:42.6946400+03:00 0HLFRQGMUTV78:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-06T22:38:42.7217242+03:00 0HLFRQGMUTV71:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-06T22:38:42.7910795+03:00 0HLFRQGMUTV72:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/dist/additional-methods.js   (ca22a1cb)
+2018-08-06T22:38:42.8190218+03:00 0HLFRQGMUTV7C:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-06T22:38:42.8475684+03:00 0HLFRQGMUTV77:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-06T22:38:42.8714121+03:00 0HLFRQGMUTV7A:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/css/custom.css   (ca22a1cb)
+2018-08-06T22:38:42.8868597+03:00 0HLFRQGMUTV74:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-06T22:38:42.8978149+03:00 0HLFRQGMUTV71:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-08-06T22:38:42.9469865+03:00 0HLFRQGMUTV74:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-06T22:38:42.9619571+03:00 0HLFRQGMUTV78:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-08-06T22:38:42.9659857+03:00 0HLFRQGMUTV71:00000002 [INF] Request finished in 468.5942ms 200 application/javascript (791a596a)
+2018-08-06T22:38:43.0220377+03:00 0HLFRQGMUTV77:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-06T22:38:43.0687259+03:00 0HLFRQGMUTV78:00000002 [INF] Request finished in 517.6736ms 200 text/css (791a596a)
+2018-08-06T22:38:43.0831714+03:00 0HLFRQGMUTV72:00000003 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/additional-methods.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\dist\additional-methods.js"' (27b0a520)
+2018-08-06T22:38:43.1120265+03:00 0HLFRQGMUTV75:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/licalization/messages_vi.js   (ca22a1cb)
+2018-08-06T22:38:43.1897280+03:00 0HLFRQGMUTV7C:00000002 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-06T22:38:43.1923872+03:00 0HLFRQGMUTV7A:00000002 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-06T22:38:43.2653181+03:00 0HLFRQGMUTV72:00000003 [INF] Request finished in 546.3132ms 200 application/javascript (791a596a)
+2018-08-06T22:38:43.2920990+03:00 0HLFRQGMUTV77:00000002 [INF] Request finished in 579.3146ms 200 application/javascript (791a596a)
+2018-08-06T22:38:43.3303422+03:00 0HLFRQGMUTV76:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-06T22:38:43.3611001+03:00 0HLFRQGMUTV76:00000002 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-06T22:38:43.3621409+03:00 0HLFRQGMUTV7C:00000002 [INF] Request finished in 740.4974ms 200 text/css (791a596a)
+2018-08-06T22:38:43.4242231+03:00 0HLFRQGMUTV7B:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/test%20v2.2.4/jquery.js   (ca22a1cb)
+2018-08-06T22:38:43.4462866+03:00 0HLFRQGMUTV75:00000002 [INF] Sending file. Request path: '"/lib/jquery-validation/licalization/messages_vi.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\licalization\messages_vi.js"' (27b0a520)
+2018-08-06T22:38:43.4491091+03:00 0HLFRQGMUTV6V:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-08-06T22:38:43.4793063+03:00 0HLFRQGMUTV6V:00000005 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-08-06T22:38:43.5281680+03:00 0HLFRQGMUTV7B:00000002 [INF] Sending file. Request path: '"/lib/jquery/test v2.2.4/jquery.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery\test v2.2.4\jquery.js"' (27b0a520)
+2018-08-06T22:38:43.5292674+03:00 0HLFRQGMUTV79:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/animate.css/animate.css   (ca22a1cb)
+2018-08-06T22:38:43.5557000+03:00 0HLFRQGMUTV6V:00000005 [INF] Request finished in 289.1949ms 200 application/javascript (791a596a)
+2018-08-06T22:38:43.6520389+03:00 0HLFRQGMUTV73:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-08-06T22:38:43.6673675+03:00 0HLFRQGMUTV79:00000002 [INF] Sending file. Request path: '"/lib/animate.css/animate.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\animate.css\animate.css"' (27b0a520)
+2018-08-06T22:38:43.6778063+03:00 0HLFRQGMUTV75:00000002 [INF] Request finished in 455.2012ms 200 application/javascript (791a596a)
+2018-08-06T22:38:43.7427100+03:00 0HLFRQGMUTV7B:00000002 [INF] Request finished in 430.7408ms 200 application/javascript (791a596a)
+2018-08-06T22:38:43.7929674+03:00 0HLFRQGMUTV76:00000002 [INF] Request finished in 419.8498ms 200 text/css (791a596a)
+2018-08-06T22:38:43.8345116+03:00 0HLFRQGMUTV79:00000002 [INF] Request finished in 375.7591ms 200 text/css (791a596a)
+2018-08-06T22:38:43.8802044+03:00 0HLFRQGMUTV74:00000002 [INF] Request finished in 1405.1236ms 200 text/css (791a596a)
+2018-08-06T22:38:43.9006010+03:00 0HLFRQGMUTV73:00000002 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-08-06T22:38:43.9343474+03:00 0HLFRQGMUTV70:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/shared/congdoan.js   (ca22a1cb)
+2018-08-06T22:38:43.9614790+03:00 0HLFRQGMUTV7D:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/login/index.js   (ca22a1cb)
+2018-08-06T22:38:43.9987423+03:00 0HLFRQGMUTV70:00000005 [INF] Sending file. Request path: '"/app/shared/congdoan.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\shared\congdoan.js"' (27b0a520)
+2018-08-06T22:38:44.0209072+03:00 0HLFRQGMUTV70:00000005 [INF] Request finished in 424.0673ms 200 application/javascript (791a596a)
+2018-08-06T22:38:44.0562670+03:00 0HLFRQGMUTV7D:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-06T22:38:44.0817824+03:00 0HLFRQGMUTV73:00000002 [INF] Request finished in 573.1185ms 200 application/javascript (791a596a)
+2018-08-06T22:38:44.1086817+03:00 0HLFRQGMUTV7A:00000002 [INF] Request finished in 1275.3927ms 200 text/css (791a596a)
+2018-08-06T22:38:44.1184703+03:00 0HLFRQGMUTV7D:00000001 [INF] Request finished in 478.4961ms 200 application/javascript (791a596a)
+2018-08-06T22:38:54.7765065+03:00 0HLFRQGMUTV71:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 30 (ca22a1cb)
+2018-08-06T22:38:54.8671419+03:00 0HLFRQGMUTV71:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:38:54.9119962+03:00 0HLFRQGMUTV71:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T22:38:55.0687121+03:00 0HLFRQGMUTV71:00000003 [INF] Executed DbCommand ("56"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T22:38:55.2422347+03:00 0HLFRQGMUTV71:00000003 [WRN] Invalid password for user "08230ec0-0470-40cb-3928-08d5fbb44685". (c2dce6c7)
+2018-08-06T22:38:55.2668038+03:00 0HLFRQGMUTV71:00000003 [WRN] User "08230ec0-0470-40cb-3928-08d5fbb44685" failed to provide the correct password. (ec8d2479)
+2018-08-06T22:38:55.2749257+03:00 0HLFRQGMUTV71:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-06T22:38:55.4036140+03:00 0HLFRQGMUTV71:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 571.9789ms (afa2e885)
+2018-08-06T22:38:55.4079179+03:00 0HLFRQGMUTV71:00000003 [INF] Request finished in 652.3509ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-06T22:39:00.2896801+03:00 0HLFRQGMUTV78:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 30 (ca22a1cb)
+2018-08-06T22:39:00.3146810+03:00 0HLFRQGMUTV78:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:39:00.3378336+03:00 0HLFRQGMUTV78:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T22:39:00.3678860+03:00 0HLFRQGMUTV78:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T22:39:00.3979207+03:00 0HLFRQGMUTV78:00000003 [WRN] Invalid password for user "08230ec0-0470-40cb-3928-08d5fbb44685". (c2dce6c7)
+2018-08-06T22:39:00.4213123+03:00 0HLFRQGMUTV78:00000003 [WRN] User "08230ec0-0470-40cb-3928-08d5fbb44685" failed to provide the correct password. (ec8d2479)
+2018-08-06T22:39:00.4446846+03:00 0HLFRQGMUTV78:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-06T22:39:00.4689663+03:00 0HLFRQGMUTV78:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 155.2747ms (afa2e885)
+2018-08-06T22:39:00.4728508+03:00 0HLFRQGMUTV78:00000003 [INF] Request finished in 203.5132ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-06T22:39:13.2823165+03:00 0HLFRQGMUTV77:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 30 (ca22a1cb)
+2018-08-06T22:39:13.3067938+03:00 0HLFRQGMUTV77:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:39:13.3315255+03:00 0HLFRQGMUTV77:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T22:39:13.3559032+03:00 0HLFRQGMUTV77:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T22:39:13.3654583+03:00 0HLFRQGMUTV77:00000003 [WRN] Invalid password for user "08230ec0-0470-40cb-3928-08d5fbb44685". (c2dce6c7)
+2018-08-06T22:39:13.3889152+03:00 0HLFRQGMUTV77:00000003 [WRN] User "08230ec0-0470-40cb-3928-08d5fbb44685" failed to provide the correct password. (ec8d2479)
+2018-08-06T22:39:13.4128304+03:00 0HLFRQGMUTV77:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-06T22:39:13.4366574+03:00 0HLFRQGMUTV77:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 130.1786ms (afa2e885)
+2018-08-06T22:39:13.4407129+03:00 0HLFRQGMUTV77:00000003 [INF] Request finished in 158.5203ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-06T22:39:25.4356392+03:00 0HLFRQGMUTV72:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 30 (ca22a1cb)
+2018-08-06T22:39:25.4592678+03:00 0HLFRQGMUTV72:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:39:25.4830321+03:00 0HLFRQGMUTV72:00000004 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T22:39:25.5094077+03:00 0HLFRQGMUTV72:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T22:39:25.5190585+03:00 0HLFRQGMUTV72:00000004 [WRN] Invalid password for user "08230ec0-0470-40cb-3928-08d5fbb44685". (c2dce6c7)
+2018-08-06T22:39:25.5422713+03:00 0HLFRQGMUTV72:00000004 [WRN] User "08230ec0-0470-40cb-3928-08d5fbb44685" failed to provide the correct password. (ec8d2479)
+2018-08-06T22:39:25.5654525+03:00 0HLFRQGMUTV72:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-06T22:39:25.5681653+03:00 0HLFRQGMUTV72:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 129.6849ms (afa2e885)
+2018-08-06T22:39:25.5916353+03:00 0HLFRQGMUTV72:00000004 [INF] Request finished in 136.1224ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-06T22:39:37.3672944+03:00 0HLFRQGMUTV7C:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-06T22:39:37.3918552+03:00 0HLFRQGMUTV7C:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:39:37.4163236+03:00 0HLFRQGMUTV7C:00000003 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-06T22:39:37.4406035+03:00 0HLFRQGMUTV7C:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 49.2614ms (afa2e885)
+2018-08-06T22:39:37.4449056+03:00 0HLFRQGMUTV7C:00000003 [INF] Request finished in 97.3997ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-06T22:39:37.5084042+03:00 0HLFRQGMUTV76:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-06T22:39:37.9327756+03:00 0HLFRQGMUTV75:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-06T22:39:37.9439134+03:00 0HLFRQGMUTV7B:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/css/custom.css   (ca22a1cb)
+2018-08-06T22:39:37.9588075+03:00 0HLFRQGMUTV79:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/test%20v2.2.4/jquery.js   (ca22a1cb)
+2018-08-06T22:39:37.9871272+03:00 0HLFRQGMUTV78:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/shared/congdoan.js   (ca22a1cb)
+2018-08-06T22:39:38.0021378+03:00 0HLFRQGMUTV6V:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-06T22:39:38.0177364+03:00 0HLFRQGMUTV7D:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-06T22:39:38.0290547+03:00 0HLFRQGMUTV7A:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/animate.css/animate.css   (ca22a1cb)
+2018-08-06T22:39:38.0401065+03:00 0HLFRQGMUTV70:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-08-06T22:39:38.0662728+03:00 0HLFRQGMUTV71:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/dist/additional-methods.js   (ca22a1cb)
+2018-08-06T22:39:38.0779672+03:00 0HLFRQGMUTV74:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-06T22:39:38.1624807+03:00 0HLFRQGMUTV76:00000003 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-06T22:39:38.3239385+03:00 0HLFRQGMUTV7B:00000003 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-06T22:39:38.3607343+03:00 0HLFRQGMUTV73:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-06T22:39:38.4187039+03:00 0HLFRQGMUTV6V:00000006 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-06T22:39:38.5220466+03:00 0HLFRQGMUTV70:00000006 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-08-06T22:39:38.5766980+03:00 0HLFRQGMUTV7A:00000003 [INF] Sending file. Request path: '"/lib/animate.css/animate.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\animate.css\animate.css"' (27b0a520)
+2018-08-06T22:39:38.6037968+03:00 0HLFRQGMUTV74:00000003 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-08-06T22:39:38.7016774+03:00 0HLFRQGMUTV72:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-08-06T22:39:38.7189972+03:00 0HLFRQGMUTV75:00000003 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-06T22:39:38.7341625+03:00 0HLFRQGMUTV7D:00000002 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-06T22:39:38.7489725+03:00 0HLFRQGMUTV71:00000004 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/additional-methods.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\dist\additional-methods.js"' (27b0a520)
+2018-08-06T22:39:38.7958344+03:00 0HLFRQGMUTV77:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/licalization/messages_vi.js   (ca22a1cb)
+2018-08-06T22:39:38.8505223+03:00 0HLFRQGMUTV79:00000003 [INF] Sending file. Request path: '"/lib/jquery/test v2.2.4/jquery.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery\test v2.2.4\jquery.js"' (27b0a520)
+2018-08-06T22:39:38.9922053+03:00 0HLFRQGMUTV7C:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/login/index.js   (ca22a1cb)
+2018-08-06T22:39:39.0142701+03:00 0HLFRQGMUTV74:00000003 [INF] Request finished in 1045.6289ms 200 text/css (791a596a)
+2018-08-06T22:39:39.0782217+03:00 0HLFRQGMUTV78:00000004 [INF] Sending file. Request path: '"/app/shared/congdoan.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\shared\congdoan.js"' (27b0a520)
+2018-08-06T22:39:39.2242013+03:00 0HLFRQGMUTV7B:00000003 [INF] Request finished in 913.2345ms 200 text/css (791a596a)
+2018-08-06T22:39:39.3369391+03:00 0HLFRQGMUTV70:00000006 [INF] Request finished in 1164.5374ms 200 application/javascript (791a596a)
+2018-08-06T22:39:39.3558510+03:00 0HLFRQGMUTV73:00000003 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-08-06T22:39:39.3685519+03:00 0HLFRQGMUTV7A:00000003 [INF] Request finished in 1202.2668ms 200 text/css (791a596a)
+2018-08-06T22:39:39.3846291+03:00 0HLFRQGMUTV72:00000005 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-08-06T22:39:39.3974703+03:00 0HLFRQGMUTV75:00000003 [INF] Request finished in 1450.9126ms 200 text/css (791a596a)
+2018-08-06T22:39:39.4487284+03:00 0HLFRQGMUTV71:00000004 [INF] Request finished in 1450.098ms 200 application/javascript (791a596a)
+2018-08-06T22:39:39.4844160+03:00 0HLFRQGMUTV77:00000004 [INF] Sending file. Request path: '"/lib/jquery-validation/licalization/messages_vi.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-validation\licalization\messages_vi.js"' (27b0a520)
+2018-08-06T22:39:39.4915537+03:00 0HLFRQGMUTV7C:00000004 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-06T22:39:39.5028069+03:00 0HLFRQGMUTV6V:00000006 [INF] Request finished in 1094.398ms 200 text/css (791a596a)
+2018-08-06T22:39:39.5193833+03:00 0HLFRQGMUTV79:00000003 [INF] Request finished in 1462.0195ms 200 application/javascript (791a596a)
+2018-08-06T22:39:39.6532106+03:00 0HLFRQGMUTV78:00000004 [INF] Request finished in 1655.0061ms 200 application/javascript (791a596a)
+2018-08-06T22:39:39.7325185+03:00 0HLFRQGMUTV72:00000005 [INF] Request finished in 1732.6285ms 200 application/javascript (791a596a)
+2018-08-06T22:39:39.7361860+03:00 0HLFRQGMUTV76:00000003 [INF] Request finished in 1134.8811ms 200 text/css (791a596a)
+2018-08-06T22:39:39.7519337+03:00 0HLFRQGMUTV77:00000004 [INF] Request finished in 1843.9102ms 200 application/javascript (791a596a)
+2018-08-06T22:39:39.7593855+03:00 0HLFRQGMUTV7D:00000002 [INF] Request finished in 1763.9094ms 200 application/javascript (791a596a)
+2018-08-06T22:39:39.7657052+03:00 0HLFRQGMUTV7C:00000004 [INF] Request finished in 1802.3218ms 200 application/javascript (791a596a)
+2018-08-06T22:39:39.7703406+03:00 0HLFRQGMUTV73:00000003 [INF] Request finished in 1969.7496ms 200 application/javascript (791a596a)
+2018-08-06T22:39:42.5010279+03:00 0HLFRQGMUTV7B:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 30 (ca22a1cb)
+2018-08-06T22:39:42.5065892+03:00 0HLFRQGMUTV7B:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:39:42.5098636+03:00 0HLFRQGMUTV7B:00000004 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T22:39:42.5359097+03:00 0HLFRQGMUTV7B:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T22:39:42.5457601+03:00 0HLFRQGMUTV7B:00000004 [WRN] Invalid password for user "08230ec0-0470-40cb-3928-08d5fbb44685". (c2dce6c7)
+2018-08-06T22:39:42.5492570+03:00 0HLFRQGMUTV7B:00000004 [WRN] User "08230ec0-0470-40cb-3928-08d5fbb44685" failed to provide the correct password. (ec8d2479)
+2018-08-06T22:39:42.5533424+03:00 0HLFRQGMUTV7B:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-06T22:39:42.5566281+03:00 0HLFRQGMUTV7B:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 52.0231ms (afa2e885)
+2018-08-06T22:39:42.5613915+03:00 0HLFRQGMUTV7B:00000004 [INF] Request finished in 60.5797ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-06T22:39:44.2750439+03:00 0HLFRQGMUTV6V:00000007 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 30 (ca22a1cb)
+2018-08-06T22:39:44.2805738+03:00 0HLFRQGMUTV6V:00000007 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-06T22:39:44.2856505+03:00 0HLFRQGMUTV6V:00000007 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-06T22:39:44.2929927+03:00 0HLFRQGMUTV6V:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-06T22:39:44.3057858+03:00 0HLFRQGMUTV6V:00000007 [WRN] Invalid password for user "08230ec0-0470-40cb-3928-08d5fbb44685". (c2dce6c7)
+2018-08-06T22:39:44.3108253+03:00 0HLFRQGMUTV6V:00000007 [WRN] User "08230ec0-0470-40cb-3928-08d5fbb44685" failed to provide the correct password. (ec8d2479)
+2018-08-06T22:39:44.3180972+03:00 0HLFRQGMUTV6V:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-06T22:39:44.3323785+03:00 0HLFRQGMUTV6V:00000007 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 42.7797ms (afa2e885)
+2018-08-06T22:39:44.3393653+03:00 0HLFRQGMUTV6V:00000007 [INF] Request finished in 61.2208ms 200 application/json; charset=utf-8 (791a596a)

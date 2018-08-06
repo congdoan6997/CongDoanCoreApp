@@ -9,7 +9,7 @@ var loginController = function () {
         $("#frmLogin").validate({
             errorClass: 'red',
             ignore: [],
-            lang: 'vi',
+            lang: 'en',
             rules: {
                 userName: {
                     required: true
@@ -17,8 +17,8 @@ var loginController = function () {
                 password: {
                     required: true
                 }
-            },
-        })
+            }
+        });
         $('#btnLogin').on('click', function (e) {
             if ($("#frmLogin").valid()) {
                 e.preventDefault();

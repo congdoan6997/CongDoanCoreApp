@@ -5,13 +5,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CongDoanCoreApp.Models;
+using CongDoanCoreApp.Extensions;
 
 namespace CongDoanCoreApp.Controllers
 {
     public class HomeController : Controller
     {
         public IActionResult Index()
+           
         {
+            var email = User.GetSpecificClaim("Email");
             return View();
         }
 

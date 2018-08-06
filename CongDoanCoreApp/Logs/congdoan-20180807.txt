@@ -1,0 +1,915 @@
+2018-08-07T01:22:16.5272607+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:22:16.5565326+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:22:16.5795945+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:22:16.6041020+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:22:16.6278787+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:22:16.6316005+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:22:16.6545665+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:22:16.7861261+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:22:17.3845183+03:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:22:17.4579765+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:22:17.5010510+03:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-07T01:22:17.5888047+03:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-07T01:22:17.6150166+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-07T01:22:17.6418171+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-07T01:22:17.6689812+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-07T01:22:17.6768757+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-07T01:22:17.7064696+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-07T01:22:17.7425273+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:22:17.7992132+03:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:22:17.8176320+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:22:18.3271367+03:00 0HLFRTC9132KB:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-07T01:22:18.3307484+03:00 0HLFRTC9132KC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-07T01:22:18.3615330+03:00 0HLFRTC9132KB:00000001 [INF] Request finished in 87.9207ms 200  (791a596a)
+2018-08-07T01:22:18.5419580+03:00 0HLFRTC9132KC:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:23:20.2929771+03:00 0HLFRTC9132KC:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-07T01:23:20.7061403+03:00 0HLFRTC9132KC:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 62169.2704ms (afa2e885)
+2018-08-07T01:23:20.7152196+03:00 0HLFRTC9132KC:00000001 [INF] Request finished in 62441.8833ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:23:20.7614279+03:00 0HLFRTC9132KC:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/css/site.css   (ca22a1cb)
+2018-08-07T01:23:20.8101726+03:00 0HLFRTC9132KD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/images/banner1.svg   (ca22a1cb)
+2018-08-07T01:23:20.8112138+03:00 0HLFRTC9132KE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/images/banner2.svg   (ca22a1cb)
+2018-08-07T01:23:20.8678544+03:00 0HLFRTC9132KD:00000001 [INF] The file "/images/banner1.svg" was not modified (f1f8d725)
+2018-08-07T01:23:20.8691501+03:00 0HLFRTC9132KC:00000002 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-08-07T01:23:20.8730510+03:00 0HLFRTC9132KE:00000001 [INF] The file "/images/banner2.svg" was not modified (f1f8d725)
+2018-08-07T01:23:20.9758092+03:00 0HLFRTC9132KD:00000001 [INF] Request finished in 112.415ms 304 image/svg+xml (791a596a)
+2018-08-07T01:23:21.0015445+03:00 0HLFRTC9132KE:00000001 [INF] Request finished in 112.4052ms 304 image/svg+xml (791a596a)
+2018-08-07T01:23:21.0557123+03:00 0HLFRTC9132KC:00000002 [INF] Request finished in 125.1615ms 304 text/css (791a596a)
+2018-08-07T01:23:21.1234612+03:00 0HLFRTC9132KG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/images/banner3.svg   (ca22a1cb)
+2018-08-07T01:23:21.1713645+03:00 0HLFRTC9132KF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/images/banner4.svg   (ca22a1cb)
+2018-08-07T01:23:21.2178895+03:00 0HLFRTC9132KD:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-08-07T01:23:21.2413639+03:00 0HLFRTC9132KE:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-07T01:23:21.3093224+03:00 0HLFRTC9132KE:00000002 [INF] The file "/lib/jquery/dist/jquery.js" was not modified (f1f8d725)
+2018-08-07T01:23:21.3313009+03:00 0HLFRTC9132KC:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA   (ca22a1cb)
+2018-08-07T01:23:21.3561220+03:00 0HLFRTC9132KH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-08-07T01:23:21.4209790+03:00 0HLFRTC9132KG:00000001 [INF] The file "/images/banner3.svg" was not modified (f1f8d725)
+2018-08-07T01:23:21.4317737+03:00 0HLFRTC9132KD:00000002 [INF] The file "/lib/bootstrap/dist/js/bootstrap.js" was not modified (f1f8d725)
+2018-08-07T01:23:21.4818185+03:00 0HLFRTC9132KF:00000001 [INF] The file "/images/banner4.svg" was not modified (f1f8d725)
+2018-08-07T01:23:21.5090872+03:00 0HLFRTC9132KG:00000001 [INF] Request finished in 445.4108ms 304 image/svg+xml (791a596a)
+2018-08-07T01:23:21.5563105+03:00 0HLFRTC9132KE:00000002 [INF] Request finished in 208.7889ms 304 application/javascript (791a596a)
+2018-08-07T01:23:21.5768784+03:00 0HLFRTC9132KH:00000001 [INF] The file "/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" was not modified (f1f8d725)
+2018-08-07T01:23:21.6023724+03:00 0HLFRTC9132KD:00000002 [INF] Request finished in 403.6806ms 304 application/javascript (791a596a)
+2018-08-07T01:23:21.6078395+03:00 0HLFRTC9132KH:00000001 [INF] Request finished in 552.5615ms 304 font/woff2 (791a596a)
+2018-08-07T01:23:21.6150447+03:00 0HLFRTC9132KF:00000001 [INF] Request finished in 479.4669ms 304 image/svg+xml (791a596a)
+2018-08-07T01:23:21.6364553+03:00 0HLFRTC9132KC:00000003 [INF] The file "/js/site.js" was not modified (f1f8d725)
+2018-08-07T01:23:21.6627931+03:00 0HLFRTC9132KC:00000003 [INF] Request finished in 489.2755ms 304 application/javascript (791a596a)
+2018-08-07T01:24:23.0617513+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:24:23.0914586+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:24:23.1144786+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:24:23.1389138+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:24:23.1618747+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:24:23.1851758+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:24:23.2076681+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:24:23.3137390+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:24:23.7765076+03:00  [INF] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:24:23.8509678+03:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:24:23.8694342+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-07T01:24:23.9495936+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-07T01:24:23.9752888+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-07T01:24:24.0011211+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-07T01:24:24.0272149+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-07T01:24:24.0335843+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-07T01:24:24.0602455+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-07T01:24:24.0667691+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:24:24.0934796+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:24:24.1186905+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:24:24.4353445+03:00 0HLFRTDEJNJQV:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-07T01:24:24.4373922+03:00 0HLFRTDEJNJR0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-07T01:24:24.4614960+03:00 0HLFRTDEJNJQV:00000001 [INF] Request finished in 96.2819ms 200  (791a596a)
+2018-08-07T01:24:24.6819625+03:00 0HLFRTDEJNJR0:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:24:26.8624339+03:00 0HLFRTDEJNJR0:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-07T01:24:27.3344505+03:00 0HLFRTDEJNJR0:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 2677.863ms (afa2e885)
+2018-08-07T01:24:27.3419432+03:00 0HLFRTDEJNJR0:00000001 [INF] Request finished in 2976.3878ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:24:28.8865260+03:00 0HLFRTDEJNJQV:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/home   (ca22a1cb)
+2018-08-07T01:24:28.9008091+03:00 0HLFRTDEJNJQV:00000002 [INF] Authorization failed for user: null. (a4ab1676)
+2018-08-07T01:24:28.9081431+03:00 0HLFRTDEJNJQV:00000002 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-08-07T01:24:28.9154902+03:00 0HLFRTDEJNJQV:00000002 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-08-07T01:24:28.9544722+03:00 0HLFRTDEJNJQV:00000002 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-08-07T01:24:28.9572871+03:00 0HLFRTDEJNJQV:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" in 63.7757ms (afa2e885)
+2018-08-07T01:24:28.9612646+03:00 0HLFRTDEJNJQV:00000002 [INF] Request finished in 76.7471ms 302  (791a596a)
+2018-08-07T01:24:28.9928351+03:00 0HLFRTDEJNJR0:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Account/Login?ReturnUrl=%2Fadmin%2Fhome   (ca22a1cb)
+2018-08-07T01:24:29.0441981+03:00 0HLFRTDEJNJR0:00000002 [INF] Executing action method "CongDoanCoreApp.Controllers.AccountController.Login (CongDoanCoreApp)" with arguments (["/admin/home"]) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:24:29.0994292+03:00 0HLFRTDEJNJR0:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-08-07T01:24:29.4555857+03:00 0HLFRTDEJNJR0:00000002 [INF] Executed action "CongDoanCoreApp.Controllers.AccountController.Login (CongDoanCoreApp)" in 439.4149ms (afa2e885)
+2018-08-07T01:24:29.5254927+03:00 0HLFRTDEJNJR0:00000002 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+q1cioujj.oye(593,30): error CS0246: The type or namespace name 'ApplicationUser' could not be found (are you missing a using directive or an assembly reference?)
+E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\Views\Account\Login.cshtml(21,135): error CS1061: 'LoginViewModel' does not contain a definition for 'Email' and no extension method 'Email' accepting a first argument of type 'LoginViewModel' could be found (are you missing a using directive or an assembly reference?)
+E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\Views\Account\Login.cshtml(22,135): error CS1061: 'LoginViewModel' does not contain a definition for 'Email' and no extension method 'Email' accepting a first argument of type 'LoginViewModel' could be found (are you missing a using directive or an assembly reference?)
+E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\Views\Account\Login.cshtml(23,147): error CS1061: 'LoginViewModel' does not contain a definition for 'Email' and no extension method 'Email' accepting a first argument of type 'LoginViewModel' could be found (are you missing a using directive or an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-08-07T01:24:29.5750386+03:00 0HLFRTDEJNJR0:00000002 [INF] Request finished in 600.877ms 500 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:25:26.0673734+03:00 0HLFRTDEJNJQV:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Account/Login?ReturnUrl=%2Fadmin%2Fhome   (ca22a1cb)
+2018-08-07T01:25:26.0931951+03:00 0HLFRTDEJNJQV:00000003 [INF] Executing action method "CongDoanCoreApp.Controllers.AccountController.Login (CongDoanCoreApp)" with arguments (["/admin/home"]) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:25:26.0975427+03:00 0HLFRTDEJNJQV:00000003 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-08-07T01:25:26.2524553+03:00 0HLFRTDEJNJQV:00000003 [INF] Executed action "CongDoanCoreApp.Controllers.AccountController.Login (CongDoanCoreApp)" in 160.1883ms (afa2e885)
+2018-08-07T01:25:26.3121151+03:00 0HLFRTDEJNJQV:00000003 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+smhet4bu.fpp(593,30): error CS0246: The type or namespace name 'ApplicationUser' could not be found (are you missing a using directive or an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-08-07T01:25:26.4010876+03:00 0HLFRTDEJNJQV:00000003 [INF] Request finished in 317.1853ms 500 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:25:26.6114286+03:00 0HLFRTDEJNJR0:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/favicon.ico   (ca22a1cb)
+2018-08-07T01:25:26.6243417+03:00 0HLFRTDEJNJR0:00000003 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2018-08-07T01:25:26.6427514+03:00 0HLFRTDEJNJR0:00000003 [INF] Request finished in 40.3131ms 200 image/x-icon (791a596a)
+2018-08-07T01:26:12.6008078+03:00 0HLFRTDEJNJQV:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Account/Login?ReturnUrl=%2Fadmin%2Fhome   (ca22a1cb)
+2018-08-07T01:26:12.6043795+03:00 0HLFRTDEJNJQV:00000004 [INF] Executing action method "CongDoanCoreApp.Controllers.AccountController.Login (CongDoanCoreApp)" with arguments (["/admin/home"]) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:26:12.6288154+03:00 0HLFRTDEJNJQV:00000004 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-08-07T01:26:12.8977743+03:00 0HLFRTDEJNJQV:00000004 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-08-07T01:26:13.1051732+03:00 0HLFRTDEJNJQV:00000004 [INF] Executed action "CongDoanCoreApp.Controllers.AccountController.Login (CongDoanCoreApp)" in 499.7427ms (afa2e885)
+2018-08-07T01:26:13.1308892+03:00 0HLFRTDEJNJQV:00000004 [INF] Request finished in 508.5652ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:26:13.2320359+03:00 0HLFRTDEJNJR0:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/favicon.ico   (ca22a1cb)
+2018-08-07T01:26:13.2370527+03:00 0HLFRTDEJNJR0:00000004 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2018-08-07T01:26:13.2482617+03:00 0HLFRTDEJNJR0:00000004 [INF] Request finished in 15.9456ms 200 image/x-icon (791a596a)
+2018-08-07T01:26:19.8901563+03:00 0HLFRTDEJNJQV:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-07T01:26:19.8954445+03:00 0HLFRTDEJNJQV:00000005 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:26:20.1279389+03:00 0HLFRTDEJNJQV:00000005 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-07T01:26:20.1544405+03:00 0HLFRTDEJNJQV:00000005 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 259.0875ms (afa2e885)
+2018-08-07T01:26:20.6274392+03:00 0HLFRTDEJNJR1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-07T01:26:20.6388166+03:00 0HLFRTDEJNJR3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/css/custom.css   (ca22a1cb)
+2018-08-07T01:26:20.6798081+03:00 0HLFRTDEJNJR4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/test%20v2.2.4/jquery.js   (ca22a1cb)
+2018-08-07T01:26:20.7053270+03:00 0HLFRTDEJNJR7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-07T01:26:20.7213910+03:00 0HLFRTDEJNJR2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-07T01:26:20.7405836+03:00 0HLFRTDEJNJR0:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-07T01:26:20.7713310+03:00 0HLFRTDEJNJR5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/login/index.js   (ca22a1cb)
+2018-08-07T01:26:20.7884739+03:00 0HLFRTDEJNJR6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-validation/licalization/messages_vi.js   (ca22a1cb)
+2018-08-07T01:26:20.8041537+03:00 0HLFRTDEJNJQV:00000005 [INF] Request finished in 268.0708ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:26:20.8234500+03:00 0HLFRTDEJNJR8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-07T01:26:20.9772402+03:00 0HLFRTDEJNJR3:00000001 [INF] The file "/admin-side/css/custom.css" was not modified (f1f8d725)
+2018-08-07T01:26:20.9886099+03:00 0HLFRTDEJNJR9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/shared/congdoan.js   (ca22a1cb)
+2018-08-07T01:26:21.0002893+03:00 0HLFRTDEJNJR1:00000001 [INF] The file "/lib/nprogress/nprogress.css" was not modified (f1f8d725)
+2018-08-07T01:26:21.0137082+03:00 0HLFRTDEJNJR4:00000001 [INF] The file "/lib/jquery/test v2.2.4/jquery.js" was not modified (f1f8d725)
+2018-08-07T01:26:21.0657747+03:00 0HLFRTDEJNJR7:00000001 [INF] The file "/lib/notifyjs/dist/styles/metro/notify-metro.js" was not modified (f1f8d725)
+2018-08-07T01:26:21.0804192+03:00 0HLFRTDEJNJR2:00000001 [INF] The file "/lib/notifyjs/dist/styles/metro/notify-metro.css" was not modified (f1f8d725)
+2018-08-07T01:26:21.1198432+03:00 0HLFRTDEJNJR5:00000001 [INF] Sending file. Request path: '"/app/controllers/login/index.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\controllers\login\index.js"' (27b0a520)
+2018-08-07T01:26:21.1385188+03:00 0HLFRTDEJNJR6:00000001 [INF] The file "/lib/jquery-validation/licalization/messages_vi.js" was not modified (f1f8d725)
+2018-08-07T01:26:21.3003270+03:00 0HLFRTDEJNJR8:00000001 [INF] The file "/lib/notifyjs/dist/notify.js" was not modified (f1f8d725)
+2018-08-07T01:26:21.3290086+03:00 0HLFRTDEJNJR3:00000001 [INF] Request finished in 800.3391ms 304 text/css (791a596a)
+2018-08-07T01:26:21.3547023+03:00 0HLFRTDEJNJR0:00000005 [INF] The file "/lib/font-awesome/css/font-awesome.css" was not modified (f1f8d725)
+2018-08-07T01:26:21.3652971+03:00 0HLFRTDEJNJR7:00000001 [INF] Request finished in 810.4019ms 304 application/javascript (791a596a)
+2018-08-07T01:26:21.3755017+03:00 0HLFRTDEJNJR1:00000001 [INF] Request finished in 812.6855ms 304 text/css (791a596a)
+2018-08-07T01:26:21.3914573+03:00 0HLFRTDEJNJR4:00000001 [INF] Request finished in 762.9864ms 304 application/javascript (791a596a)
+2018-08-07T01:26:21.4202216+03:00 0HLFRTDEJNJR2:00000001 [INF] Request finished in 892.4346ms 304 text/css (791a596a)
+2018-08-07T01:26:21.4454752+03:00 0HLFRTDEJNJR6:00000001 [INF] Request finished in 887.5954ms 304 application/javascript (791a596a)
+2018-08-07T01:26:21.4814238+03:00 0HLFRTDEJNJR9:00000001 [INF] Sending file. Request path: '"/app/shared/congdoan.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\shared\congdoan.js"' (27b0a520)
+2018-08-07T01:26:21.5018532+03:00 0HLFRTDEJNJR5:00000001 [INF] Request finished in 1004.0518ms 200 application/javascript (791a596a)
+2018-08-07T01:26:21.5209635+03:00 0HLFRTDEJNJQV:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/animate.css/animate.css   (ca22a1cb)
+2018-08-07T01:26:21.5216261+03:00 0HLFRTDEJNJR9:00000001 [INF] Request finished in 1039.6103ms 200 application/javascript (791a596a)
+2018-08-07T01:26:21.5684041+03:00 0HLFRTDEJNJR8:00000001 [INF] Request finished in 915.1866ms 304 application/javascript (791a596a)
+2018-08-07T01:26:21.6186170+03:00 0HLFRTDEJNJQV:00000006 [INF] The file "/lib/animate.css/animate.css" was not modified (f1f8d725)
+2018-08-07T01:26:21.6228608+03:00 0HLFRTDEJNJQV:00000006 [INF] Request finished in 420.0799ms 304 text/css (791a596a)
+2018-08-07T01:26:21.6278152+03:00 0HLFRTDEJNJR0:00000005 [INF] Request finished in 1172.0565ms 304 text/css (791a596a)
+2018-08-07T01:26:30.0389665+03:00 0HLFRTDEJNJR3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/home   (ca22a1cb)
+2018-08-07T01:26:30.0459547+03:00 0HLFRTDEJNJR3:00000002 [INF] Authorization failed for user: null. (a4ab1676)
+2018-08-07T01:26:30.0499468+03:00 0HLFRTDEJNJR3:00000002 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-08-07T01:26:30.0528277+03:00 0HLFRTDEJNJR3:00000002 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-08-07T01:26:30.0780080+03:00 0HLFRTDEJNJR3:00000002 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-08-07T01:26:30.1020953+03:00 0HLFRTDEJNJR3:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" in 38.5805ms (afa2e885)
+2018-08-07T01:26:30.1063095+03:00 0HLFRTDEJNJR3:00000002 [INF] Request finished in 67.371ms 302  (791a596a)
+2018-08-07T01:26:30.1136993+03:00 0HLFRTDEJNJR1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Account/Login?ReturnUrl=%2Fadmin%2Fhome   (ca22a1cb)
+2018-08-07T01:26:30.1373943+03:00 0HLFRTDEJNJR1:00000002 [INF] Executing action method "CongDoanCoreApp.Controllers.AccountController.Login (CongDoanCoreApp)" with arguments (["/admin/home"]) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:26:30.1617634+03:00 0HLFRTDEJNJR1:00000002 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-08-07T01:26:30.1646907+03:00 0HLFRTDEJNJR1:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-08-07T01:26:30.1909034+03:00 0HLFRTDEJNJR1:00000002 [INF] Executed action "CongDoanCoreApp.Controllers.AccountController.Login (CongDoanCoreApp)" in 52.7593ms (afa2e885)
+2018-08-07T01:26:30.2180073+03:00 0HLFRTDEJNJR1:00000002 [INF] Request finished in 80.1918ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:26:32.6239055+03:00 0HLFRTDEJNJR4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-07T01:26:32.6302479+03:00 0HLFRTDEJNJR4:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:26:32.6341954+03:00 0HLFRTDEJNJR4:00000002 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-07T01:26:32.6389574+03:00 0HLFRTDEJNJR4:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 10.559ms (afa2e885)
+2018-08-07T01:26:32.6464594+03:00 0HLFRTDEJNJR4:00000002 [INF] Request finished in 18.778ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:26:36.6295168+03:00 0HLFRTDEJNJR7:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-08-07T01:26:36.6771535+03:00 0HLFRTDEJNJR7:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:26:36.7036211+03:00 0HLFRTDEJNJR7:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:26:36.8441878+03:00 0HLFRTDEJNJR7:00000002 [INF] Executed DbCommand ("48"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-07T01:26:37.1111360+03:00 0HLFRTDEJNJR7:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-07T01:26:37.1746886+03:00 0HLFRTDEJNJR7:00000002 [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-07T01:26:37.1886150+03:00 0HLFRTDEJNJR7:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-07T01:26:37.2148609+03:00 0HLFRTDEJNJR7:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-07T01:26:37.2346418+03:00 0HLFRTDEJNJR7:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-08-07T01:26:37.2374330+03:00 0HLFRTDEJNJR7:00000002 [INF] User logged in. (fdce0db4)
+2018-08-07T01:26:37.2446007+03:00 0HLFRTDEJNJR7:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-07T01:26:37.3521219+03:00 0HLFRTDEJNJR7:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 712.6463ms (afa2e885)
+2018-08-07T01:26:37.3568170+03:00 0HLFRTDEJNJR7:00000002 [INF] Request finished in 727.4228ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-07T01:26:37.3689854+03:00 0HLFRTDEJNJR2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Admin/Home/Index   (ca22a1cb)
+2018-08-07T01:26:37.3838255+03:00 0HLFRTDEJNJR2:00000002 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-07T01:26:37.3865521+03:00 0HLFRTDEJNJR2:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:31:41.2935026+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:31:41.3225604+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:31:41.3459651+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:31:41.3495754+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:31:41.3534785+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:31:41.3758526+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:31:41.3990724+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:31:41.5075538+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:31:41.9669440+03:00  [INF] Executed DbCommand ("32"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:31:42.0389031+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:31:42.0775583+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-07T01:31:42.1488906+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-07T01:31:42.1758581+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-07T01:31:42.2024941+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-07T01:31:42.2083496+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-07T01:31:42.2345106+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-07T01:31:42.2596846+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-07T01:31:42.2867558+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:31:42.3132146+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:31:42.3393733+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:31:42.7040143+03:00 0HLFRTHH7364Q:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-07T01:31:42.6991477+03:00 0HLFRTHH7364P:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-07T01:31:42.7325412+03:00 0HLFRTHH7364P:00000001 [INF] Request finished in 97.1874ms 200  (791a596a)
+2018-08-07T01:31:42.9428417+03:00 0HLFRTHH7364Q:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:31:45.2673537+03:00 0HLFRTHH7364Q:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-07T01:31:45.7560706+03:00 0HLFRTHH7364Q:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 2824.1482ms (afa2e885)
+2018-08-07T01:31:45.7625449+03:00 0HLFRTHH7364Q:00000001 [INF] Request finished in 3130.3413ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:31:50.3907152+03:00 0HLFRTHH7364P:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/login   (ca22a1cb)
+2018-08-07T01:31:50.3994043+03:00 0HLFRTHH7364P:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:31:50.6348712+03:00 0HLFRTHH7364P:00000002 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-07T01:31:50.6653101+03:00 0HLFRTHH7364P:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 267.2988ms (afa2e885)
+2018-08-07T01:31:50.6740743+03:00 0HLFRTHH7364P:00000002 [INF] Request finished in 278.2872ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:31:51.7145846+03:00 0HLFRTHH7364Q:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-08-07T01:31:51.8187819+03:00 0HLFRTHH7364Q:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:31:51.8380454+03:00 0HLFRTHH7364Q:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:31:51.9968169+03:00 0HLFRTHH7364Q:00000002 [INF] Executed DbCommand ("48"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-07T01:31:58.5569979+03:00 0HLFRTHH7364Q:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-07T01:31:58.6439829+03:00 0HLFRTHH7364Q:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-07T01:31:58.6869545+03:00 0HLFRTHH7364Q:00000002 [INF] Executed DbCommand ("15"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-07T01:31:58.7236275+03:00 0HLFRTHH7364Q:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-07T01:31:58.7351376+03:00 0HLFRTHH7364Q:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-07T01:31:58.8332670+03:00 0HLFRTHH7364Q:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 7066.932ms (afa2e885)
+2018-08-07T01:31:58.9177694+03:00 0HLFRTHH7364Q:00000002 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: value
+   at System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   at System.Security.Claims.Claim..ctor(String type, String value)
+   at CongDoanCoreApp.Helpers.CustomClaimsPrincipalFactory.<CreateAsync>d__2.MoveNext() in E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\Helpers\CustomClaimsPrincipalFactory.cs:line 22
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.<CreateUserPrincipalAsync>d__25.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.<SignInAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.<SignInOrTwoFactorAsync>d__56.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.<PasswordSignInAsync>d__35.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.<PasswordSignInAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at CongDoanCoreApp.Areas.Admin.Controllers.LoginController.<Authen>d__5.MoveNext() in E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\Areas\Admin\Controllers\LoginController.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-08-07T01:31:58.9939257+03:00 0HLFRTHH7364Q:00000002 [INF] Request finished in 7299.2646ms 500 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:34:09.4212055+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:34:09.4506430+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:34:09.4749032+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:34:09.4982542+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:34:09.5214099+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:34:09.5438256+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:34:09.5473421+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:34:09.6543035+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:34:10.1224569+03:00  [INF] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:34:10.1939896+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:34:10.2320990+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-07T01:34:10.3150059+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-07T01:34:10.3414045+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-07T01:34:10.3476207+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-07T01:34:10.3529402+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-07T01:34:10.3781862+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-07T01:34:10.4044521+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-07T01:34:10.4318758+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:34:10.4582654+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:34:10.4645818+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:34:10.7945162+03:00 0HLFRTITBNVPJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-07T01:34:10.7926389+03:00 0HLFRTITBNVPK:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-07T01:34:10.8236721+03:00 0HLFRTITBNVPK:00000001 [INF] Request finished in 78.5782ms 200  (791a596a)
+2018-08-07T01:34:11.0544115+03:00 0HLFRTITBNVPJ:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:34:13.2271315+03:00 0HLFRTITBNVPJ:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-07T01:34:13.7803045+03:00 0HLFRTITBNVPJ:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 2733.7028ms (afa2e885)
+2018-08-07T01:34:13.8133344+03:00 0HLFRTITBNVPJ:00000001 [INF] Request finished in 3045.3842ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:34:25.5255263+03:00 0HLFRTITBNVPK:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/login   (ca22a1cb)
+2018-08-07T01:34:25.5547771+03:00 0HLFRTITBNVPK:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:34:25.7861400+03:00 0HLFRTITBNVPK:00000002 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-07T01:34:25.8331375+03:00 0HLFRTITBNVPK:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 279.9978ms (afa2e885)
+2018-08-07T01:34:25.8364185+03:00 0HLFRTITBNVPK:00000002 [INF] Request finished in 313.0087ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:34:27.4816864+03:00 0HLFRTITBNVPJ:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-08-07T01:34:27.5669809+03:00 0HLFRTITBNVPJ:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:34:27.5892463+03:00 0HLFRTITBNVPJ:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:34:27.7501523+03:00 0HLFRTITBNVPJ:00000002 [INF] Executed DbCommand ("49"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-07T01:34:51.1031723+03:00 0HLFRTITBNVPJ:00000002 [INF] Executed DbCommand ("20"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-07T01:34:51.2122535+03:00 0HLFRTITBNVPJ:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-07T01:34:51.2299525+03:00 0HLFRTITBNVPJ:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-07T01:34:51.2795228+03:00 0HLFRTITBNVPJ:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-07T01:34:52.8403523+03:00 0HLFRTITBNVPJ:00000002 [INF] Executed DbCommand ("17"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-07T01:35:10.1171946+03:00 0HLFRTITBNVPJ:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-08-07T01:35:10.1426740+03:00 0HLFRTITBNVPJ:00000002 [INF] User logged in. (fdce0db4)
+2018-08-07T01:35:10.1701677+03:00 0HLFRTITBNVPJ:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-07T01:35:10.2738470+03:00 0HLFRTITBNVPJ:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 42762.2381ms (afa2e885)
+2018-08-07T01:35:10.2804319+03:00 0HLFRTITBNVPJ:00000002 [INF] Request finished in 42816.904ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-07T01:35:10.2971460+03:00 0HLFRTITBNVPK:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Admin/Home/Index   (ca22a1cb)
+2018-08-07T01:35:10.3309322+03:00 0HLFRTITBNVPK:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-07T01:35:10.3547894+03:00 0HLFRTITBNVPK:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:35:17.9483607+03:00 0HLFRTITBNVPK:00000003 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-07T01:35:18.2040174+03:00 0HLFRTITBNVPK:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" in 7897.9558ms (afa2e885)
+2018-08-07T01:35:18.2137779+03:00 0HLFRTITBNVPK:00000003 [INF] Request finished in 7912.5084ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:35:18.3279477+03:00 0HLFRTITBNVPJ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2018-08-07T01:35:18.3286767+03:00 0HLFRTITBNVPK:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/images/img.jpg   (ca22a1cb)
+2018-08-07T01:35:18.3390097+03:00 0HLFRTITBNVPL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2018-08-07T01:35:18.4095498+03:00 0HLFRTITBNVPL:00000001 [INF] Sending file. Request path: '"/lib/fastclick/lib/fastclick.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\fastclick\lib\fastclick.js"' (27b0a520)
+2018-08-07T01:35:18.4109804+03:00 0HLFRTITBNVPJ:00000003 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2018-08-07T01:35:18.4147172+03:00 0HLFRTITBNVPK:00000004 [INF] Sending file. Request path: '"/admin-side/images/img.jpg"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\admin-side\images\img.jpg"' (27b0a520)
+2018-08-07T01:35:18.4583664+03:00 0HLFRTITBNVPK:00000004 [INF] Request finished in 170.5213ms 200 image/jpeg (791a596a)
+2018-08-07T01:35:18.5771220+03:00 0HLFRTITBNVPM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.js   (ca22a1cb)
+2018-08-07T01:35:18.6063593+03:00 0HLFRTITBNVPN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.pie.js   (ca22a1cb)
+2018-08-07T01:35:18.6356374+03:00 0HLFRTITBNVPK:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.js   (ca22a1cb)
+2018-08-07T01:35:18.6805884+03:00 0HLFRTITBNVPL:00000001 [INF] Request finished in 137.2215ms 200 application/javascript (791a596a)
+2018-08-07T01:35:18.6978768+03:00 0HLFRTITBNVPJ:00000003 [INF] Request finished in 177.5478ms 200 text/css (791a596a)
+2018-08-07T01:35:18.7906163+03:00 0HLFRTITBNVPP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.resize.js   (ca22a1cb)
+2018-08-07T01:35:18.8142515+03:00 0HLFRTITBNVPK:00000005 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\nprogress\nprogress.js"' (27b0a520)
+2018-08-07T01:35:18.8595037+03:00 0HLFRTITBNVPO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/Chart.js/dist/Chart.js   (ca22a1cb)
+2018-08-07T01:35:18.8820413+03:00 0HLFRTITBNVPN:00000001 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.pie.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.pie.js"' (27b0a520)
+2018-08-07T01:35:18.9423170+03:00 0HLFRTITBNVPR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.stack.js   (ca22a1cb)
+2018-08-07T01:35:18.9705390+03:00 0HLFRTITBNVPK:00000005 [INF] Request finished in 416.295ms 200 application/javascript (791a596a)
+2018-08-07T01:35:18.9852794+03:00 0HLFRTITBNVPM:00000001 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.js"' (27b0a520)
+2018-08-07T01:35:18.9870324+03:00 0HLFRTITBNVPP:00000001 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.resize.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.resize.js"' (27b0a520)
+2018-08-07T01:35:18.9916648+03:00 0HLFRTITBNVPN:00000001 [INF] Request finished in 466.9229ms 200 application/javascript (791a596a)
+2018-08-07T01:35:19.0863043+03:00 0HLFRTITBNVPJ:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-sparkline/dist/jquery.sparkline.js   (ca22a1cb)
+2018-08-07T01:35:19.1475383+03:00 0HLFRTITBNVPO:00000001 [INF] Sending file. Request path: '"/lib/Chart.js/dist/Chart.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\Chart.js\dist\Chart.js"' (27b0a520)
+2018-08-07T01:35:19.1740916+03:00 0HLFRTITBNVPU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/DateJS/build/date.js   (ca22a1cb)
+2018-08-07T01:35:19.2462800+03:00 0HLFRTITBNVPT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot.curvedlines/curvedLines.js   (ca22a1cb)
+2018-08-07T01:35:19.2547688+03:00 0HLFRTITBNVPP:00000001 [INF] Request finished in 590.7748ms 200 application/javascript (791a596a)
+2018-08-07T01:35:19.3081843+03:00 0HLFRTITBNVPU:00000001 [INF] Sending file. Request path: '"/lib/DateJS/build/date.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\DateJS\build\date.js"' (27b0a520)
+2018-08-07T01:35:19.3121333+03:00 0HLFRTITBNVPJ:00000004 [INF] Sending file. Request path: '"/lib/jquery-sparkline/dist/jquery.sparkline.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-sparkline\dist\jquery.sparkline.js"' (27b0a520)
+2018-08-07T01:35:19.3149756+03:00 0HLFRTITBNVPR:00000001 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.stack.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.stack.js"' (27b0a520)
+2018-08-07T01:35:19.3197765+03:00 0HLFRTITBNVPQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2018-08-07T01:35:19.3869959+03:00 0HLFRTITBNVPT:00000001 [INF] Sending file. Request path: '"/lib/flot.curvedlines/curvedLines.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot.curvedlines\curvedLines.js"' (27b0a520)
+2018-08-07T01:35:19.4587675+03:00 0HLFRTITBNVQ0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-07T01:35:19.4868104+03:00 0HLFRTITBNVPR:00000001 [INF] Request finished in 570.4286ms 200 application/javascript (791a596a)
+2018-08-07T01:35:19.5413440+03:00 0HLFRTITBNVQ1:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot.orderbars/js/jquery.flot.orderBars.js   (ca22a1cb)
+2018-08-07T01:35:19.5566219+03:00 0HLFRTITBNVQ1:00000001 [INF] Sending file. Request path: '"/lib/flot.orderbars/js/jquery.flot.orderBars.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot.orderbars\js\jquery.flot.orderBars.js"' (27b0a520)
+2018-08-07T01:35:19.5595459+03:00 0HLFRTITBNVPS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot-spline/js/jquery.flot.spline.js   (ca22a1cb)
+2018-08-07T01:35:19.5849150+03:00 0HLFRTITBNVPQ:00000001 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.js"' (27b0a520)
+2018-08-07T01:35:19.6071853+03:00 0HLFRTITBNVPV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootbox/bootbox.js   (ca22a1cb)
+2018-08-07T01:35:19.6549610+03:00 0HLFRTITBNVQ0:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-07T01:35:19.6767754+03:00 0HLFRTITBNVQ2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.time.js   (ca22a1cb)
+2018-08-07T01:35:19.7239746+03:00 0HLFRTITBNVQ2:00000001 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.time.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.time.js"' (27b0a520)
+2018-08-07T01:35:19.7714058+03:00 0HLFRTITBNVQ4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/js/custom.js   (ca22a1cb)
+2018-08-07T01:35:19.7816797+03:00 0HLFRTITBNVPV:00000001 [INF] Sending file. Request path: '"/lib/bootbox/bootbox.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootbox\bootbox.js"' (27b0a520)
+2018-08-07T01:35:19.7884866+03:00 0HLFRTITBNVPM:00000001 [INF] Request finished in 1287.4331ms 200 application/javascript (791a596a)
+2018-08-07T01:35:19.7902717+03:00 0HLFRTITBNVPS:00000001 [INF] Sending file. Request path: '"/lib/flot-spline/js/jquery.flot.spline.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot-spline\js\jquery.flot.spline.js"' (27b0a520)
+2018-08-07T01:35:19.8373422+03:00 0HLFRTITBNVQ2:00000001 [INF] Request finished in 186.4352ms 200 application/javascript (791a596a)
+2018-08-07T01:35:19.9068675+03:00 0HLFRTITBNVPV:00000001 [INF] Request finished in 506.0592ms 200 application/javascript (791a596a)
+2018-08-07T01:35:19.9482717+03:00 0HLFRTITBNVPU:00000001 [INF] Request finished in 782.566ms 200 application/javascript (791a596a)
+2018-08-07T01:35:19.9706188+03:00 0HLFRTITBNVQ3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/moment/moment.js   (ca22a1cb)
+2018-08-07T01:35:20.1027929+03:00 0HLFRTITBNVPJ:00000004 [INF] Request finished in 953.96ms 200 application/javascript (791a596a)
+2018-08-07T01:35:20.1168015+03:00 0HLFRTITBNVQ1:00000001 [INF] Request finished in 692.5211ms 200 application/javascript (791a596a)
+2018-08-07T01:35:20.1425770+03:00 0HLFRTITBNVQ3:00000001 [INF] Sending file. Request path: '"/lib/moment/moment.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\moment\moment.js"' (27b0a520)
+2018-08-07T01:35:20.1460763+03:00 0HLFRTITBNVPQ:00000001 [INF] Request finished in 1008.4137ms 200 application/javascript (791a596a)
+2018-08-07T01:35:20.1602960+03:00 0HLFRTITBNVQ0:00000001 [INF] Request finished in 816.9091ms 200 font/woff2 (791a596a)
+2018-08-07T01:35:20.1761556+03:00 0HLFRTITBNVPT:00000001 [INF] Request finished in 1025.0898ms 200 application/javascript (791a596a)
+2018-08-07T01:35:20.2030955+03:00 0HLFRTITBNVQ4:00000001 [INF] Sending file. Request path: '"/admin-side/js/custom.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\admin-side\js\custom.js"' (27b0a520)
+2018-08-07T01:35:20.2320389+03:00 0HLFRTITBNVPO:00000001 [INF] Request finished in 1704.5031ms 200 application/javascript (791a596a)
+2018-08-07T01:35:20.3267768+03:00 0HLFRTITBNVPS:00000001 [INF] Request finished in 583.3329ms 200 application/javascript (791a596a)
+2018-08-07T01:35:20.4883049+03:00 0HLFRTITBNVQ4:00000001 [INF] Request finished in 609.3111ms 200 application/javascript (791a596a)
+2018-08-07T01:35:20.5075136+03:00 0HLFRTITBNVQ3:00000001 [INF] Request finished in 505.8141ms 200 application/javascript (791a596a)
+2018-08-07T01:40:55.8563424+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:40:55.8865752+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:40:55.9096558+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:40:55.9329269+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:40:55.9560581+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:40:55.9797867+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:40:56.0032818+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-07T01:40:56.1044526+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:40:56.5889998+03:00  [INF] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:40:56.6470714+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:40:56.6883760+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-07T01:40:56.7800889+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-07T01:40:56.8063396+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-07T01:40:56.8339107+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-07T01:40:56.8413489+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-07T01:40:56.8683332+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-07T01:40:56.8951141+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-07T01:40:56.9246040+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:40:56.9377261+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:40:56.9498069+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-07T01:40:57.4139587+03:00 0HLFRTMMHLH0N:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-07T01:40:57.4105370+03:00 0HLFRTMMHLH0M:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-07T01:40:57.4456707+03:00 0HLFRTMMHLH0M:00000001 [INF] Request finished in 84.0107ms 200  (791a596a)
+2018-08-07T01:40:57.6641588+03:00 0HLFRTMMHLH0N:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:40:59.8965271+03:00 0HLFRTMMHLH0N:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-07T01:41:00.3924098+03:00 0HLFRTMMHLH0N:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 2757.9641ms (afa2e885)
+2018-08-07T01:41:00.3993930+03:00 0HLFRTMMHLH0N:00000001 [INF] Request finished in 3042.9704ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:41:01.1239954+03:00 0HLFRTMMHLH0M:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-07T01:41:01.1489426+03:00 0HLFRTMMHLH0M:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:41:01.4114607+03:00 0HLFRTMMHLH0M:00000002 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-07T01:41:01.4542608+03:00 0HLFRTMMHLH0M:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 317.7458ms (afa2e885)
+2018-08-07T01:41:01.4577574+03:00 0HLFRTMMHLH0M:00000002 [INF] Request finished in 335.1334ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-07T01:41:02.8103871+03:00 0HLFRTMMHLH0N:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-08-07T01:41:02.8981787+03:00 0HLFRTMMHLH0N:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:41:02.9225429+03:00 0HLFRTMMHLH0N:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-07T01:41:03.1262218+03:00 0HLFRTMMHLH0N:00000002 [INF] Executed DbCommand ("80"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-07T01:41:03.4480859+03:00 0HLFRTMMHLH0N:00000002 [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-07T01:41:03.5230462+03:00 0HLFRTMMHLH0N:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-07T01:41:03.5580241+03:00 0HLFRTMMHLH0N:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-07T01:41:03.5852090+03:00 0HLFRTMMHLH0N:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-07T01:41:03.6274093+03:00 0HLFRTMMHLH0N:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-07T01:41:03.6664056+03:00 0HLFRTMMHLH0N:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-08-07T01:41:03.6917912+03:00 0HLFRTMMHLH0N:00000002 [INF] User logged in. (fdce0db4)
+2018-08-07T01:41:03.6989249+03:00 0HLFRTMMHLH0N:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-07T01:41:03.8239803+03:00 0HLFRTMMHLH0N:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 962.6553ms (afa2e885)
+2018-08-07T01:41:03.8289438+03:00 0HLFRTMMHLH0N:00000002 [INF] Request finished in 1038.4303ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-07T01:41:03.8607590+03:00 0HLFRTMMHLH0M:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Admin/Home/Index   (ca22a1cb)
+2018-08-07T01:41:03.8917415+03:00 0HLFRTMMHLH0M:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-07T01:41:03.8954918+03:00 0HLFRTMMHLH0M:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-07T01:41:07.8399555+03:00 0HLFRTMMHLH0M:00000003 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-07T01:41:08.1066129+03:00 0HLFRTMMHLH0M:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" in 4238.966ms (afa2e885)
+2018-08-07T01:41:08.1129425+03:00 0HLFRTMMHLH0M:00000003 [INF] Request finished in 4269.7407ms 200 text/html; charset=utf-8 (791a596a)

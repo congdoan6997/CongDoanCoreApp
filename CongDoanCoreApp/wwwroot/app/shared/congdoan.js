@@ -12,13 +12,13 @@ var congdoan = {
             // whether to auto-hide the notification
             autoHide: true,
             // if autoHide, hide after milliseconds
-            autoHideDelay: 5000,
+            autoHideDelay: 6000,
             // show the arrow pointing at the element
             arrowShow: true,
             // arrow size in pixels
             arrowSize: 5,
             // position defines the notification position though uses the defaults below
-            position: '...',
+            position: 'top right',
             // default positions
             elementPosition: 'top right',
             globalPosition: 'top right',
@@ -142,7 +142,7 @@ var congdoan = {
 };
 
 $(document).ajaxSend(function (e, xhr, options) {
-    if (options.type.toUpperCase() == "POST" || options.type.toUpperCase() == "PUT") {
+    if (options.type.toUpperCase() === "POST" || options.type.toUpperCase() === "PUT") {
         var token = $('form').find("input[name='__RequestVerificationToken']").val();
         xhr.setRequestHeader("RequestVerificationToken", token);
     }

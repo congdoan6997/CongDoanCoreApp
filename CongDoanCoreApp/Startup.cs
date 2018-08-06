@@ -5,6 +5,7 @@ using CongDoanCoreApp.Data.EF;
 using CongDoanCoreApp.Data.EF.Repositories;
 using CongDoanCoreApp.Data.Entities;
 using CongDoanCoreApp.Data.IRepositories;
+using CongDoanCoreApp.Helpers;
 using CongDoanCoreApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -71,6 +72,8 @@ namespace CongDoanCoreApp
             //services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
 
             services.AddTransient<DbInitializer>();
+
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
 
             services.AddTransient<IEmailSender, EmailSender>();
    

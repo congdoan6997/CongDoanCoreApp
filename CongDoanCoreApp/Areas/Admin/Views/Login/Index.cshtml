@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Đăng nhập hệ thống admin</title>
+    <title>Login admin</title>
 
     @*<!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,16 +52,16 @@
                 <section class="login_content">
                     <form id="frmLogin">
                         @Html.AntiForgeryToken()
-                        <h1>Đăng nhập</h1>
+                        <h1>Login</h1>
                         <div>
-                            <input type="text"  class="form-control" placeholder="Tên đăng nhập"  id="txtUserName" name="userName" />
+                            <input type="text"  class="form-control" placeholder="User Name"  id="txtUserName" name="userName" />
                         </div>
                         <div>
-                            <input type="password"  class="form-control" placeholder="Mật khẩu" id="txtPassword"  name="password" />
+                            <input type="password"  class="form-control" placeholder="Password" id="txtPassword"  name="password" />
                         </div>
                         <div>
-                            <a class="btn btn-default submit" id="btnLogin" href="#">Đăng nhập</a>
-                            <a class="reset_pass" href="#">Quên mật khẩu?</a>
+                            <a class="btn btn-default submit" id="btnLogin" href="#">Login</a>
+                            <a class="reset_pass" href="#">Forget password?</a>
                         </div>
 
                         <div class="clearfix"></div>

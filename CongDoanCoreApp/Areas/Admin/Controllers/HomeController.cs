@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using CongDoanCoreApp.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CongDoanCoreApp.Areas.Admin.Controllers
@@ -9,6 +10,7 @@ namespace CongDoanCoreApp.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
+            var email = User.GetSpecificClaim("Email");
             return View();
         }
     }
