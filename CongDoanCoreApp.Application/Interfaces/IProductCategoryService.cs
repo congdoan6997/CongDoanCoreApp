@@ -1,9 +1,10 @@
 ﻿using CongDoanCoreApp.Application.ViewModels.Product;
+using System;
 using System.Collections.Generic;
 
 namespace CongDoanCoreApp.Application.Interfaces
 {
-    public interface IProductCategoryService
+    public interface IProductCategoryService:IDisposable
     {
         void Add(ProductCategoryViewModel productCategoryViewModel);
 

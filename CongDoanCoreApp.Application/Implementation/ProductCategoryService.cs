@@ -34,6 +34,11 @@ namespace CongDoanCoreApp.Application.Implementation
             _productCategoryRepository.Remove(id);
         }
 
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
+
         public List<ProductCategoryViewModel> GetAll()
         {
             return _productCategoryRepository.FillAll().OrderBy(x => x.ParentId).ProjectTo<ProductCategoryViewModel>().ToList();

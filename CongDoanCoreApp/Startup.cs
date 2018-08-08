@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CongDoanCoreApp.Application.AutoMapper;
 using CongDoanCoreApp.Application.Implementation;
 using CongDoanCoreApp.Application.Interfaces;
 using CongDoanCoreApp.Data.EF;
@@ -15,7 +16,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
-using Serilog.Core;
 using System;
 
 namespace CongDoanCoreApp
@@ -67,21 +67,29 @@ namespace CongDoanCoreApp
             // Add application services.
             services.AddScoped<UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>>();
-
+            Mapper.Initialize(cfg =>
+            {
+                cfg.AddProfile(new DomainToViewModelMappingProfile());
+                cfg.AddProfile(new ViewModelToDomainMappingProfile());
+            });
             //services.AddSingleton(Mapper.Configuration);
-            //services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
+            services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
 
             services.AddTransient<DbInitializer>();
 
             services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
 
             services.AddTransient<IEmailSender, EmailSender>();
-   
 
+            //Repositories
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
+            //services
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
-            services.AddMvc().AddJsonOptions( op => 
-            op.SerializerSettings.ContractResolver =new DefaultContractResolver());
+            services.AddTransient<IFunctionService, FunctionService>();
+
+            services.AddMvc().AddJsonOptions(op =>
+           op.SerializerSettings.ContractResolver = new DefaultContractResolver());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

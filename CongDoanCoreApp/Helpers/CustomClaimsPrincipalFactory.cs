@@ -24,7 +24,7 @@ namespace CongDoanCoreApp.Helpers
                 new Claim("Email", appUser.Email),
                 new Claim("Avatar", appUser.Avatar?? string.Empty),
                 new Claim("FullName", appUser.FullName),
-                new Claim("Role", string.Join(";",roles))
+                new Claim("Roles", string.Join(";",roles))
             });
             return pricipal;
         }
