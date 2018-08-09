@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace CongDoanCoreApp.Areas.Admin.Controllers
 {
-    [Area("admin")]
-    public class AccountController:Controller
+
+    public class AccountController: BaseController
     {
         private readonly SignInManager<AppUser> _signInManager;
 

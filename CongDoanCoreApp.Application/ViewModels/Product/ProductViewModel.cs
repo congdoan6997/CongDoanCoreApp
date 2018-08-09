@@ -59,6 +59,6 @@ namespace CongDoanCoreApp.Application.ViewModels.Product
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public Status Status { get; set; }
-        public ProductCategoryViewModel ProductCategoryViewModel { get; set; }
+        public ProductCategoryViewModel ProductCategory { get; set; }
     }
 }

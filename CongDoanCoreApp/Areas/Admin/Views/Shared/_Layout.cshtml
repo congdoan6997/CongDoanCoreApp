@@ -28,6 +28,8 @@
     <!-- Custom Theme Style -->
     @*<link href="../build/css/custom.min.css" rel="stylesheet">*@
     <link href="~/admin-side/css/custom.css" rel="stylesheet" />
+
+    @RenderSection("Styles", required:false)
 </head>
 
 <body class="nav-md">
@@ -196,6 +198,8 @@
     <!-- Chart.js -->
     @*<script src="../vendors/Chart.js/dist/Chart.min.js"></script>*@
     <script src="~/lib/Chart.js/dist/Chart.js"></script>
+    <!--mustache hook data-->
+    <script src="~/lib/mustache/mustache.js"></script>
     <!-- jQuery Sparklines -->
     @*<script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>*@
     <script src="~/lib/jquery-sparkline/dist/jquery.sparkline.js"></script>
@@ -239,5 +243,7 @@
     <!-- Custom Theme Scripts -->
     @*<script src="../build/js/custom.min.js"></script>*@
     <script src="~/admin-side/js/custom.js"></script>
+
+    @RenderSection("Scripts",required:false)
 </body>
 </html>
