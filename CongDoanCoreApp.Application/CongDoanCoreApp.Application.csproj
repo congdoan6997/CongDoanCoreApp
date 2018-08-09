@@ -13,4 +13,10 @@
     <ProjectReference Include="..\CongDoanCoreApp.Data\CongDoanCoreApp.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Mvc.RazorPages">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.razorpages\2.0.4\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.RazorPages.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

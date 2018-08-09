@@ -25,6 +25,9 @@
   <ItemGroup>
     <ProjectReference Include="..\CongDoanCoreApp.Application\CongDoanCoreApp.Application.csproj" />
     <ProjectReference Include="..\CongDoanCoreApp.Data.EF\CongDoanCoreApp.Data.EF.csproj" />
+    <ProjectReference Include="..\CongDoanCoreApp.Data\CongDoanCoreApp.Data.csproj" />
+    <ProjectReference Include="..\CongDoanCoreApp.Infrastructure\CongDoanCoreApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\CongDoanCoreApp.Utilities\CongDoanCoreApp.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
