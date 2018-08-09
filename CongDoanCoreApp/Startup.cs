@@ -7,6 +7,7 @@ using CongDoanCoreApp.Data.EF.Repositories;
 using CongDoanCoreApp.Data.Entities;
 using CongDoanCoreApp.Data.IRepositories;
 using CongDoanCoreApp.Helpers;
+using CongDoanCoreApp.Infrastructure.Interfaces;
 using CongDoanCoreApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -81,6 +82,7 @@ namespace CongDoanCoreApp
 
             services.AddTransient<IEmailSender, EmailSender>();
 
+            services.AddTransient<IUnitOfWork, EFUnitOfWork>();
             //Repositories
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IFunctionRepository, FunctionRepository>();

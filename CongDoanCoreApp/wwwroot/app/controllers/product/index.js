@@ -3,6 +3,7 @@
 
 var productController = function () {
     this.initialize = function () {
+        loadCategories();
         loadData();
         registerEvents();
     };
@@ -13,15 +14,40 @@ var productController = function () {
             congdoan.configs.pageIndex = 1;
             loadData(true);
         });
+        $('#btnSearch').on('click', function () {
+            loadData();
+        });
+        $('#txtSearchKeyword').on('keypress', function (e) {
+            if (e.which === 13) {
+                loadData();
+            }
+        })
     }
-
+    function loadCategories() {
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: '/admin/product/GetAllCategories',
+            success: function (result) {
+                var render = '<option value="">--Select category--</option>';
+                $.each(result, function (i, item) {
+                    render += "<option value= '" + item.Id + "'>" + item.Name + " </option>";
+                });
+                $('#ddlCategorySearch').html(render);
+            },
+            error: function (error) {
+                console.log(error);
+                congdoan.notify('Connot loading product category data', 'error');
+            }
+        });
+    }
     function loadData(isPageChanged) {
         var template = $('#table-template').html();
         var render = "";
         $.ajax({
             type: "GET",
             data: {
-                categoryId: null,
+                categoryId: $('#ddlCategorySearch').val(),
                 keyword: $("#txtSearchKeyword").val(),
                 page: congdoan.configs.pageIndex,
                 pageSize: congdoan.configs.pageSize
@@ -35,14 +61,15 @@ var productController = function () {
                         Id: item.Id,
                         Name: item.Name,
                         ProductCategoryName: item.ProductCategory.Name,
-                        Price: congdoan.formatNumber( item.Price, 0),
+                        Price: congdoan.formatNumber(item.Price, 0),
                         Image: item.Image === null ? '<img src="/admin-side/images/user.png" width=25/>' : '<img src="' + item.Image + '" width="25" />',
                         CreatedDate: congdoan.dateTimeFormatJson(item.DateCreated),
-                        Status: congdoan.getStatus( item.Status)
+                        Status: congdoan.getStatus(item.Status)
                     });
-
                 });
+                //hiển thị số lượng trang
                 $("#lblTotalRecords").text(result.PageCount);
+                //xuất html danh sách sản phẩm
                 if (render !== '') {
                     $("#tbl-content").html(render);
                 }
@@ -64,7 +91,6 @@ var productController = function () {
             $("#paginationUL").empty();
             $("#paginationUL").removeData("twbs-pagination");
             $("#paginationUL").unbind("page");
-
         }
         //bind pgination
         $("#paginationUL").twbsPagination({

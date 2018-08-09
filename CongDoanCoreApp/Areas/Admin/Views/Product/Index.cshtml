@@ -14,13 +14,20 @@
     </div>
 
     <div class="title_right">
-        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right ">
+
             <div class="input-group">
                 <input type="text" class="form-control" id="txtSearchKeyword" placeholder="Search for...">
                 <span class="input-group-btn">
                     <button class="btn btn-default" id="btnSearch" type="button">Go!</button>
                 </span>
             </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 pull-right ">
+            <select class="form-control " id="ddlCategorySearch">
+                <option value="">--Select category--</option>
+            </select>
         </div>
     </div>
 </div>
@@ -85,7 +92,8 @@
                             </span>
                             Tổng số bản ghi: <strong id="lblTotalRecords"></strong>
                         </div>
-                    </div><div class="col-sm-7">
+                    </div>
+                    <div class="col-sm-7">
                         <div class="dataTables_paginate paging_simple_numbers" id="datatable-checkbox_paginate">
                             <ul id="paginationUL"></ul>
                         </div>
