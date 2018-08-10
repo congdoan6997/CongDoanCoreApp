@@ -4,7 +4,6 @@
         registerEvents();
     };
     function registerEvents() {
-
     }
     function loadData() {
         $.ajax({
@@ -20,13 +19,66 @@
                         parentId: item.ParentId,
                         sortOrder: item.SortOrder
                     });
-
                 });
                 var treeArr = congdoan.unflattern(data);
-
+                treeArr.sort(function (a, b) {
+                    return a.sortOrder - b.sortOrder;
+                });
                 var $tree = $('#treeProductCategory').tree({
                     data: treeArr,
-                    dnd:true
+                    dnd: true,
+                    onDrop: function (target, source, point) {
+                        var targetNode = $(this).tree('getNode', target);
+                        if (point === 'append') {
+                            var children = [];
+                            $.each(targetNode.children, function (i, item) {
+                                children.push({
+                                    key: item.id,
+                                    value: i
+                                });
+                            });
+                            //update to database
+
+                            $.ajax({
+                                url: '/admin/productcategory/updateparentId',
+                                type: 'POST',
+                                datatype: 'json',
+                                data: {
+                                    sourceId: source.id,
+                                    targetId: targetNode.id,
+                                    items: children
+                                },
+                                success: function (result) {
+                                    loadData();
+                                },
+                                error: function (error) {
+                                    console.log(error);
+                                    congdoan.notify('Cannot update database', 'error');
+                                }
+
+                            });
+                        }
+                        //update 
+                        else if (point === 'top' || point === 'bottom') {
+                            $.ajax({
+                                url: '/admin/productcategory/reorder',
+                                type: 'POST',
+                                dataType: 'json',
+                                data: {
+                                    sourceId: source.id,
+                                    targetId: targetNode.id
+                                },
+                                success: function (result) {
+                                    loadData();
+                                },
+                                error: function (error) {
+                                    console.log(error);
+                                    congdoan.notify('Cannot update point', 'error');
+                                }
+
+                            });
+                        }
+                    }
                 });
             },
             error: function (error) {

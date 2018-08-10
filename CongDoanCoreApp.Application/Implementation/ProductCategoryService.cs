@@ -81,7 +81,15 @@ namespace CongDoanCoreApp.Application.Implementation
 
         public void ReOrder(int sourceId, int targetId)
         {
-            throw new NotImplementedException();
+            var source = _productCategoryRepository.FindById(sourceId);
+            var target = _productCategoryRepository.FindById(targetId);
+
+            int temp = source.SortOrder;
+            source.SortOrder = target.SortOrder;
+            target.SortOrder = temp;
+
+            _productCategoryRepository.Update(target);
+            _productCategoryRepository.Update(source);
         }
 
         public void Save()
@@ -96,7 +104,19 @@ namespace CongDoanCoreApp.Application.Implementation
 
         public void UpdateParentId(int sourceId, int targetId, Dictionary<int, int> items)
         {
-            throw new NotImplementedException();
+            var sourceCategory = _productCategoryRepository.FindById(sourceId);
+
+            sourceCategory.ParentId = targetId;
+            _productCategoryRepository.Update(sourceCategory);
+
+            //get all sibling
+            var sibling = _productCategoryRepository.FillAll(x => items.ContainsKey(x.Id));
+
+            foreach (var item in sibling)
+            {
+                item.SortOrder = items[item.Id];
+                _productCategoryRepository.Update(item);
+            }
         }
     }
 }
