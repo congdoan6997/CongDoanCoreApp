@@ -18,6 +18,7 @@
     "bootbox": "~4.4.0",
     "animate.css": "~3.7.0",
     "mustache": "~2.3.1",
-    "twbs-pagination": "~1.4.2"
+    "twbs-pagination": "~1.4.2",
+    "jQuery-EasyUI": "~1.5.3"
   }
 }

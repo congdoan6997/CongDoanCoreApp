@@ -21,7 +21,7 @@ var productController = function () {
             if (e.which === 13) {
                 loadData();
             }
-        })
+        });
     }
     function loadCategories() {
         $.ajax({
