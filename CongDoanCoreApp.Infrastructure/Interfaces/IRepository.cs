@@ -15,7 +15,7 @@ namespace CongDoanCoreApp.Infrastructure.Interfaces
 
         IQueryable<T> FillAll(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties);
 
-        void Add(T entity);
+        T Add(T entity);
 
         void Update(T entity);
 

@@ -19,6 +19,7 @@
             }
         });
         $('#btnCreate').off('click').on('click', function () {
+            resetFormMaintainance();
             initTreeDropDownCategory();
             $('#modalAddEdit').modal('show');
         });

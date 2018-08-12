@@ -9,6 +9,21 @@ var productController = function () {
     };
 
     function registerEvents() {
+        $("#frmMaintainance").validate({
+            errorClass: 'red',
+            ignore: [],
+            lang: 'en',
+            rules: {
+                txtNameM: {
+                    required: true
+                },
+                txtPriceM: {
+                    number: true,
+                    required: true
+                },
+                ddlCategoryIdM: { required: true },
+            }
+        });
         $("#ddlShowPage").on('change', function () {
             congdoan.configs.pageSize = $(this).val();
             congdoan.configs.pageIndex = 1;
@@ -22,6 +37,196 @@ var productController = function () {
                 loadData();
             }
         });
+        $('#btnCreate').on('click', function (e) {
+            e.preventDefault();
+            resetFormMaintainance();
+            $('#modalAddEdit').modal('show');
+        });
+        $('body').on('click', '.btnEdit', function (e) {
+            e.preventDefault();
+            var that = this.id;
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                data: {
+                    id: that
+                },
+                url: '/admin/product/getbyid',
+                success: function (result) {
+                    $('#hidIdM').val(result.Id);
+                    $('#txtNameM').val(result.Name);
+                    //drop
+                    initTreeDropDownCategory(result.CategoryId);
+                    $('#txtDescM').val(result.Description);
+                    $('#txtUnitM').val(result.Unit);
+
+                    $('#txtPriceM').val(result.Price);
+                    $('#txtOriginalPriceM').val(result.OriginalPrice);
+                    $('#txtPromotionPriceM').val(result.PromotionPrice);
+                    //$('#txtImageM').val(result.Image);
+
+                    $('#txtTagM').val(result.Tags);
+                    $('#txtSeoPageTitleM').val(result.SeoPageTitle);
+                    $('#txtSeoAliasM').val(result.SeoAlias);
+                    $('#txtSeoKeywordM').val(result.SeoKeywords);
+                    $('#txtSeoDescriptionM').val(result.SeoDescription);
+
+                    $('#ckStatusM').prop('checked', result.Status === 1);
+                    $('#ckHotM').prop('checked', result.HotFlag);
+                    $('#ckShowHomeM').prop('checked', result.HomeFlag);
+
+                    $('#modalAddEdit').modal('show');
+                },
+                error: function (error) {
+                    congdoan.notify('Has an error', 'error');
+                }
+            });
+        });
+
+        $('body').on('click', '.btnDelete', function (e) {
+            e.preventDefault();
+            var that = this.id;
+            congdoan.confirm('Are you sure to delete?', function () {
+                $.ajax({
+                    type: 'POST',
+                    url: '/admin/product/delete',
+                    data: {
+                        id: that
+                    },
+                    dataType: 'json',
+                    beforeSend: function () {
+                        congdoan.startLoading();
+                    },
+                    success: function (result) {
+                        congdoan.notify('Deleted success', 'success');
+                        congdoan.stopLoading();
+                        loadData();
+                    },
+                    error: function (error) {
+                        congdoan.notify('Has an error in deleting progress', 'error');
+                        congdoan.stopLoading();
+                    }
+                });
+            });
+        });
+        $('#btnSave').on('click', function (e) {
+            if ($('#frmMaintainance').valid()) {
+                e.preventDefault();
+
+                var id = $('#hidIdM').val();
+                var name = $('#txtNameM').val();
+                var categoryId = $('#ddlCategoryIdM').combotree('getValue');
+
+                var description = $('#txtDescM').val();
+                var unit = $('#txtUnitM').val();
+
+                var price = $('#txtPriceM').val();
+                var originalPrice = $('#txtOriginalPriceM').val();
+                var promotionPrice = $('#txtPromotionPriceM').val();
+
+                //var image = $('#txtImageM').val();
+
+                var tags = $('#txtTagM').val();
+                var seoKeyword = $('#txtSeoKeywordM').val();
+                var seoMetaDescription = $('#txtSeoDescriptionM').val();
+                var seoPageTitle = $('#txtSeoPageTitleM').val();
+                var seoAlias = $('#txtSeoAliasM').val();
+
+                //var content = CKEDITOR.instances.txtContentM.getData();
+                var status = $('#ckStatusM').prop('checked') == true ? 1 : 0;
+                var hot = $('#ckHotM').prop('checked');
+                var showHome = $('#ckShowHomeM').prop('checked');
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Admin/Product/SaveEntity",
+                    data: {
+                        Id: id,
+                        Name: name,
+                        CategoryId: categoryId,
+                        Image: '',
+                        Price: price,
+                        OriginalPrice: originalPrice,
+                        PromotionPrice: promotionPrice,
+                        Description: description,
+                        Content: '',
+                        HomeFlag: showHome,
+                        HotFlag: hot,
+                        Tags: tags,
+                        Unit: unit,
+                        Status: status,
+                        SeoPageTitle: seoPageTitle,
+                        SeoAlias: seoAlias,
+                        SeoKeywords: seoKeyword,
+                        SeoDescription: seoMetaDescription
+                    },
+                    dataType: "json",
+                    beforeSend: function () {
+                        congdoan.startLoading();
+                    },
+                    success: function (response) {
+                        congdoan.notify('Update product successful', 'success');
+                        $('#modalAddEdit').modal('hide');
+                        resetFormMaintainance();
+
+                        congdoan.stopLoading();
+                        loadData(true);
+                    },
+                    error: function () {
+                        congdoan.notify('Has an error in save product progress', 'error');
+                        congdoan.stopLoading();
+                    }
+                });
+                return false;
+            }
+        });
+    }
+    function initTreeDropDownCategory(selectedId) {
+        $.ajax({
+            url: '/admin/productCategory/getall',
+            type: 'GET',
+            dataType: 'json',
+            success: function (result) {
+                var data = [];
+                $.each(result, function (i, item) {
+                    data.push({
+                        id: item.Id,
+                        text: item.Name,
+                        parentId: item.ParentId,
+                        sortOrder: item.SortOrder
+                    });
+                });
+                var arr = congdoan.unflattern(data);
+                $('#ddlCategoryIdM').combotree({
+                    data: arr
+                });
+                if (selectedId !== undefined) {
+                    $('#ddlCategoryIdM').combotree('setValue', selectedId);
+                }
+            }
+        });
+    }
+    function resetFormMaintainance() {
+        $('#hidIdM').val(0);
+        $('#txtNameM').val('');
+        initTreeDropDownCategory('');
+
+        $('#txtDescM').val('');
+        $('#txtUnitM').val('');
+
+        $('#txtPriceM').val('');
+        $('#txtOriginalPriceM').val('');
+        $('#txtPromotionPriceM').val('');
+
+        $('#txtTagM').val('');
+        $('#txtMetakeywordM').val('');
+        $('#txtMetaDescriptionM').val('');
+        $('#txtSeoPageTitleM').val('');
+        $('#txtSeoAliasM').val('');
+
+        $('#ckStatusM').prop('checked', true);
+        $('#ckHotM').prop('checked', false);
+        $('#ckShowHomeM').prop('checked', false);
     }
     function loadCategories() {
         $.ajax({
@@ -63,7 +268,7 @@ var productController = function () {
                         ProductCategoryName: item.ProductCategory.Name,
                         Price: congdoan.formatNumber(item.Price, 0),
                         Image: item.Image === null ? '<img src="/admin-side/images/user.png" width=25/>' : '<img src="' + item.Image + '" width="25" />',
-                        CreatedDate: congdoan.dateTimeFormatJson(item.DateCreated),
+                        CreatedDate: item.DateCreated,
                         Status: congdoan.getStatus(item.Status)
                     });
                 });

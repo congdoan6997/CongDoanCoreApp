@@ -17,9 +17,9 @@ namespace CongDoanCoreApp.Data.EF
             this._context = context;
         }
 
-        public void Add(T entity)
+        public T Add(T entity)
         {
-            this._context.Add(entity);
+            return _context.Add(entity).Entity;
         }
 
         public void Dispose()

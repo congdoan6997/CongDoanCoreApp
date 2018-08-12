@@ -100,6 +100,8 @@ namespace CongDoanCoreApp.Data.EF
                         changedOrAddedItem.DateCreated = DateTime.Now;
                     }
                     changedOrAddedItem.DateModified = DateTime.Now;
+                    item.Property("DateCreated").IsModified = false;
+                    
                 }
             }
             return base.SaveChanges();
