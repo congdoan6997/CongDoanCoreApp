@@ -3951,3 +3951,517 @@ END" (0723d8ff)
 2018-08-10T15:51:50.8220561+03:00 0HLFUO04GF74B:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
 2018-08-10T15:51:51.3268634+03:00 0HLFUO04GF74B:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 2770.7603ms (afa2e885)
 2018-08-10T15:51:51.3326974+03:00 0HLFUO04GF74B:00000001 [INF] Request finished in 3112.9288ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T17:54:46.4338958+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-10T17:54:46.4408768+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-10T17:54:46.4410332+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-10T17:54:46.4410744+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-10T17:54:46.4411018+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-10T17:54:46.4411575+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-10T17:54:46.4411864+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-10T17:54:46.5560049+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T17:54:47.2537629+03:00  [INF] Executed DbCommand ("93"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-10T17:54:47.3500274+03:00  [INF] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-10T17:54:47.4118153+03:00  [INF] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-10T17:54:47.4877393+03:00  [INF] Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-10T17:54:47.5017752+03:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-10T17:54:47.5156983+03:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-10T17:54:47.5427651+03:00  [INF] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-10T17:54:47.5575361+03:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-10T17:54:47.5615231+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-10T17:54:47.5766425+03:00  [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-10T17:54:47.5800438+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-10T17:54:47.5836051+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-10T17:54:47.8356499+03:00 0HLFUQ4RPIE1G:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-10T17:54:47.9764496+03:00 0HLFUQ4RPIE1G:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T17:54:48.3676778+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executed DbCommand ("123"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-08-10T17:54:48.7200809+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-10T17:54:48.8153545+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executed DbCommand ("9"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-10T17:54:48.8367501+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-10T17:54:48.8685496+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-10T17:54:48.8747720+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-10T17:54:48.9719941+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T17:54:51.3772567+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-10T17:54:51.4893636+03:00 0HLFUQ4RPIE1G:00000001 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 2522.585ms (afa2e885)
+2018-08-10T17:54:51.4920993+03:00 0HLFUQ4RPIE1G:00000001 [INF] Request finished in 3685.8171ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T17:54:51.5432720+03:00 0HLFUQ4RPIE1G:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-08-10T17:54:51.5583683+03:00 0HLFUQ4RPIE1G:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"' (27b0a520)
+2018-08-10T17:54:51.5585040+03:00 0HLFUQ4RPIE1H:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-10T17:54:51.5589591+03:00 0HLFUQ4RPIE1K:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-10T17:54:51.5593158+03:00 0HLFUQ4RPIE1K:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.js"' (27b0a520)
+2018-08-10T17:54:51.5596673+03:00 0HLFUQ4RPIE1H:00000001 [INF] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\font-awesome\css\font-awesome.css"' (27b0a520)
+2018-08-10T17:54:51.5602916+03:00 0HLFUQ4RPIE1J:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-10T17:54:51.5603850+03:00 0HLFUQ4RPIE1L:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/css/custom.css   (ca22a1cb)
+2018-08-10T17:54:51.5604124+03:00 0HLFUQ4RPIE1I:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/test%20v2.2.4/jquery.js   (ca22a1cb)
+2018-08-10T17:54:51.5605064+03:00 0HLFUQ4RPIE1J:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/styles/metro/notify-metro.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\styles\metro\notify-metro.css"' (27b0a520)
+2018-08-10T17:54:51.5605374+03:00 0HLFUQ4RPIE1L:00000001 [INF] Sending file. Request path: '"/admin-side/css/custom.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\admin-side\css\custom.css"' (27b0a520)
+2018-08-10T17:54:51.5605506+03:00 0HLFUQ4RPIE1I:00000001 [INF] Sending file. Request path: '"/lib/jquery/test v2.2.4/jquery.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery\test v2.2.4\jquery.js"' (27b0a520)
+2018-08-10T17:54:51.5674779+03:00 0HLFUQ4RPIE1M:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-10T17:54:51.5678510+03:00 0HLFUQ4RPIE1M:00000001 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\nprogress\nprogress.css"' (27b0a520)
+2018-08-10T17:54:51.5705174+03:00 0HLFUQ4RPIE1N:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/shared/congdoan.js   (ca22a1cb)
+2018-08-10T17:54:51.5707614+03:00 0HLFUQ4RPIE1N:00000001 [INF] Sending file. Request path: '"/app/shared/congdoan.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\shared\congdoan.js"' (27b0a520)
+2018-08-10T17:54:51.5710491+03:00 0HLFUQ4RPIE1O:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-10T17:54:51.5712234+03:00 0HLFUQ4RPIE1O:00000001 [INF] Sending file. Request path: '"/lib/notifyjs/dist/notify.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\notifyjs\dist\notify.js"' (27b0a520)
+2018-08-10T17:54:51.5785311+03:00 0HLFUQ4RPIE1O:00000001 [INF] Request finished in 7.3197ms 200 application/javascript (791a596a)
+2018-08-10T17:54:51.5785781+03:00 0HLFUQ4RPIE1N:00000001 [INF] Request finished in 8.1172ms 200 application/javascript (791a596a)
+2018-08-10T17:54:51.5792557+03:00 0HLFUQ4RPIE1J:00000001 [INF] Request finished in 18.9892ms 200 text/css (791a596a)
+2018-08-10T17:54:51.5836102+03:00 0HLFUQ4RPIE1K:00000001 [INF] Request finished in 24.6124ms 200 application/javascript (791a596a)
+2018-08-10T17:54:51.5856364+03:00 0HLFUQ4RPIE1L:00000001 [INF] Request finished in 25.1569ms 200 text/css (791a596a)
+2018-08-10T17:54:51.5882343+03:00 0HLFUQ4RPIE1H:00000001 [INF] Request finished in 29.615ms 200 text/css (791a596a)
+2018-08-10T17:54:51.5913150+03:00 0HLFUQ4RPIE1M:00000001 [INF] Request finished in 23.7897ms 200 text/css (791a596a)
+2018-08-10T17:54:51.6012969+03:00 0HLFUQ4RPIE1I:00000001 [INF] Request finished in 40.6737ms 200 application/javascript (791a596a)
+2018-08-10T17:54:51.6035822+03:00 0HLFUQ4RPIE1G:00000002 [INF] Request finished in 60.1078ms 200 text/css (791a596a)
+2018-08-10T17:54:53.0062667+03:00 0HLFUQ4RPIE1K:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-08-10T17:54:53.0912481+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-10T17:54:53.1005119+03:00 0HLFUQ4RPIE1K:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T17:54:53.1072696+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-10T17:54:53.1696950+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-10T17:54:53.1706348+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-10T17:54:53.1718834+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-10T17:54:53.1727130+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-10T17:54:53.1733293+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-10T17:54:53.1848060+03:00 0HLFUQ4RPIE1K:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-08-10T17:54:53.1866872+03:00 0HLFUQ4RPIE1K:00000002 [INF] User logged in. (fdce0db4)
+2018-08-10T17:54:53.1899314+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-10T17:54:53.2920667+03:00 0HLFUQ4RPIE1K:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 254.8805ms (afa2e885)
+2018-08-10T17:54:53.2939345+03:00 0HLFUQ4RPIE1K:00000002 [INF] Request finished in 287.5522ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-10T17:54:53.3122775+03:00 0HLFUQ4RPIE1N:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Admin/Home/Index   (ca22a1cb)
+2018-08-10T17:54:53.3220398+03:00 0HLFUQ4RPIE1N:00000002 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T17:54:53.3226215+03:00 0HLFUQ4RPIE1N:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T17:54:53.4516495+03:00 0HLFUQ4RPIE1N:00000002 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-10T17:54:53.7140704+03:00 0HLFUQ4RPIE1N:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T17:54:53.7458913+03:00 0HLFUQ4RPIE1N:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-10T17:54:54.0664934+03:00 0HLFUQ4RPIE1N:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" in 751.119ms (afa2e885)
+2018-08-10T17:54:54.0674941+03:00 0HLFUQ4RPIE1N:00000002 [INF] Request finished in 755.2369ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T17:54:54.1289615+03:00 0HLFUQ4RPIE1J:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2018-08-10T17:54:54.1292685+03:00 0HLFUQ4RPIE1J:00000002 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.css"' (27b0a520)
+2018-08-10T17:54:54.1332008+03:00 0HLFUQ4RPIE1O:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/images/img.jpg   (ca22a1cb)
+2018-08-10T17:54:54.1349344+03:00 0HLFUQ4RPIE1M:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-08-10T17:54:54.1352123+03:00 0HLFUQ4RPIE1M:00000002 [INF] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap\dist\js\bootstrap.js"' (27b0a520)
+2018-08-10T17:54:54.1402065+03:00 0HLFUQ4RPIE1O:00000002 [INF] Sending file. Request path: '"/admin-side/images/img.jpg"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\admin-side\images\img.jpg"' (27b0a520)
+2018-08-10T17:54:54.1411109+03:00 0HLFUQ4RPIE1M:00000002 [INF] Request finished in 6.102ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.1501069+03:00 0HLFUQ4RPIE1J:00000002 [INF] Request finished in 21.2126ms 200 text/css (791a596a)
+2018-08-10T17:54:54.1571204+03:00 0HLFUQ4RPIE1O:00000002 [INF] Request finished in 23.9724ms 200 image/jpeg (791a596a)
+2018-08-10T17:54:54.1700323+03:00 0HLFUQ4RPIE1L:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2018-08-10T17:54:54.1704560+03:00 0HLFUQ4RPIE1L:00000002 [INF] Sending file. Request path: '"/lib/fastclick/lib/fastclick.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\fastclick\lib\fastclick.js"' (27b0a520)
+2018-08-10T17:54:54.1832382+03:00 0HLFUQ4RPIE1L:00000002 [INF] Request finished in 13.0778ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.1857672+03:00 0HLFUQ4RPIE1I:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.js   (ca22a1cb)
+2018-08-10T17:54:54.1857662+03:00 0HLFUQ4RPIE1H:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/Chart.js/dist/Chart.js   (ca22a1cb)
+2018-08-10T17:54:54.1860327+03:00 0HLFUQ4RPIE1H:00000002 [INF] Sending file. Request path: '"/lib/Chart.js/dist/Chart.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\Chart.js\dist\Chart.js"' (27b0a520)
+2018-08-10T17:54:54.1860353+03:00 0HLFUQ4RPIE1I:00000002 [INF] Sending file. Request path: '"/lib/nprogress/nprogress.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\nprogress\nprogress.js"' (27b0a520)
+2018-08-10T17:54:54.1900802+03:00 0HLFUQ4RPIE1G:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-sparkline/dist/jquery.sparkline.js   (ca22a1cb)
+2018-08-10T17:54:54.1903001+03:00 0HLFUQ4RPIE1G:00000003 [INF] Sending file. Request path: '"/lib/jquery-sparkline/dist/jquery.sparkline.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jquery-sparkline\dist\jquery.sparkline.js"' (27b0a520)
+2018-08-10T17:54:54.2000992+03:00 0HLFUQ4RPIE1K:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/twbs-pagination/jquery.twbsPagination.js   (ca22a1cb)
+2018-08-10T17:54:54.2013201+03:00 0HLFUQ4RPIE1K:00000003 [INF] Sending file. Request path: '"/lib/twbs-pagination/jquery.twbsPagination.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\twbs-pagination\jquery.twbsPagination.js"' (27b0a520)
+2018-08-10T17:54:54.2052348+03:00 0HLFUQ4RPIE1N:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/mustache/mustache.js   (ca22a1cb)
+2018-08-10T17:54:54.2060784+03:00 0HLFUQ4RPIE1N:00000003 [INF] Sending file. Request path: '"/lib/mustache/mustache.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\mustache\mustache.js"' (27b0a520)
+2018-08-10T17:54:54.2079138+03:00 0HLFUQ4RPIE1I:00000002 [INF] Request finished in 22.1141ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2409491+03:00 0HLFUQ4RPIE1M:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.js   (ca22a1cb)
+2018-08-10T17:54:54.2432407+03:00 0HLFUQ4RPIE1M:00000003 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.js"' (27b0a520)
+2018-08-10T17:54:54.2499291+03:00 0HLFUQ4RPIE1N:00000003 [INF] Request finished in 46.115ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2502205+03:00 0HLFUQ4RPIE1J:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.pie.js   (ca22a1cb)
+2018-08-10T17:54:54.2504893+03:00 0HLFUQ4RPIE1J:00000003 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.pie.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.pie.js"' (27b0a520)
+2018-08-10T17:54:54.2536506+03:00 0HLFUQ4RPIE1I:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot.orderbars/js/jquery.flot.orderBars.js   (ca22a1cb)
+2018-08-10T17:54:54.2536506+03:00 0HLFUQ4RPIE1O:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.stack.js   (ca22a1cb)
+2018-08-10T17:54:54.2536506+03:00 0HLFUQ4RPIE1L:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.time.js   (ca22a1cb)
+2018-08-10T17:54:54.2538979+03:00 0HLFUQ4RPIE1L:00000003 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.time.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.time.js"' (27b0a520)
+2018-08-10T17:54:54.2539026+03:00 0HLFUQ4RPIE1I:00000003 [INF] Sending file. Request path: '"/lib/flot.orderbars/js/jquery.flot.orderBars.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot.orderbars\js\jquery.flot.orderBars.js"' (27b0a520)
+2018-08-10T17:54:54.2552246+03:00 0HLFUQ4RPIE1O:00000003 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.stack.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.stack.js"' (27b0a520)
+2018-08-10T17:54:54.2579567+03:00 0HLFUQ4RPIE1P:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/DateJS/build/date.js   (ca22a1cb)
+2018-08-10T17:54:54.2606749+03:00 0HLFUQ4RPIE1K:00000003 [INF] Request finished in 62.2787ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2608591+03:00 0HLFUQ4RPIE1H:00000002 [INF] Request finished in 75.1724ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2611603+03:00 0HLFUQ4RPIE1G:00000003 [INF] Request finished in 71.2383ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2690522+03:00 0HLFUQ4RPIE1I:00000003 [INF] Request finished in 15.3975ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2690616+03:00 0HLFUQ4RPIE1R:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/moment/moment.js   (ca22a1cb)
+2018-08-10T17:54:54.2692243+03:00 0HLFUQ4RPIE1Q:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootbox/bootbox.js   (ca22a1cb)
+2018-08-10T17:54:54.2692819+03:00 0HLFUQ4RPIE1R:00000001 [INF] Sending file. Request path: '"/lib/moment/moment.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\moment\moment.js"' (27b0a520)
+2018-08-10T17:54:54.2730993+03:00 0HLFUQ4RPIE1Q:00000001 [INF] Sending file. Request path: '"/lib/bootbox/bootbox.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootbox\bootbox.js"' (27b0a520)
+2018-08-10T17:54:54.2732842+03:00 0HLFUQ4RPIE1J:00000003 [INF] Request finished in 23.0855ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2735504+03:00 0HLFUQ4RPIE1L:00000003 [INF] Request finished in 19.961ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2745161+03:00 0HLFUQ4RPIE1S:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2018-08-10T17:54:54.2748451+03:00 0HLFUQ4RPIE1S:00000001 [INF] Sending file. Request path: '"/lib/bootstrap-daterangepicker/daterangepicker.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap-daterangepicker\daterangepicker.js"' (27b0a520)
+2018-08-10T17:54:54.2772347+03:00 0HLFUQ4RPIE1P:00000001 [INF] Sending file. Request path: '"/lib/DateJS/build/date.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\DateJS\build\date.js"' (27b0a520)
+2018-08-10T17:54:54.2793407+03:00 0HLFUQ4RPIE1N:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.resize.js   (ca22a1cb)
+2018-08-10T17:54:54.2795395+03:00 0HLFUQ4RPIE1N:00000004 [INF] Sending file. Request path: '"/lib/flot/jquery.flot.resize.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot\jquery.flot.resize.js"' (27b0a520)
+2018-08-10T17:54:54.2796369+03:00 0HLFUQ4RPIE1K:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot.curvedlines/curvedLines.js   (ca22a1cb)
+2018-08-10T17:54:54.2797915+03:00 0HLFUQ4RPIE1K:00000004 [INF] Sending file. Request path: '"/lib/flot.curvedlines/curvedLines.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot.curvedlines\curvedLines.js"' (27b0a520)
+2018-08-10T17:54:54.2799352+03:00 0HLFUQ4RPIE1I:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/js/custom.js   (ca22a1cb)
+2018-08-10T17:54:54.2800573+03:00 0HLFUQ4RPIE1I:00000004 [INF] Sending file. Request path: '"/admin-side/js/custom.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\admin-side\js\custom.js"' (27b0a520)
+2018-08-10T17:54:54.2810484+03:00 0HLFUQ4RPIE1L:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-10T17:54:54.2812260+03:00 0HLFUQ4RPIE1L:00000004 [INF] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-08-10T17:54:54.2817855+03:00 0HLFUQ4RPIE1J:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2   (ca22a1cb)
+2018-08-10T17:54:54.2819372+03:00 0HLFUQ4RPIE1J:00000004 [INF] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"' (27b0a520)
+2018-08-10T17:54:54.2830206+03:00 0HLFUQ4RPIE1M:00000003 [INF] Request finished in 41.7951ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2856933+03:00 0HLFUQ4RPIE1S:00000001 [INF] Request finished in 11.1571ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2858796+03:00 0HLFUQ4RPIE1O:00000003 [INF] Request finished in 32.3001ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2914574+03:00 0HLFUQ4RPIE1Q:00000001 [INF] Request finished in 22.0812ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2956674+03:00 0HLFUQ4RPIE1R:00000001 [INF] Request finished in 26.3599ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.2958815+03:00 0HLFUQ4RPIE1K:00000004 [INF] Request finished in 16.8803ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.3067564+03:00 0HLFUQ4RPIE1M:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot-spline/js/jquery.flot.spline.js   (ca22a1cb)
+2018-08-10T17:54:54.3100050+03:00 0HLFUQ4RPIE1N:00000004 [INF] Request finished in 30.5227ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.3118385+03:00 0HLFUQ4RPIE1J:00000004 [INF] Request finished in 29.6599ms 200 font/woff2 (791a596a)
+2018-08-10T17:54:54.3153094+03:00 0HLFUQ4RPIE1M:00000004 [INF] Sending file. Request path: '"/lib/flot-spline/js/jquery.flot.spline.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\flot-spline\js\jquery.flot.spline.js"' (27b0a520)
+2018-08-10T17:54:54.3221999+03:00 0HLFUQ4RPIE1L:00000004 [INF] Request finished in 40.4224ms 200 font/woff2 (791a596a)
+2018-08-10T17:54:54.3269950+03:00 0HLFUQ4RPIE1P:00000001 [INF] Request finished in 69.1663ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.3334629+03:00 0HLFUQ4RPIE1I:00000004 [INF] Request finished in 54.3595ms 200 application/javascript (791a596a)
+2018-08-10T17:54:54.3477722+03:00 0HLFUQ4RPIE1M:00000004 [INF] Request finished in 45.4768ms 200 application/javascript (791a596a)
+2018-08-10T17:54:56.0622191+03:00 0HLFUQ4RPIE1G:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/index   (ca22a1cb)
+2018-08-10T17:54:56.0644166+03:00 0HLFUQ4RPIE1G:00000004 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T17:54:56.0656375+03:00 0HLFUQ4RPIE1G:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T17:54:56.1791163+03:00 0HLFUQ4RPIE1G:00000004 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-10T17:54:56.2759938+03:00 0HLFUQ4RPIE1G:00000004 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T17:54:56.2803355+03:00 0HLFUQ4RPIE1G:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-10T17:54:56.3139466+03:00 0HLFUQ4RPIE1G:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" in 249.906ms (afa2e885)
+2018-08-10T17:54:56.3152055+03:00 0HLFUQ4RPIE1G:00000004 [INF] Request finished in 252.9663ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T17:54:56.3673388+03:00 0HLFUQ4RPIE1O:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/icon.css   (ca22a1cb)
+2018-08-10T17:54:56.3673369+03:00 0HLFUQ4RPIE1S:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/product-category/index.js?v=ECCzB95mP5R2an5ykJCB1u4mLsFbVBoV19Ldv3cRmKA   (ca22a1cb)
+2018-08-10T17:54:56.3673366+03:00 0HLFUQ4RPIE1Q:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/jquery.easyui.min.js   (ca22a1cb)
+2018-08-10T17:54:56.3675415+03:00 0HLFUQ4RPIE1S:00000002 [INF] Sending file. Request path: '"/app/controllers/product-category/index.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\controllers\product-category\index.js"' (27b0a520)
+2018-08-10T17:54:56.3675521+03:00 0HLFUQ4RPIE1O:00000004 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/icon.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jQuery-EasyUI\themes\icon.css"' (27b0a520)
+2018-08-10T17:54:56.3682730+03:00 0HLFUQ4RPIE1Q:00000002 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/jquery.easyui.min.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jQuery-EasyUI\jquery.easyui.min.js"' (27b0a520)
+2018-08-10T17:54:56.3697798+03:00 0HLFUQ4RPIE1S:00000002 [INF] Request finished in 2.2412ms 200 application/javascript (791a596a)
+2018-08-10T17:54:56.3723526+03:00 0HLFUQ4RPIE1N:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/bootstrap/easyui.css   (ca22a1cb)
+2018-08-10T17:54:56.3747882+03:00 0HLFUQ4RPIE1N:00000005 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/bootstrap/easyui.css"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jQuery-EasyUI\themes\bootstrap\easyui.css"' (27b0a520)
+2018-08-10T17:54:56.3930624+03:00 0HLFUQ4RPIE1O:00000004 [INF] Request finished in 25.6382ms 200 text/css (791a596a)
+2018-08-10T17:54:56.4021832+03:00 0HLFUQ4RPIE1N:00000005 [INF] Request finished in 29.7565ms 200 text/css (791a596a)
+2018-08-10T17:54:56.4150032+03:00 0HLFUQ4RPIE1Q:00000002 [INF] Request finished in 47.4905ms 200 application/javascript (791a596a)
+2018-08-10T17:54:56.5422532+03:00 0HLFUQ4RPIE1K:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/getall   (ca22a1cb)
+2018-08-10T17:54:56.5446789+03:00 0HLFUQ4RPIE1K:00000005 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T17:54:56.5448087+03:00 0HLFUQ4RPIE1K:00000005 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T17:54:56.5468458+03:00 0HLFUQ4RPIE1K:00000005 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T17:54:56.5919335+03:00 0HLFUQ4RPIE1K:00000005 [INF] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-10T17:54:56.6005220+03:00 0HLFUQ4RPIE1K:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-10T17:54:56.6443887+03:00 0HLFUQ4RPIE1K:00000005 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 99.6266ms (afa2e885)
+2018-08-10T17:54:56.6446127+03:00 0HLFUQ4RPIE1K:00000005 [INF] Request finished in 102.4109ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-10T17:54:56.6671753+03:00 0HLFUQ4RPIE1R:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/bootstrap/images/tree_icons.png   (ca22a1cb)
+2018-08-10T17:54:56.6676093+03:00 0HLFUQ4RPIE1R:00000002 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/bootstrap/images/tree_icons.png"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jQuery-EasyUI\themes\bootstrap\images\tree_icons.png"' (27b0a520)
+2018-08-10T17:54:56.6784553+03:00 0HLFUQ4RPIE1R:00000002 [INF] Request finished in 11.2552ms 200 image/png (791a596a)
+2018-08-10T17:56:23.6686307+03:00 0HLFUQ4RPIE1T:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/index   (ca22a1cb)
+2018-08-10T17:56:23.6698957+03:00 0HLFUQ4RPIE1T:00000001 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T17:56:23.6700642+03:00 0HLFUQ4RPIE1T:00000001 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T17:56:23.6706123+03:00 0HLFUQ4RPIE1T:00000001 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-10T17:56:23.7623056+03:00 0HLFUQ4RPIE1T:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T17:56:23.7641100+03:00 0HLFUQ4RPIE1T:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-10T17:56:23.7651726+03:00 0HLFUQ4RPIE1T:00000001 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" in 95.3111ms (afa2e885)
+2018-08-10T17:56:23.7652660+03:00 0HLFUQ4RPIE1T:00000001 [INF] Request finished in 96.6983ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T17:56:23.9444675+03:00 0HLFUQ4RPIE1T:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/getall   (ca22a1cb)
+2018-08-10T17:56:23.9453785+03:00 0HLFUQ4RPIE1T:00000002 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T17:56:23.9455480+03:00 0HLFUQ4RPIE1T:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T17:56:23.9459703+03:00 0HLFUQ4RPIE1T:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T17:56:23.9498176+03:00 0HLFUQ4RPIE1T:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-10T17:56:23.9504047+03:00 0HLFUQ4RPIE1T:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-10T17:56:23.9508788+03:00 0HLFUQ4RPIE1T:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 5.5977ms (afa2e885)
+2018-08-10T17:56:23.9509959+03:00 0HLFUQ4RPIE1T:00000002 [INF] Request finished in 6.7964ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-10T17:56:24.2419891+03:00 0HLFUQ4RPIE1T:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/favicon.ico   (ca22a1cb)
+2018-08-10T17:56:24.2428162+03:00 0HLFUQ4RPIE1T:00000003 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2018-08-10T17:56:24.2526594+03:00 0HLFUQ4RPIE1T:00000003 [INF] Request finished in 10.3887ms 200 image/x-icon (791a596a)
+2018-08-10T20:24:56.9150859+03:00 0HLFUQ4RPIE1U:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/index   (ca22a1cb)
+2018-08-10T20:24:56.9216515+03:00 0HLFUQ4RPIE1U:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T20:24:56.9425972+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-08-10T20:24:56.9474153+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-10T20:24:56.9513194+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-10T20:24:56.9533889+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-10T20:24:56.9551547+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-10T20:24:56.9559927+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-10T20:24:56.9575951+03:00 0HLFUQ4RPIE1U:00000001 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T20:24:56.9585658+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T20:24:57.1674534+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-10T20:24:57.2772403+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-10T20:24:57.2840819+03:00 0HLFUQ4RPIE1U:00000001 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" in 326.7209ms (afa2e885)
+2018-08-10T20:24:57.2841888+03:00 0HLFUQ4RPIE1U:00000001 [INF] Request finished in 370.5381ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T20:24:57.3486530+03:00 0HLFUQ4RPIE1U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/bootstrap/easyui.css   (ca22a1cb)
+2018-08-10T20:24:57.3536640+03:00 0HLFUQ4RPIE1V:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/icon.css   (ca22a1cb)
+2018-08-10T20:24:57.3578690+03:00 0HLFUQ4RPIE1V:00000001 [INF] The file "/lib/jQuery-EasyUI/themes/icon.css" was not modified (f1f8d725)
+2018-08-10T20:24:57.3581261+03:00 0HLFUQ4RPIE1U:00000002 [INF] The file "/lib/jQuery-EasyUI/themes/bootstrap/easyui.css" was not modified (f1f8d725)
+2018-08-10T20:24:57.3608695+03:00 0HLFUQ4RPIE1V:00000001 [INF] Request finished in 7.1971ms 304 text/css (791a596a)
+2018-08-10T20:24:57.3611434+03:00 0HLFUQ4RPIE1U:00000002 [INF] Request finished in 12.5899ms 304 text/css (791a596a)
+2018-08-10T20:24:57.4477341+03:00 0HLFUQ4RPIE1U:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/shared/congdoan.js   (ca22a1cb)
+2018-08-10T20:24:57.4481334+03:00 0HLFUQ4RPIE1U:00000003 [INF] The file "/app/shared/congdoan.js" was not modified (f1f8d725)
+2018-08-10T20:24:57.4484390+03:00 0HLFUQ4RPIE1U:00000003 [INF] Request finished in 0.9999ms 304 application/javascript (791a596a)
+2018-08-10T20:24:57.4522685+03:00 0HLFUQ4RPIE1V:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/jquery.easyui.min.js   (ca22a1cb)
+2018-08-10T20:24:57.4526722+03:00 0HLFUQ4RPIE1V:00000002 [INF] The file "/lib/jQuery-EasyUI/jquery.easyui.min.js" was not modified (f1f8d725)
+2018-08-10T20:24:57.4530569+03:00 0HLFUQ4RPIE1V:00000002 [INF] Request finished in 1.6767ms 304 application/javascript (791a596a)
+2018-08-10T20:24:57.4584409+03:00 0HLFUQ4RPIE1U:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/product-category/index.js?v=iyWFabKeCfqEJQ2t2Z-N79djslf0m7PbbStWcuQ17OA   (ca22a1cb)
+2018-08-10T20:24:57.4587502+03:00 0HLFUQ4RPIE1U:00000004 [INF] Sending file. Request path: '"/app/controllers/product-category/index.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\controllers\product-category\index.js"' (27b0a520)
+2018-08-10T20:24:57.4595127+03:00 0HLFUQ4RPIE1U:00000004 [INF] Request finished in 1.5582ms 200 application/javascript (791a596a)
+2018-08-10T20:24:57.5651503+03:00 0HLFUQ4RPIE1V:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/getall   (ca22a1cb)
+2018-08-10T20:24:57.5665794+03:00 0HLFUQ4RPIE1V:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T20:24:57.5667092+03:00 0HLFUQ4RPIE1V:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T20:24:57.5670200+03:00 0HLFUQ4RPIE1V:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T20:24:57.5695956+03:00 0HLFUQ4RPIE1V:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-10T20:24:57.5698002+03:00 0HLFUQ4RPIE1V:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-10T20:24:57.5699887+03:00 0HLFUQ4RPIE1V:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 3.5898ms (afa2e885)
+2018-08-10T20:24:57.5701678+03:00 0HLFUQ4RPIE1V:00000003 [INF] Request finished in 5.0532ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-10T20:24:57.6105542+03:00 0HLFUQ4RPIE1U:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/bootstrap/images/tree_icons.png   (ca22a1cb)
+2018-08-10T20:24:57.6354008+03:00 0HLFUQ4RPIE1U:00000005 [INF] The file "/lib/jQuery-EasyUI/themes/bootstrap/images/tree_icons.png" was not modified (f1f8d725)
+2018-08-10T20:24:57.6355434+03:00 0HLFUQ4RPIE1U:00000005 [INF] Request finished in 25.057ms 304 image/png (791a596a)
+2018-08-10T20:24:57.6577731+03:00 0HLFUQ4RPIE1V:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/favicon.ico   (ca22a1cb)
+2018-08-10T20:24:57.6580087+03:00 0HLFUQ4RPIE1V:00000004 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2018-08-10T20:24:57.6645710+03:00 0HLFUQ4RPIE1V:00000004 [INF] Request finished in 6.7271ms 200 image/x-icon (791a596a)
+2018-08-10T20:25:28.4879765+03:00 0HLFUQ4RPIE1U:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/index   (ca22a1cb)
+2018-08-10T20:25:28.4885078+03:00 0HLFUQ4RPIE1U:00000006 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T20:25:28.4885953+03:00 0HLFUQ4RPIE1U:00000006 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T20:25:28.5785747+03:00 0HLFUQ4RPIE1U:00000006 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-10T20:25:28.5847478+03:00 0HLFUQ4RPIE1U:00000006 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T20:25:28.5854115+03:00 0HLFUQ4RPIE1U:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-10T20:25:28.5887585+03:00 0HLFUQ4RPIE1U:00000006 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" in 100.2805ms (afa2e885)
+2018-08-10T20:25:28.5888493+03:00 0HLFUQ4RPIE1U:00000006 [INF] Request finished in 100.923ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T20:25:28.6384900+03:00 0HLFUQ4RPIE1V:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/product-category/index.js?v=iyWFabKeCfqEJQ2t2Z-N79djslf0m7PbbStWcuQ17OA   (ca22a1cb)
+2018-08-10T20:25:28.6388896+03:00 0HLFUQ4RPIE1V:00000005 [INF] The file "/app/controllers/product-category/index.js" was not modified (f1f8d725)
+2018-08-10T20:25:28.6390683+03:00 0HLFUQ4RPIE1V:00000005 [INF] Request finished in 0.7191ms 304 application/javascript (791a596a)
+2018-08-10T20:25:28.7450378+03:00 0HLFUQ4RPIE1U:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/getall   (ca22a1cb)
+2018-08-10T20:25:28.7455344+03:00 0HLFUQ4RPIE1U:00000007 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T20:25:28.7456125+03:00 0HLFUQ4RPIE1U:00000007 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T20:25:28.7458273+03:00 0HLFUQ4RPIE1U:00000007 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T20:25:28.7496096+03:00 0HLFUQ4RPIE1U:00000007 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-10T20:25:28.7497748+03:00 0HLFUQ4RPIE1U:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-10T20:25:28.7499549+03:00 0HLFUQ4RPIE1U:00000007 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 4.4643ms (afa2e885)
+2018-08-10T20:25:28.7500326+03:00 0HLFUQ4RPIE1U:00000007 [INF] Request finished in 5.055ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-10T20:25:28.7919893+03:00 0HLFUQ4RPIE1V:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/favicon.ico   (ca22a1cb)
+2018-08-10T20:25:28.7922340+03:00 0HLFUQ4RPIE1V:00000006 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2018-08-10T20:25:28.7930298+03:00 0HLFUQ4RPIE1V:00000006 [INF] Request finished in 1.1385ms 200 image/x-icon (791a596a)
+2018-08-10T20:32:25.2246261+03:00 0HLFUQ4RPIE20:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/index   (ca22a1cb)
+2018-08-10T20:32:25.2253588+03:00 0HLFUQ4RPIE20:00000001 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T20:32:25.2254605+03:00 0HLFUQ4RPIE20:00000001 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T20:32:25.3196334+03:00 0HLFUQ4RPIE20:00000001 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-10T20:32:25.3256951+03:00 0HLFUQ4RPIE20:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T20:32:25.3296467+03:00 0HLFUQ4RPIE20:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-10T20:32:25.3336887+03:00 0HLFUQ4RPIE20:00000001 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" in 108.3536ms (afa2e885)
+2018-08-10T20:32:25.3339184+03:00 0HLFUQ4RPIE20:00000001 [INF] Request finished in 109.3681ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T20:32:25.4720520+03:00 0HLFUQ4RPIE20:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/product-category/index.js?v=iyWFabKeCfqEJQ2t2Z-N79djslf0m7PbbStWcuQ17OA   (ca22a1cb)
+2018-08-10T20:32:25.4723360+03:00 0HLFUQ4RPIE20:00000002 [INF] The file "/app/controllers/product-category/index.js" was not modified (f1f8d725)
+2018-08-10T20:32:25.4724418+03:00 0HLFUQ4RPIE20:00000002 [INF] Request finished in 0.4948ms 304 application/javascript (791a596a)
+2018-08-10T20:32:25.5522551+03:00 0HLFUQ4RPIE20:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/getall   (ca22a1cb)
+2018-08-10T20:32:25.5528156+03:00 0HLFUQ4RPIE20:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T20:32:25.5528915+03:00 0HLFUQ4RPIE20:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T20:32:25.5531220+03:00 0HLFUQ4RPIE20:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T20:32:25.5547199+03:00 0HLFUQ4RPIE20:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-10T20:32:25.5549070+03:00 0HLFUQ4RPIE20:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-10T20:32:25.5550755+03:00 0HLFUQ4RPIE20:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 2.2875ms (afa2e885)
+2018-08-10T20:32:25.5551685+03:00 0HLFUQ4RPIE20:00000003 [INF] Request finished in 3.0074ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-10T20:32:25.5769777+03:00 0HLFUQ4RPIE20:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/icons/edit_remove.png   (ca22a1cb)
+2018-08-10T20:32:25.5797452+03:00 0HLFUQ4RPIE21:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/icons/pencil.png   (ca22a1cb)
+2018-08-10T20:32:25.6039113+03:00 0HLFUQ4RPIE20:00000004 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/icons/edit_remove.png"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jQuery-EasyUI\themes\icons\edit_remove.png"' (27b0a520)
+2018-08-10T20:32:25.6039941+03:00 0HLFUQ4RPIE21:00000001 [INF] Sending file. Request path: '"/lib/jQuery-EasyUI/themes/icons/pencil.png"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\jQuery-EasyUI\themes\icons\pencil.png"' (27b0a520)
+2018-08-10T20:32:25.6068910+03:00 0HLFUQ4RPIE20:00000004 [INF] Request finished in 29.8243ms 200 image/png (791a596a)
+2018-08-10T20:32:25.6069972+03:00 0HLFUQ4RPIE21:00000001 [INF] Request finished in 27.1192ms 200 image/png (791a596a)
+2018-08-10T20:32:25.6381343+03:00 0HLFUQ4RPIE20:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/favicon.ico   (ca22a1cb)
+2018-08-10T20:32:25.6383641+03:00 0HLFUQ4RPIE20:00000005 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2018-08-10T20:32:25.6388403+03:00 0HLFUQ4RPIE20:00000005 [INF] Request finished in 0.7351ms 200 image/x-icon (791a596a)
+2018-08-10T20:41:30.1422437+03:00 0HLFUQ4RPIE22:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/index   (ca22a1cb)
+2018-08-10T20:41:30.1429380+03:00 0HLFUQ4RPIE22:00000001 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T20:41:30.1430427+03:00 0HLFUQ4RPIE22:00000001 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T20:41:30.1431331+03:00 0HLFUQ4RPIE22:00000001 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-10T20:41:30.1437322+03:00 0HLFUQ4RPIE22:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T20:41:30.1479377+03:00 0HLFUQ4RPIE22:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-10T20:41:30.1507566+03:00 0HLFUQ4RPIE22:00000001 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" in 7.8229ms (afa2e885)
+2018-08-10T20:41:30.1509178+03:00 0HLFUQ4RPIE22:00000001 [INF] Request finished in 8.879ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T20:41:30.2487812+03:00 0HLFUQ4RPIE22:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/product-category/index.js?v=1ByVPqkjwpmsL9Dntq3bEGUvOEWqzSUPZjqI8iP4edI   (ca22a1cb)
+2018-08-10T20:41:30.2490464+03:00 0HLFUQ4RPIE22:00000002 [INF] Sending file. Request path: '"/app/controllers/product-category/index.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\controllers\product-category\index.js"' (27b0a520)
+2018-08-10T20:41:30.2499176+03:00 0HLFUQ4RPIE22:00000002 [INF] Request finished in 1.0214ms 200 application/javascript (791a596a)
+2018-08-10T20:41:30.3452098+03:00 0HLFUQ4RPIE22:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/getall   (ca22a1cb)
+2018-08-10T20:41:30.3458666+03:00 0HLFUQ4RPIE22:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T20:41:30.3459457+03:00 0HLFUQ4RPIE22:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T20:41:30.3461590+03:00 0HLFUQ4RPIE22:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T20:41:30.3479944+03:00 0HLFUQ4RPIE22:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-10T20:41:30.3482106+03:00 0HLFUQ4RPIE22:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-10T20:41:30.3484167+03:00 0HLFUQ4RPIE22:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 2.5764ms (afa2e885)
+2018-08-10T20:41:30.3485199+03:00 0HLFUQ4RPIE22:00000003 [INF] Request finished in 3.4034ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-10T20:41:30.4068197+03:00 0HLFUQ4RPIE22:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/favicon.ico   (ca22a1cb)
+2018-08-10T20:41:30.4070006+03:00 0HLFUQ4RPIE22:00000004 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2018-08-10T20:41:30.4072617+03:00 0HLFUQ4RPIE22:00000004 [INF] Request finished in 0.4799ms 200 image/x-icon (791a596a)
+2018-08-10T21:17:17.8041668+03:00 0HLFUQ4RPIE23:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/index   (ca22a1cb)
+2018-08-10T21:17:17.8048801+03:00 0HLFUQ4RPIE23:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T21:17:17.8189765+03:00 0HLFUQ4RPIE23:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-08-10T21:17:17.8206890+03:00 0HLFUQ4RPIE23:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-10T21:17:17.8226171+03:00 0HLFUQ4RPIE23:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-10T21:17:17.8237238+03:00 0HLFUQ4RPIE23:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-10T21:17:17.8248347+03:00 0HLFUQ4RPIE23:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-10T21:17:17.8254625+03:00 0HLFUQ4RPIE23:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-10T21:17:17.8257072+03:00 0HLFUQ4RPIE23:00000001 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T21:17:17.8257871+03:00 0HLFUQ4RPIE23:00000001 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T21:17:17.8270278+03:00 0HLFUQ4RPIE23:00000001 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/ProductCategory/Index.cshtml". (9707eebe)
+2018-08-10T21:17:17.9364849+03:00 0HLFUQ4RPIE23:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-10T21:17:17.9387645+03:00 0HLFUQ4RPIE23:00000001 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.Index (CongDoanCoreApp)" in 113.0345ms (afa2e885)
+2018-08-10T21:17:17.9388888+03:00 0HLFUQ4RPIE23:00000001 [INF] Request finished in 134.7949ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-10T21:17:18.0238758+03:00 0HLFUQ4RPIE23:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/twbs-pagination/jquery.twbsPagination.js   (ca22a1cb)
+2018-08-10T21:17:18.0241599+03:00 0HLFUQ4RPIE23:00000002 [INF] The file "/lib/twbs-pagination/jquery.twbsPagination.js" was not modified (f1f8d725)
+2018-08-10T21:17:18.0242521+03:00 0HLFUQ4RPIE23:00000002 [INF] Request finished in 0.4525ms 304 application/javascript (791a596a)
+2018-08-10T21:17:18.0422957+03:00 0HLFUQ4RPIE23:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/product-category/index.js?v=af7EgHPW759DBLAxk1QeVkziiEVNNMRk_uYVGayeCr0   (ca22a1cb)
+2018-08-10T21:17:18.0426852+03:00 0HLFUQ4RPIE23:00000003 [INF] Sending file. Request path: '"/app/controllers/product-category/index.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\app\controllers\product-category\index.js"' (27b0a520)
+2018-08-10T21:17:18.0429438+03:00 0HLFUQ4RPIE23:00000003 [INF] Request finished in 0.8055ms 200 application/javascript (791a596a)
+2018-08-10T21:17:18.1192062+03:00 0HLFUQ4RPIE23:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productcategory/getall   (ca22a1cb)
+2018-08-10T21:17:18.1198535+03:00 0HLFUQ4RPIE23:00000004 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-10T21:17:18.1199414+03:00 0HLFUQ4RPIE23:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-10T21:17:18.1201580+03:00 0HLFUQ4RPIE23:00000004 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-10T21:17:18.1218086+03:00 0HLFUQ4RPIE23:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-10T21:17:18.1220379+03:00 0HLFUQ4RPIE23:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-10T21:17:18.1222181+03:00 0HLFUQ4RPIE23:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 2.448ms (afa2e885)
+2018-08-10T21:17:18.1224110+03:00 0HLFUQ4RPIE23:00000004 [INF] Request finished in 3.216ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-10T21:17:18.1702305+03:00 0HLFUQ4RPIE23:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/favicon.ico   (ca22a1cb)
+2018-08-10T21:17:18.1705631+03:00 0HLFUQ4RPIE23:00000005 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\favicon.ico"' (27b0a520)
+2018-08-10T21:17:18.1712552+03:00 0HLFUQ4RPIE23:00000005 [INF] Request finished in 1.028ms 200 image/x-icon (791a596a)

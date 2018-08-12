@@ -43,11 +43,11 @@ var congdoan = {
             message: message,
             buttons: {
                 confirm: {
-                    label: 'Đồng ý',
+                    label: 'Yes',
                     className: 'btn-success'
                 },
                 cancel: {
-                    label: 'Hủy',
+                    label: 'Cancel',
                     className: 'btn-danger'
                 }
             },

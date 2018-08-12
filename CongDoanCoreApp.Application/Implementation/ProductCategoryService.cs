@@ -99,7 +99,8 @@ namespace CongDoanCoreApp.Application.Implementation
 
         public void Update(ProductCategoryViewModel productCategoryViewModel)
         {
-            throw new NotImplementedException();
+            var productCategory = Mapper.Map<ProductCategoryViewModel, ProductCategory>(productCategoryViewModel);
+            _productCategoryRepository.Update(productCategory);
         }
 
         public void UpdateParentId(int sourceId, int targetId, Dictionary<int, int> items)
