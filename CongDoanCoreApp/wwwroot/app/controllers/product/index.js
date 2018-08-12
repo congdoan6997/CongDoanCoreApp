@@ -1,11 +1,13 @@
 ﻿/// <reference path="../../../lib/mustache/mustache.js" />
 /// <reference path="../../../lib/twbs-pagination/jquery.twbspagination.js" />
+/// <reference path="../../../lib/ckeditor/ckeditor.js" />
 
 var productController = function () {
     this.initialize = function () {
         loadCategories();
         loadData();
         registerEvents();
+        registerControls();
     };
 
     function registerEvents() {
@@ -64,6 +66,8 @@ var productController = function () {
                     $('#txtOriginalPriceM').val(result.OriginalPrice);
                     $('#txtPromotionPriceM').val(result.PromotionPrice);
                     //$('#txtImageM').val(result.Image);
+
+                    CKEDITOR.instances.txtContentM.setData(result.Content);
 
                     $('#txtTagM').val(result.Tags);
                     $('#txtSeoPageTitleM').val(result.SeoPageTitle);
@@ -132,7 +136,7 @@ var productController = function () {
                 var seoPageTitle = $('#txtSeoPageTitleM').val();
                 var seoAlias = $('#txtSeoAliasM').val();
 
-                //var content = CKEDITOR.instances.txtContentM.getData();
+                var content = CKEDITOR.instances.txtContentM.getData();
                 var status = $('#ckStatusM').prop('checked') == true ? 1 : 0;
                 var hot = $('#ckHotM').prop('checked');
                 var showHome = $('#ckShowHomeM').prop('checked');
@@ -152,6 +156,7 @@ var productController = function () {
                         Content: '',
                         HomeFlag: showHome,
                         HotFlag: hot,
+                        Content: content,
                         Tags: tags,
                         Unit: unit,
                         Status: status,
@@ -180,6 +185,27 @@ var productController = function () {
                 return false;
             }
         });
+        $('body').on('click', 'btnCancel', function (e) {
+            e.preventDefault();
+            resetFormMaintainance();
+        });
+    }
+    function registerControls() {
+        CKEDITOR.replace('txtContentM', {});
+        // bootstrap-ckeditor-fix.js
+        // hack to fix ckeditor/bootstrap compatiability bug when ckeditor appears in a bootstrap modal dialog
+        //
+        // Include this file AFTER both jQuery and bootstrap are loaded.
+        $.fn.modal.Constructor.prototype.enforceFocus = function () {
+            modal_this = this
+            $(document).on('focusin.modal', function (e) {
+                if (modal_this.$element[0] !== e.target && !modal_this.$element.has(e.target).length
+                    && !$(e.target.parentNode).hasClass('cke_dialog_ui_input_select')
+                    && !$(e.target.parentNode).hasClass('cke_dialog_ui_input_text')) {
+                    modal_this.$element.focus()
+                }
+            })
+        };
     }
     function initTreeDropDownCategory(selectedId) {
         $.ajax({
@@ -217,10 +243,10 @@ var productController = function () {
         $('#txtPriceM').val('');
         $('#txtOriginalPriceM').val('');
         $('#txtPromotionPriceM').val('');
-
+        CKEDITOR.instances.txtContentM.setData('');
         $('#txtTagM').val('');
-        $('#txtMetakeywordM').val('');
-        $('#txtMetaDescriptionM').val('');
+        $('#txtSeoKeywordM').val('');
+        $('#txtSeoDescriptionM').val('');
         $('#txtSeoPageTitleM').val('');
         $('#txtSeoAliasM').val('');
 
