@@ -153,6 +153,34 @@
         $('#btnCancel').on('click', function (e) {
             resetFormMaintainance();
         });
+        $('#btnSelectImg').on('click', function (e) {
+            e.preventDefault();
+            $('#fileInputImage').click();
+        });
+        $('#fileInputImage').on('change', function () {
+            var fileUpload = $(this).get(0);
+            var files = fileUpload.files;
+
+            var data = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                data.append(files[i].name, files[i]);
+            }
+            $.ajax({
+                type: 'POST',
+                url: '/admin/upload/uploadimage',
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (result) {
+                    $('#txtImageM').val(result);
+                    congdoan.notify('Upload image succesful', 'success');
+                },
+                error: function (error) {
+                    congdoan.notify('There was error uploading files', 'error');
+                    console.log(error);
+                }
+            });
+        });
     }
     function resetFormMaintainance() {
         $('#hidIdM').val(0);
