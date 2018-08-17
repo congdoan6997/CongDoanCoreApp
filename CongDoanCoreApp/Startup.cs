@@ -89,10 +89,15 @@ namespace CongDoanCoreApp
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<ITagRepository, TagRepository>();
             services.AddTransient<IProductTagRepository, ProductTagRepository>();
+            services.AddTransient<IPermissionRepository, PermissionRepository>();
             //services
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
             services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IRoleService, RoleService>();
+
+         
 
             services.AddMvc().AddJsonOptions(op =>
            op.SerializerSettings.ContractResolver = new DefaultContractResolver());

@@ -27,6 +27,12 @@ var loginController = function () {
                 login(user, password);
             }
         });
+        $('body').keypress(function (e) {
+            e.preventDefault();
+            if (e.which === 13) {
+                $('#btnLogin').click();
+            }
+        })
     };
 
     var login = function (user, pass) {

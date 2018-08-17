@@ -23,7 +23,7 @@ var productController = function () {
                     number: true,
                     required: true
                 },
-                ddlCategoryIdM: { required: true },
+                ddlCategoryIdM: { required: true }
             }
         });
         $("#ddlShowPage").on('change', function () {
@@ -137,7 +137,7 @@ var productController = function () {
                 var seoAlias = $('#txtSeoAliasM').val();
 
                 var content = CKEDITOR.instances.txtContentM.getData();
-                var status = $('#ckStatusM').prop('checked') == true ? 1 : 0;
+                var status = $('#ckStatusM').prop('checked') === true ? 1 : 0;
                 var hot = $('#ckHotM').prop('checked');
                 var showHome = $('#ckShowHomeM').prop('checked');
 
@@ -153,7 +153,7 @@ var productController = function () {
                         OriginalPrice: originalPrice,
                         PromotionPrice: promotionPrice,
                         Description: description,
-                        Content: '',
+                  
                         HomeFlag: showHome,
                         HotFlag: hot,
                         Content: content,
@@ -221,21 +221,21 @@ var productController = function () {
     function registerControls() {
         CKEDITOR.replace('txtContentM', {
             extraPlugins : 'colorbutton'
-            //filebrowserImageUploadUrl: "/Admin/Upload/UploadImageForCKEditor"
+
         });
         // bootstrap-ckeditor-fix.js
         // hack to fix ckeditor/bootstrap compatiability bug when ckeditor appears in a bootstrap modal dialog
         //
         // Include this file AFTER both jQuery and bootstrap are loaded.
         $.fn.modal.Constructor.prototype.enforceFocus = function () {
-            modal_this = this
+            modal_this = this;
             $(document).on('focusin.modal', function (e) {
                 if (modal_this.$element[0] !== e.target && !modal_this.$element.has(e.target).length
                     && !$(e.target.parentNode).hasClass('cke_dialog_ui_input_select')
                     && !$(e.target.parentNode).hasClass('cke_dialog_ui_input_text')) {
-                    modal_this.$element.focus()
+                    modal_this.$element.focus();
                 }
-            })
+            });
         };
     }
     function initTreeDropDownCategory(selectedId) {
@@ -330,7 +330,7 @@ var productController = function () {
                     });
                 });
                 //hiển thị số lượng trang
-                $("#lblTotalRecords").text(result.PageCount);
+                $("#lblTotalRecords").text(result.RowCount);
                 //xuất html danh sách sản phẩm
                 if (render !== '') {
                     $("#tbl-content").html(render);

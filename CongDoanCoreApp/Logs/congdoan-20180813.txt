@@ -8387,3 +8387,341 @@ ORDER BY [x].[ParentId]" (0723d8ff)
 2018-08-13T15:43:19.5250414+03:00 0HLG12PG3LVU7:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" with arguments (["System.Collections.Generic.List`1[Microsoft.AspNetCore.Http.IFormFile]", "", "", ""]) - ModelState is Valid (ba7f4ac2)
 2018-08-13T15:43:19.5396242+03:00 0HLG12PG3LVU7:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" in 218.4448ms (afa2e885)
 2018-08-13T15:43:19.5545576+03:00 0HLG12PG3LVU7:00000003 [INF] Request finished in 230.3539ms 200  (791a596a)
+2018-08-13T16:10:05.9200673+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-13T16:10:05.9301378+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-13T16:10:05.9534575+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-13T16:10:05.9767590+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-13T16:10:05.9994770+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-13T16:10:06.0223618+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-13T16:10:06.0448558+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-13T16:10:06.1678447+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:06.7115777+03:00  [INF] Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-13T16:10:06.7933792+03:00  [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-13T16:10:06.8371875+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-13T16:10:06.9399967+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-13T16:10:06.9511400+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-13T16:10:06.9758456+03:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-13T16:10:06.9837144+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-13T16:10:06.9936761+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-13T16:10:07.0056488+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-13T16:10:07.0395199+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-13T16:10:07.0723521+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-13T16:10:07.0832519+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-13T16:10:07.4779442+03:00 0HLG13OBN5FVH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-13T16:10:07.4745990+03:00 0HLG13OBN5FVG:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-13T16:10:07.5020134+03:00 0HLG13OBN5FVG:00000001 [INF] Request finished in 80.3053ms 200  (791a596a)
+2018-08-13T16:10:07.5857003+03:00 0HLG13OBN5FVH:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:07.7992735+03:00 0HLG13OBN5FVH:00000001 [INF] Executed DbCommand ("63"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-08-13T16:10:08.0300141+03:00 0HLG13OBN5FVH:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-13T16:10:08.0993806+03:00 0HLG13OBN5FVH:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-13T16:10:08.1214040+03:00 0HLG13OBN5FVH:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-13T16:10:08.1541136+03:00 0HLG13OBN5FVH:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-13T16:10:08.1773973+03:00 0HLG13OBN5FVH:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-13T16:10:08.3345921+03:00 0HLG13OBN5FVH:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:10.6107456+03:00 0HLG13OBN5FVH:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-13T16:10:11.2552688+03:00 0HLG13OBN5FVH:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 2909.9152ms (afa2e885)
+2018-08-13T16:10:11.2623015+03:00 0HLG13OBN5FVH:00000001 [INF] Request finished in 3840.9078ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-13T16:10:13.7824788+03:00 0HLG13OBN5FVG:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-13T16:10:13.8064929+03:00 0HLG13OBN5FVG:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:14.0721227+03:00 0HLG13OBN5FVG:00000002 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-13T16:10:14.1005085+03:00 0HLG13OBN5FVG:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 309.2892ms (afa2e885)
+2018-08-13T16:10:14.1056873+03:00 0HLG13OBN5FVG:00000002 [INF] Request finished in 324.3899ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-13T16:10:14.1158332+03:00 0HLG13OBN5FVH:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-13T16:10:14.1282127+03:00 0HLG13OBN5FVH:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:14.1527239+03:00 0HLG13OBN5FVH:00000002 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-13T16:10:14.1570135+03:00 0HLG13OBN5FVH:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 36.6135ms (afa2e885)
+2018-08-13T16:10:14.1616004+03:00 0HLG13OBN5FVH:00000002 [INF] Request finished in 45.6311ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-13T16:10:15.8268402+03:00 0HLG13OBN5FVG:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-08-13T16:10:15.9469853+03:00 0HLG13OBN5FVG:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:15.9583548+03:00 0HLG13OBN5FVG:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:15.9893187+03:00 0HLG13OBN5FVG:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-13T16:10:16.0634279+03:00 0HLG13OBN5FVG:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-13T16:10:16.0685209+03:00 0HLG13OBN5FVG:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-13T16:10:16.0737897+03:00 0HLG13OBN5FVG:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-13T16:10:16.0983052+03:00 0HLG13OBN5FVG:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-13T16:10:16.1224732+03:00 0HLG13OBN5FVG:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-13T16:10:16.1376396+03:00 0HLG13OBN5FVG:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-08-13T16:10:16.1439418+03:00 0HLG13OBN5FVG:00000003 [INF] User logged in. (fdce0db4)
+2018-08-13T16:10:16.1514964+03:00 0HLG13OBN5FVG:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:10:16.2824803+03:00 0HLG13OBN5FVG:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 415.6446ms (afa2e885)
+2018-08-13T16:10:16.2875080+03:00 0HLG13OBN5FVG:00000003 [INF] Request finished in 461.7892ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:10:16.3328599+03:00 0HLG13OBN5FVH:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Admin/Home/Index   (ca22a1cb)
+2018-08-13T16:10:16.3448172+03:00 0HLG13OBN5FVH:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:10:16.3495998+03:00 0HLG13OBN5FVH:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:16.4818112+03:00 0HLG13OBN5FVH:00000003 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-13T16:10:16.7349354+03:00 0HLG13OBN5FVH:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:16.7756430+03:00 0HLG13OBN5FVH:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-13T16:10:17.2092442+03:00 0HLG13OBN5FVH:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" in 869.7137ms (afa2e885)
+2018-08-13T16:10:17.2187898+03:00 0HLG13OBN5FVH:00000003 [INF] Request finished in 900.4257ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-13T16:10:19.3746357+03:00 0HLG13OBN5FVG:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/index   (ca22a1cb)
+2018-08-13T16:10:19.3794618+03:00 0HLG13OBN5FVG:00000004 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:10:19.4043528+03:00 0HLG13OBN5FVG:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:19.5201584+03:00 0HLG13OBN5FVG:00000004 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Product/Index.cshtml". (9707eebe)
+2018-08-13T16:10:19.6617364+03:00 0HLG13OBN5FVG:00000004 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:19.6876665+03:00 0HLG13OBN5FVG:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-13T16:10:19.6985169+03:00 0HLG13OBN5FVG:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.Index (CongDoanCoreApp)" in 318.4304ms (afa2e885)
+2018-08-13T16:10:19.7042649+03:00 0HLG13OBN5FVG:00000004 [INF] Request finished in 329.2977ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-13T16:10:19.7543450+03:00 0HLG13OBN5FVH:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/product/index.js?v=pyCBgW62ZcHYREyHfEOjdYuTM3WIMkZGxld2QYqAIco   (ca22a1cb)
+2018-08-13T16:10:19.7735046+03:00 0HLG13OBN5FVH:00000004 [INF] The file "/app/controllers/product/index.js" was not modified (f1f8d725)
+2018-08-13T16:10:19.7870482+03:00 0HLG13OBN5FVH:00000004 [INF] Request finished in 43.167ms 304 application/javascript (791a596a)
+2018-08-13T16:10:20.1602267+03:00 0HLG13OBN5FVG:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/GetAllCategories   (ca22a1cb)
+2018-08-13T16:10:20.2186436+03:00 0HLG13OBN5FVH:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/getallpaging?categoryId=&keyword=&page=1&pageSize=10   (ca22a1cb)
+2018-08-13T16:10:20.2513289+03:00 0HLG13OBN5FVI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/config.js?t=I639   (ca22a1cb)
+2018-08-13T16:10:20.2992553+03:00 0HLG13OBN5FVH:00000005 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:10:20.3009480+03:00 0HLG13OBN5FVI:00000001 [INF] The file "/lib/ckeditor/config.js" was not modified (f1f8d725)
+2018-08-13T16:10:20.3599525+03:00 0HLG13OBN5FVI:00000001 [INF] Request finished in 86.7819ms 304 application/javascript (791a596a)
+2018-08-13T16:10:20.3639475+03:00 0HLG13OBN5FVG:00000005 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:10:20.3674829+03:00 0HLG13OBN5FVG:00000005 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllCategories (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:20.3752754+03:00 0HLG13OBN5FVG:00000005 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:20.3784950+03:00 0HLG13OBN5FVH:00000005 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" with arguments (["", "", "1", "10"]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:20.3858617+03:00 0HLG13OBN5FVH:00000005 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:20.4125748+03:00 0HLG13OBN5FVH:00000005 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2018-08-13T16:10:20.4243680+03:00 0HLG13OBN5FVG:00000005 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-13T16:10:20.4458906+03:00 0HLG13OBN5FVG:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:10:20.5035873+03:00 0HLG13OBN5FVG:00000005 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllCategories (CongDoanCoreApp)" in 226.4395ms (afa2e885)
+2018-08-13T16:10:20.5123303+03:00 0HLG13OBN5FVG:00000005 [INF] Request finished in 371.5115ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:10:20.5441928+03:00 0HLG13OBN5FVH:00000005 [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Id], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], CASE
+    WHEN [x].[CategoryId] IS NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[DateCreated] AS [DateCreated0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[ParentId], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x].[PromotionPrice], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoDescription] AS [SeoDescription0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[Status] AS [Status0], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2018-08-13T16:10:20.5609944+03:00 0HLG13OBN5FVH:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:10:20.5830171+03:00 0HLG13OBN5FVH:00000005 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" in 357.2021ms (afa2e885)
+2018-08-13T16:10:20.5870955+03:00 0HLG13OBN5FVH:00000005 [INF] Request finished in 449.5963ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:10:20.6105542+03:00 0HLG13OBN5FVI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/getallpaging?categoryId=&keyword=&page=1&pageSize=10   (ca22a1cb)
+2018-08-13T16:10:20.6360244+03:00 0HLG13OBN5FVG:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/client-side/images/products/product-1.jpg   (ca22a1cb)
+2018-08-13T16:10:20.6590903+03:00 0HLG13OBN5FVI:00000002 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:10:20.6832842+03:00 0HLG13OBN5FVI:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" with arguments (["", "", "1", "10"]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:20.7116459+03:00 0HLG13OBN5FVI:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:20.7422405+03:00 0HLG13OBN5FVG:00000006 [INF] Request finished in 74.9428ms 404  (791a596a)
+2018-08-13T16:10:20.7656973+03:00 0HLG13OBN5FVI:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2018-08-13T16:10:20.7919370+03:00 0HLG13OBN5FVI:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Id], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], CASE
+    WHEN [x].[CategoryId] IS NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[DateCreated] AS [DateCreated0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[ParentId], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x].[PromotionPrice], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoDescription] AS [SeoDescription0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[Status] AS [Status0], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2018-08-13T16:10:20.8128845+03:00 0HLG13OBN5FVI:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:10:20.8202882+03:00 0HLG13OBN5FVI:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" in 200.6367ms (afa2e885)
+2018-08-13T16:10:20.8483143+03:00 0HLG13OBN5FVI:00000002 [INF] Request finished in 216.2079ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:10:20.8550578+03:00 0HLG13OBN5FVH:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/client-side/images/products/product-1.jpg   (ca22a1cb)
+2018-08-13T16:10:20.8623017+03:00 0HLG13OBN5FVH:00000006 [INF] Request finished in 12.1826ms 404  (791a596a)
+2018-08-13T16:10:21.4551923+03:00 0HLG13OBN5FVG:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productCategory/getall   (ca22a1cb)
+2018-08-13T16:10:21.4701333+03:00 0HLG13OBN5FVG:00000007 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:10:21.4782797+03:00 0HLG13OBN5FVG:00000007 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:21.4828632+03:00 0HLG13OBN5FVG:00000007 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:10:21.4909281+03:00 0HLG13OBN5FVG:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-13T16:10:21.4958220+03:00 0HLG13OBN5FVG:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:10:21.4998818+03:00 0HLG13OBN5FVG:00000007 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 37.3753ms (afa2e885)
+2018-08-13T16:10:21.5040308+03:00 0HLG13OBN5FVG:00000007 [INF] Request finished in 52.9187ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:10:43.1589051+03:00 0HLG13OBN5FVI:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44361/Admin/Upload/UploadImageForCKEditor multipart/form-data; boundary=----WebKitFormBoundary70eEsoinhDxqL8LV 271021 (ca22a1cb)
+2018-08-13T16:10:43.1897182+03:00 0HLG13OBN5FVI:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:10:43.2562133+03:00 0HLG13OBN5FVI:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" with arguments (["System.Collections.Generic.List`1[Microsoft.AspNetCore.Http.IFormFile]", "", "", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:10:43.3000568+03:00 0HLG13OBN5FVI:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" in 131.3996ms (afa2e885)
+2018-08-13T16:10:43.3067176+03:00 0HLG13OBN5FVI:00000003 [INF] Request finished in 147.6472ms 200  (791a596a)
+2018-08-13T16:11:14.2775572+03:00 0HLG13OBN5FVH:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/index   (ca22a1cb)
+2018-08-13T16:11:14.2863863+03:00 0HLG13OBN5FVH:00000007 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:11:14.2920978+03:00 0HLG13OBN5FVH:00000007 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:11:14.3011279+03:00 0HLG13OBN5FVH:00000007 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Product/Index.cshtml". (9707eebe)
+2018-08-13T16:11:14.3126755+03:00 0HLG13OBN5FVH:00000007 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:11:14.3207859+03:00 0HLG13OBN5FVH:00000007 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-13T16:11:14.3322497+03:00 0HLG13OBN5FVH:00000007 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.Index (CongDoanCoreApp)" in 43.1491ms (afa2e885)
+2018-08-13T16:11:14.3392453+03:00 0HLG13OBN5FVH:00000007 [INF] Request finished in 66.191ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-13T16:11:15.0172578+03:00 0HLG13OBN5FVG:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/GetAllCategories   (ca22a1cb)
+2018-08-13T16:11:15.0869734+03:00 0HLG13OBN5FVG:00000008 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:11:15.1712259+03:00 0HLG13OBN5FVG:00000008 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllCategories (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:11:15.2113862+03:00 0HLG13OBN5FVG:00000008 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:11:15.2446717+03:00 0HLG13OBN5FVI:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/getallpaging?categoryId=&keyword=&page=1&pageSize=10   (ca22a1cb)
+2018-08-13T16:11:15.2580753+03:00 0HLG13OBN5FVG:00000008 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-13T16:11:15.2848072+03:00 0HLG13OBN5FVI:00000004 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:11:15.3390428+03:00 0HLG13OBN5FVG:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:11:15.3409775+03:00 0HLG13OBN5FVI:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" with arguments (["", "", "1", "10"]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:11:15.3686452+03:00 0HLG13OBN5FVG:00000008 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllCategories (CongDoanCoreApp)" in 322.7846ms (afa2e885)
+2018-08-13T16:11:15.3741284+03:00 0HLG13OBN5FVI:00000004 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:11:15.3755711+03:00 0HLG13OBN5FVG:00000008 [INF] Request finished in 372.7857ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:11:15.3909712+03:00 0HLG13OBN5FVI:00000004 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2018-08-13T16:11:15.4007138+03:00 0HLG13OBN5FVI:00000004 [INF] Executed DbCommand ("5"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Id], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], CASE
+    WHEN [x].[CategoryId] IS NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[DateCreated] AS [DateCreated0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[ParentId], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x].[PromotionPrice], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoDescription] AS [SeoDescription0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[Status] AS [Status0], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2018-08-13T16:11:15.4070543+03:00 0HLG13OBN5FVI:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:11:15.4151508+03:00 0HLG13OBN5FVI:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" in 162.279ms (afa2e885)
+2018-08-13T16:11:15.4201136+03:00 0HLG13OBN5FVI:00000004 [INF] Request finished in 393.2526ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:11:15.4931511+03:00 0HLG13OBN5FVH:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/getallpaging?categoryId=&keyword=&page=1&pageSize=10   (ca22a1cb)
+2018-08-13T16:11:15.4938881+03:00 0HLG13OBN5FVG:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:44361/client-side/images/products/product-1.jpg   (ca22a1cb)
+2018-08-13T16:11:15.5422310+03:00 0HLG13OBN5FVH:00000008 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:11:15.5427488+03:00 0HLG13OBN5FVG:00000009 [INF] Request finished in 52.903ms 404  (791a596a)
+2018-08-13T16:11:15.5957467+03:00 0HLG13OBN5FVH:00000008 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" with arguments (["", "", "1", "10"]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:11:15.6192466+03:00 0HLG13OBN5FVH:00000008 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:11:15.6229487+03:00 0HLG13OBN5FVH:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2018-08-13T16:11:15.6267555+03:00 0HLG13OBN5FVH:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Id], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], CASE
+    WHEN [x].[CategoryId] IS NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[DateCreated] AS [DateCreated0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[ParentId], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x].[PromotionPrice], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoDescription] AS [SeoDescription0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[Status] AS [Status0], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2018-08-13T16:11:15.6302072+03:00 0HLG13OBN5FVH:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:11:15.6362582+03:00 0HLG13OBN5FVH:00000008 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" in 136.0441ms (afa2e885)
+2018-08-13T16:11:15.6575536+03:00 0HLG13OBN5FVH:00000008 [INF] Request finished in 193.5169ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:11:15.6656595+03:00 0HLG13OBN5FVI:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/client-side/images/products/product-1.jpg   (ca22a1cb)
+2018-08-13T16:11:15.6723334+03:00 0HLG13OBN5FVI:00000005 [INF] Request finished in 8.6839ms 404  (791a596a)
+2018-08-13T16:11:26.4241513+03:00 0HLG13OBN5FVG:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productCategory/getall   (ca22a1cb)
+2018-08-13T16:11:26.4490177+03:00 0HLG13OBN5FVG:0000000A [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:11:26.4723837+03:00 0HLG13OBN5FVG:0000000A [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:11:26.4967460+03:00 0HLG13OBN5FVG:0000000A [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-13T16:11:26.5221320+03:00 0HLG13OBN5FVG:0000000A [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-13T16:11:26.5248703+03:00 0HLG13OBN5FVG:0000000A [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-13T16:11:26.5487972+03:00 0HLG13OBN5FVG:0000000A [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 99.9181ms (afa2e885)
+2018-08-13T16:11:26.5520964+03:00 0HLG13OBN5FVG:0000000A [INF] Request finished in 149.5592ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-13T16:11:51.9607240+03:00 0HLG13OBN5FVH:00000009 [INF] Request starting HTTP/1.1 POST http://localhost:44361/Admin/Upload/UploadImageForCKEditor multipart/form-data; boundary=----WebKitFormBoundaryAGd0U8IlE2rf8Img 635696 (ca22a1cb)
+2018-08-13T16:11:51.9650720+03:00 0HLG13OBN5FVH:00000009 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:11:52.0048695+03:00 0HLG13OBN5FVH:00000009 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" with arguments (["System.Collections.Generic.List`1[Microsoft.AspNetCore.Http.IFormFile]", "", "", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:11:52.0311551+03:00 0HLG13OBN5FVH:00000009 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" in 45.4973ms (afa2e885)
+2018-08-13T16:11:52.0375328+03:00 0HLG13OBN5FVH:00000009 [INF] Request finished in 76.0368ms 200  (791a596a)
+2018-08-13T16:12:14.2009139+03:00 0HLG13OBN5FVI:00000006 [INF] Request starting HTTP/1.1 POST http://localhost:44361/Admin/Upload/UploadImageForCKEditor multipart/form-data; boundary=----WebKitFormBoundaryZEqUgNypBhVrU1JD 635696 (ca22a1cb)
+2018-08-13T16:12:14.2049326+03:00 0HLG13OBN5FVI:00000006 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:12:14.2227746+03:00 0HLG13OBN5FVI:00000006 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" with arguments (["System.Collections.Generic.List`1[Microsoft.AspNetCore.Http.IFormFile]", "", "", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:12:14.2273524+03:00 0HLG13OBN5FVI:00000006 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" in 23.0856ms (afa2e885)
+2018-08-13T16:12:14.2307311+03:00 0HLG13OBN5FVI:00000006 [INF] Request finished in 31.8235ms 200  (791a596a)
+2018-08-13T16:12:29.4798369+03:00 0HLG13OBN5FVH:0000000A [INF] Request starting HTTP/1.1 POST http://localhost:44361/Admin/Upload/UploadImageForCKEditor multipart/form-data; boundary=----WebKitFormBoundaryBSBKeb5ViyjVJdrp 38246 (ca22a1cb)
+2018-08-13T16:12:29.4838027+03:00 0HLG13OBN5FVH:0000000A [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-13T16:12:29.4873458+03:00 0HLG13OBN5FVH:0000000A [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" with arguments (["System.Collections.Generic.List`1[Microsoft.AspNetCore.Http.IFormFile]", "", "", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-13T16:12:29.4967642+03:00 0HLG13OBN5FVH:0000000A [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" in 12.0021ms (afa2e885)
+2018-08-13T16:12:29.5202036+03:00 0HLG13OBN5FVH:0000000A [INF] Request finished in 20.3093ms 200  (791a596a)

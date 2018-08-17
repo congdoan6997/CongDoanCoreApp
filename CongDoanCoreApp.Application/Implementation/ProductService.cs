@@ -95,6 +95,7 @@ namespace CongDoanCoreApp.Application.Implementation
             query = query.OrderByDescending(x => x.DateCreated)
                  .Skip((page - 1) * pageSize)
                  .Take(pageSize);
+
             var data = query.ProjectTo<ProductViewModel>().ToList();
 
             var paginationSet = new PageResult<ProductViewModel>()

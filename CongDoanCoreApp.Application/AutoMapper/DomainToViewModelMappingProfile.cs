@@ -12,6 +12,7 @@ namespace CongDoanCoreApp.Application.AutoMapper
             CreateMap<ProductCategory, ProductCategoryViewModel>();
             CreateMap<Function, FunctionViewModel>();
             CreateMap<Product, ProductViewModel>();
+            CreateMap<AppUser, AppUserViewModel>();
         }
     }
 }

@@ -1,0 +1,511 @@
+2018-08-14T11:14:18.5063212+03:00  [WRN] No type was specified for the decimal column '"Balance"' on entity type '"AppUser"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-14T11:14:18.5371517+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"BillDetail"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-14T11:14:18.5617733+03:00  [WRN] No type was specified for the decimal column '"OriginalPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-14T11:14:18.5656352+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-14T11:14:18.5687006+03:00  [WRN] No type was specified for the decimal column '"PromotionPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-14T11:14:18.5924955+03:00  [WRN] No type was specified for the decimal column '"Value5"' on entity type '"SystemConfig"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-14T11:14:18.5981512+03:00  [WRN] No type was specified for the decimal column '"Price"' on entity type '"WholePrice"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'. (b5b4253a)
+2018-08-14T11:14:18.7363466+03:00  [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:14:19.4139178+03:00  [INF] Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppRoles] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T11:14:19.4916923+03:00  [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T11:14:19.5133283+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Functions] AS [f]" (0723d8ff)
+2018-08-14T11:14:19.6163488+03:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Footers] AS [x]
+WHERE [x].[Id] = 'DefaultFooterId'" (0723d8ff)
+2018-08-14T11:14:19.6234960+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Colors] AS [c]" (0723d8ff)
+2018-08-14T11:14:19.6313850+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [AdvertistmentPages] AS [a]" (0723d8ff)
+2018-08-14T11:14:19.6585042+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Slides] AS [s]" (0723d8ff)
+2018-08-14T11:14:19.6653360+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Sizes] AS [s]" (0723d8ff)
+2018-08-14T11:14:19.6923010+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [ProductCategories] AS [p]" (0723d8ff)
+2018-08-14T11:14:19.7201496+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeTitle')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T11:14:19.7470818+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaKeyword')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T11:14:19.7744374+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [SystemConfigs] AS [x]
+        WHERE [x].[Id] = 'HomeMetaDescription')
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2018-08-14T11:14:20.1730101+03:00 0HLG1NNNQ32Q6:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56179/  0 (ca22a1cb)
+2018-08-14T11:14:20.1730101+03:00 0HLG1NNNQ32Q5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/   (ca22a1cb)
+2018-08-14T11:14:20.2049077+03:00 0HLG1NNNQ32Q6:00000001 [INF] Request finished in 98.0543ms 200  (791a596a)
+2018-08-14T11:14:20.3909868+03:00 0HLG1NNNQ32Q5:00000001 [INF] Executing action method "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:23.4210242+03:00 0HLG1NNNQ32Q5:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-08-14T11:14:24.0831475+03:00 0HLG1NNNQ32Q5:00000001 [INF] Executed action "CongDoanCoreApp.Controllers.HomeController.Index (CongDoanCoreApp)" in 3692.3908ms (afa2e885)
+2018-08-14T11:14:24.0969762+03:00 0HLG1NNNQ32Q5:00000001 [INF] Request finished in 3993.8567ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T11:14:24.2166597+03:00 0HLG1NNNQ32Q6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/css/site.css   (ca22a1cb)
+2018-08-14T11:14:24.2197317+03:00 0HLG1NNNQ32Q5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/images/banner1.svg   (ca22a1cb)
+2018-08-14T11:14:24.2235801+03:00 0HLG1NNNQ32Q7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/images/banner2.svg   (ca22a1cb)
+2018-08-14T11:14:24.2801741+03:00 0HLG1NNNQ32Q7:00000001 [INF] The file "/images/banner2.svg" was not modified (f1f8d725)
+2018-08-14T11:14:24.2810205+03:00 0HLG1NNNQ32Q6:00000002 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-08-14T11:14:24.2845165+03:00 0HLG1NNNQ32Q5:00000002 [INF] The file "/images/banner1.svg" was not modified (f1f8d725)
+2018-08-14T11:14:24.4082548+03:00 0HLG1NNNQ32Q7:00000001 [INF] Request finished in 67.4192ms 304 image/svg+xml (791a596a)
+2018-08-14T11:14:24.4082986+03:00 0HLG1NNNQ32Q5:00000002 [INF] Request finished in 126.2672ms 304 image/svg+xml (791a596a)
+2018-08-14T11:14:24.5410945+03:00 0HLG1NNNQ32Q6:00000002 [INF] Request finished in 129.1536ms 304 text/css (791a596a)
+2018-08-14T11:14:24.7251628+03:00 0HLG1NNNQ32Q5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/images/banner3.svg   (ca22a1cb)
+2018-08-14T11:14:24.7846942+03:00 0HLG1NNNQ32Q7:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-08-14T11:14:24.8164929+03:00 0HLG1NNNQ32Q8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA   (ca22a1cb)
+2018-08-14T11:14:24.8373478+03:00 0HLG1NNNQ32Q7:00000002 [INF] The file "/lib/jquery/dist/jquery.js" was not modified (f1f8d725)
+2018-08-14T11:14:24.9136530+03:00 0HLG1NNNQ32Q5:00000003 [INF] The file "/images/banner3.svg" was not modified (f1f8d725)
+2018-08-14T11:14:24.9557418+03:00 0HLG1NNNQ32Q8:00000001 [INF] The file "/js/site.js" was not modified (f1f8d725)
+2018-08-14T11:14:25.0155609+03:00 0HLG1NNNQ32Q7:00000002 [INF] Request finished in 399.2292ms 304 application/javascript (791a596a)
+2018-08-14T11:14:25.0207720+03:00 0HLG1NNNQ32Q8:00000001 [INF] Request finished in 455.2688ms 304 application/javascript (791a596a)
+2018-08-14T11:14:25.0569100+03:00 0HLG1NNNQ32Q5:00000003 [INF] Request finished in 412.6225ms 304 image/svg+xml (791a596a)
+2018-08-14T11:14:25.0826723+03:00 0HLG1NNNQ32Q6:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/images/banner4.svg   (ca22a1cb)
+2018-08-14T11:14:25.1227783+03:00 0HLG1NNNQ32Q6:00000003 [INF] The file "/images/banner4.svg" was not modified (f1f8d725)
+2018-08-14T11:14:25.1373463+03:00 0HLG1NNNQ32Q6:00000003 [INF] Request finished in 263.4615ms 304 image/svg+xml (791a596a)
+2018-08-14T11:14:27.1221368+03:00 0HLG1NNNQ32Q7:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-14T11:14:27.1498710+03:00 0HLG1NNNQ32Q7:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:27.4092865+03:00 0HLG1NNNQ32Q7:00000003 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T11:14:27.5024260+03:00 0HLG1NNNQ32Q7:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 347.9792ms (afa2e885)
+2018-08-14T11:14:27.5137984+03:00 0HLG1NNNQ32Q7:00000003 [INF] Request finished in 387.3387ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T11:14:27.5225013+03:00 0HLG1NNNQ32Q5:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin   (ca22a1cb)
+2018-08-14T11:14:27.5625770+03:00 0HLG1NNNQ32Q5:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:27.6371326+03:00 0HLG1NNNQ32Q5:00000004 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Login/Index.cshtml". (9707eebe)
+2018-08-14T11:14:27.6859182+03:00 0HLG1NNNQ32Q6:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/animate.css/animate.css   (ca22a1cb)
+2018-08-14T11:14:27.8020005+03:00 0HLG1NNNQ32Q9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.css   (ca22a1cb)
+2018-08-14T11:14:27.8309311+03:00 0HLG1NNNQ32Q6:00000004 [INF] The file "/lib/animate.css/animate.css" was not modified (f1f8d725)
+2018-08-14T11:14:27.8740492+03:00 0HLG1NNNQ32Q7:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.css   (ca22a1cb)
+2018-08-14T11:14:27.9477405+03:00 0HLG1NNNQ32Q7:00000004 [INF] The file "/lib/nprogress/nprogress.css" was not modified (f1f8d725)
+2018-08-14T11:14:27.9885463+03:00 0HLG1NNNQ32Q8:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/css/font-awesome.css   (ca22a1cb)
+2018-08-14T11:14:28.0421893+03:00 0HLG1NNNQ32QB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/notify.js   (ca22a1cb)
+2018-08-14T11:14:28.0683739+03:00 0HLG1NNNQ32Q5:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Index (CongDoanCoreApp)" in 115.7001ms (afa2e885)
+2018-08-14T11:14:28.1280501+03:00 0HLG1NNNQ32Q5:00000004 [INF] Request finished in 550.3879ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T11:14:28.1609888+03:00 0HLG1NNNQ32Q9:00000001 [INF] The file "/lib/notifyjs/dist/styles/metro/notify-metro.css" was not modified (f1f8d725)
+2018-08-14T11:14:28.1970910+03:00 0HLG1NNNQ32Q6:00000004 [INF] Request finished in 277.8693ms 304 text/css (791a596a)
+2018-08-14T11:14:28.2170798+03:00 0HLG1NNNQ32Q8:00000002 [INF] The file "/lib/font-awesome/css/font-awesome.css" was not modified (f1f8d725)
+2018-08-14T11:14:28.3112482+03:00 0HLG1NNNQ32Q7:00000004 [INF] Request finished in 394.6711ms 304 text/css (791a596a)
+2018-08-14T11:14:28.3409106+03:00 0HLG1NNNQ32Q8:00000002 [INF] Request finished in 687.8404ms 304 text/css (791a596a)
+2018-08-14T11:14:28.3580091+03:00 0HLG1NNNQ32Q9:00000001 [INF] Request finished in 607.9282ms 304 text/css (791a596a)
+2018-08-14T11:14:28.3958836+03:00 0HLG1NNNQ32QD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/login/index.js   (ca22a1cb)
+2018-08-14T11:14:28.4145031+03:00 0HLG1NNNQ32QC:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery/test%20v2.2.4/jquery.js   (ca22a1cb)
+2018-08-14T11:14:28.4329505+03:00 0HLG1NNNQ32QB:00000001 [INF] The file "/lib/notifyjs/dist/notify.js" was not modified (f1f8d725)
+2018-08-14T11:14:28.5010352+03:00 0HLG1NNNQ32QA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/css/custom.css   (ca22a1cb)
+2018-08-14T11:14:28.5175801+03:00 0HLG1NNNQ32QD:00000001 [INF] The file "/app/controllers/login/index.js" was not modified (f1f8d725)
+2018-08-14T11:14:28.5797535+03:00 0HLG1NNNQ32QA:00000001 [INF] The file "/admin-side/css/custom.css" was not modified (f1f8d725)
+2018-08-14T11:14:28.7193648+03:00 0HLG1NNNQ32QA:00000001 [INF] Request finished in 252.882ms 304 text/css (791a596a)
+2018-08-14T11:14:28.7385298+03:00 0HLG1NNNQ32QD:00000001 [INF] Request finished in 147.2308ms 304 application/javascript (791a596a)
+2018-08-14T11:14:28.7618258+03:00 0HLG1NNNQ32QB:00000001 [INF] Request finished in 820.4755ms 304 application/javascript (791a596a)
+2018-08-14T11:14:28.7836512+03:00 0HLG1NNNQ32QC:00000001 [INF] The file "/lib/jquery/test v2.2.4/jquery.js" was not modified (f1f8d725)
+2018-08-14T11:14:28.8091225+03:00 0HLG1NNNQ32QF:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/shared/congdoan.js   (ca22a1cb)
+2018-08-14T11:14:28.8844581+03:00 0HLG1NNNQ32QC:00000001 [INF] Request finished in 564.3797ms 304 application/javascript (791a596a)
+2018-08-14T11:14:28.9282881+03:00 0HLG1NNNQ32QE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/notifyjs/dist/styles/metro/notify-metro.js   (ca22a1cb)
+2018-08-14T11:14:28.9867469+03:00 0HLG1NNNQ32QE:00000001 [INF] The file "/lib/notifyjs/dist/styles/metro/notify-metro.js" was not modified (f1f8d725)
+2018-08-14T11:14:28.9978214+03:00 0HLG1NNNQ32QE:00000001 [INF] Request finished in 522.9153ms 304 application/javascript (791a596a)
+2018-08-14T11:14:29.0050069+03:00 0HLG1NNNQ32QF:00000001 [INF] The file "/app/shared/congdoan.js" was not modified (f1f8d725)
+2018-08-14T11:14:29.0121570+03:00 0HLG1NNNQ32QF:00000001 [INF] Request finished in 532.2757ms 304 application/javascript (791a596a)
+2018-08-14T11:14:30.5563918+03:00 0HLG1NNNQ32Q6:00000005 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 33 (ca22a1cb)
+2018-08-14T11:14:30.6805075+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" with arguments (["CongDoanCoreApp.Models.AccountViewModels.LoginViewModel", ""]) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:30.6940904+03:00 0HLG1NNNQ32Q6:00000005 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:14:30.8671030+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executed DbCommand ("69"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[Balance], [u].[BirthDay], [u].[ConcurrencyStamp], [u].[DateCreated], [u].[DateModified], [u].[Email], [u].[EmailConfirmed], [u].[FullName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[Status], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AppUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-08-14T11:14:31.1480877+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-14T11:14:31.2277078+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-14T11:14:31.2625362+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-14T11:14:31.3134325+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-14T11:14:31.3242969+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-14T11:14:31.3510260+03:00 0HLG1NNNQ32Q6:00000005 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-08-14T11:14:31.3772062+03:00 0HLG1NNNQ32Q6:00000005 [INF] User logged in. (fdce0db4)
+2018-08-14T11:14:31.4058677+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:14:31.5741867+03:00 0HLG1NNNQ32Q6:00000005 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.LoginController.Authen (CongDoanCoreApp)" in 982.2933ms (afa2e885)
+2018-08-14T11:14:31.5796164+03:00 0HLG1NNNQ32Q6:00000005 [INF] Request finished in 1024.2408ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:14:31.5924423+03:00 0HLG1NNNQ32Q7:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/Admin/Home/Index   (ca22a1cb)
+2018-08-14T11:14:31.6157825+03:00 0HLG1NNNQ32Q7:00000005 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:14:31.6198548+03:00 0HLG1NNNQ32Q7:00000005 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:31.7490361+03:00 0HLG1NNNQ32Q7:00000005 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Home/Index.cshtml". (9707eebe)
+2018-08-14T11:14:31.9996480+03:00 0HLG1NNNQ32Q7:00000005 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:14:32.0548989+03:00 0HLG1NNNQ32Q7:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-14T11:14:32.4069464+03:00 0HLG1NNNQ32Q7:00000005 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.HomeController.Index (CongDoanCoreApp)" in 797.4785ms (afa2e885)
+2018-08-14T11:14:32.4119501+03:00 0HLG1NNNQ32Q7:00000005 [INF] Request finished in 819.721ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T11:14:32.4721695+03:00 0HLG1NNNQ32Q8:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/skins/moono/editor.css   (ca22a1cb)
+2018-08-14T11:14:32.4936984+03:00 0HLG1NNNQ32Q5:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/images/img.jpg   (ca22a1cb)
+2018-08-14T11:14:32.5198093+03:00 0HLG1NNNQ32Q8:00000003 [INF] The file "/lib/ckeditor/skins/moono/editor.css" was not modified (f1f8d725)
+2018-08-14T11:14:32.5540265+03:00 0HLG1NNNQ32QB:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/fastclick/lib/fastclick.js   (ca22a1cb)
+2018-08-14T11:14:32.5903323+03:00 0HLG1NNNQ32Q8:00000003 [INF] Request finished in 51.9516ms 304 text/css (791a596a)
+2018-08-14T11:14:32.6195152+03:00 0HLG1NNNQ32QB:00000002 [INF] The file "/lib/fastclick/lib/fastclick.js" was not modified (f1f8d725)
+2018-08-14T11:14:32.6419689+03:00 0HLG1NNNQ32Q9:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap-daterangepicker/daterangepicker.css   (ca22a1cb)
+2018-08-14T11:14:32.7246625+03:00 0HLG1NNNQ32QD:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/nprogress/nprogress.js   (ca22a1cb)
+2018-08-14T11:14:32.7989999+03:00 0HLG1NNNQ32Q5:00000005 [INF] The file "/admin-side/images/img.jpg" was not modified (f1f8d725)
+2018-08-14T11:14:32.8279389+03:00 0HLG1NNNQ32QD:00000002 [INF] The file "/lib/nprogress/nprogress.js" was not modified (f1f8d725)
+2018-08-14T11:14:32.9240181+03:00 0HLG1NNNQ32QB:00000002 [INF] Request finished in 173.5054ms 304 application/javascript (791a596a)
+2018-08-14T11:14:32.9531562+03:00 0HLG1NNNQ32QA:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/Chart.js/dist/Chart.js   (ca22a1cb)
+2018-08-14T11:14:32.9717881+03:00 0HLG1NNNQ32Q9:00000002 [INF] The file "/lib/bootstrap-daterangepicker/daterangepicker.css" was not modified (f1f8d725)
+2018-08-14T11:14:33.0511664+03:00 0HLG1NNNQ32QC:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/twbs-pagination/jquery.twbsPagination.js   (ca22a1cb)
+2018-08-14T11:14:33.1301593+03:00 0HLG1NNNQ32Q5:00000005 [INF] Request finished in 354.9021ms 304 image/jpeg (791a596a)
+2018-08-14T11:14:33.2225813+03:00 0HLG1NNNQ32QA:00000002 [INF] The file "/lib/Chart.js/dist/Chart.js" was not modified (f1f8d725)
+2018-08-14T11:14:33.2628120+03:00 0HLG1NNNQ32QD:00000002 [INF] Request finished in 185.6589ms 304 application/javascript (791a596a)
+2018-08-14T11:14:33.3146167+03:00 0HLG1NNNQ32QB:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.time.js   (ca22a1cb)
+2018-08-14T11:14:33.3578030+03:00 0HLG1NNNQ32Q9:00000002 [INF] Request finished in 527.6407ms 304 text/css (791a596a)
+2018-08-14T11:14:33.4027117+03:00 0HLG1NNNQ32QC:00000002 [INF] The file "/lib/twbs-pagination/jquery.twbsPagination.js" was not modified (f1f8d725)
+2018-08-14T11:14:33.4211931+03:00 0HLG1NNNQ32Q9:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.stack.js   (ca22a1cb)
+2018-08-14T11:14:33.4462603+03:00 0HLG1NNNQ32QA:00000002 [INF] Request finished in 397.4109ms 304 application/javascript (791a596a)
+2018-08-14T11:14:33.5840646+03:00 0HLG1NNNQ32Q9:00000003 [INF] The file "/lib/flot/jquery.flot.stack.js" was not modified (f1f8d725)
+2018-08-14T11:14:33.5995060+03:00 0HLG1NNNQ32QB:00000003 [INF] The file "/lib/flot/jquery.flot.time.js" was not modified (f1f8d725)
+2018-08-14T11:14:33.6369622+03:00 0HLG1NNNQ32QE:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jquery-sparkline/dist/jquery.sparkline.js   (ca22a1cb)
+2018-08-14T11:14:33.7419129+03:00 0HLG1NNNQ32QD:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/ckeditor.js   (ca22a1cb)
+2018-08-14T11:14:33.7522536+03:00 0HLG1NNNQ32Q5:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/js/custom.js   (ca22a1cb)
+2018-08-14T11:14:33.7614222+03:00 0HLG1NNNQ32QC:00000002 [INF] Request finished in 550.7285ms 304 application/javascript (791a596a)
+2018-08-14T11:14:33.8090835+03:00 0HLG1NNNQ32Q9:00000003 [INF] Request finished in 197.839ms 304 application/javascript (791a596a)
+2018-08-14T11:14:33.8222051+03:00 0HLG1NNNQ32QE:00000002 [INF] The file "/lib/jquery-sparkline/dist/jquery.sparkline.js" was not modified (f1f8d725)
+2018-08-14T11:14:33.8792119+03:00 0HLG1NNNQ32QE:00000002 [INF] Request finished in 252.9483ms 304 application/javascript (791a596a)
+2018-08-14T11:14:33.9760026+03:00 0HLG1NNNQ32QB:00000003 [INF] Request finished in 460.2269ms 304 application/javascript (791a596a)
+2018-08-14T11:14:34.0762756+03:00 0HLG1NNNQ32QD:00000003 [INF] The file "/lib/ckeditor/ckeditor.js" was not modified (f1f8d725)
+2018-08-14T11:14:34.1189285+03:00 0HLG1NNNQ32Q5:00000006 [INF] The file "/admin-side/js/custom.js" was not modified (f1f8d725)
+2018-08-14T11:14:34.1830004+03:00 0HLG1NNNQ32Q6:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.js   (ca22a1cb)
+2018-08-14T11:14:34.2209063+03:00 0HLG1NNNQ32Q7:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.pie.js   (ca22a1cb)
+2018-08-14T11:14:34.2650547+03:00 0HLG1NNNQ32QF:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/mustache/mustache.js   (ca22a1cb)
+2018-08-14T11:14:34.3649192+03:00 0HLG1NNNQ32Q8:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot/jquery.flot.resize.js   (ca22a1cb)
+2018-08-14T11:14:34.3922289+03:00 0HLG1NNNQ32QD:00000003 [INF] Request finished in 600.1967ms 304 application/javascript (791a596a)
+2018-08-14T11:14:34.4001321+03:00 0HLG1NNNQ32Q6:00000006 [INF] The file "/lib/flot/jquery.flot.js" was not modified (f1f8d725)
+2018-08-14T11:14:34.4160512+03:00 0HLG1NNNQ32Q7:00000006 [INF] The file "/lib/flot/jquery.flot.pie.js" was not modified (f1f8d725)
+2018-08-14T11:14:34.4349437+03:00 0HLG1NNNQ32QF:00000002 [INF] The file "/lib/mustache/mustache.js" was not modified (f1f8d725)
+2018-08-14T11:14:34.4643834+03:00 0HLG1NNNQ32Q5:00000006 [INF] Request finished in 781.1973ms 304 application/javascript (791a596a)
+2018-08-14T11:14:34.5354330+03:00 0HLG1NNNQ32QF:00000002 [INF] Request finished in 519.7171ms 304 application/javascript (791a596a)
+2018-08-14T11:14:34.6054863+03:00 0HLG1NNNQ32Q6:00000006 [INF] Request finished in 494.6185ms 304 application/javascript (791a596a)
+2018-08-14T11:14:34.6210082+03:00 0HLG1NNNQ32Q8:00000004 [INF] The file "/lib/flot/jquery.flot.resize.js" was not modified (f1f8d725)
+2018-08-14T11:14:34.6640732+03:00 0HLG1NNNQ32Q7:00000006 [INF] Request finished in 500.8504ms 304 application/javascript (791a596a)
+2018-08-14T11:14:34.7003953+03:00 0HLG1NNNQ32QH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot.curvedlines/curvedLines.js   (ca22a1cb)
+2018-08-14T11:14:34.8076116+03:00 0HLG1NNNQ32QL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot-spline/js/jquery.flot.spline.js   (ca22a1cb)
+2018-08-14T11:14:34.8638325+03:00 0HLG1NNNQ32QG:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/flot.orderbars/js/jquery.flot.orderBars.js   (ca22a1cb)
+2018-08-14T11:14:34.9045825+03:00 0HLG1NNNQ32QH:00000001 [INF] The file "/lib/flot.curvedlines/curvedLines.js" was not modified (f1f8d725)
+2018-08-14T11:14:34.9128857+03:00 0HLG1NNNQ32Q8:00000004 [INF] Request finished in 438.3309ms 304 application/javascript (791a596a)
+2018-08-14T11:14:34.9398803+03:00 0HLG1NNNQ32QJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/DateJS/build/date.js   (ca22a1cb)
+2018-08-14T11:14:34.9631085+03:00 0HLG1NNNQ32QH:00000001 [INF] Request finished in 309.8909ms 304 application/javascript (791a596a)
+2018-08-14T11:14:34.9980336+03:00 0HLG1NNNQ32QL:00000001 [INF] The file "/lib/flot-spline/js/jquery.flot.spline.js" was not modified (f1f8d725)
+2018-08-14T11:14:35.0788054+03:00 0HLG1NNNQ32QJ:00000001 [INF] The file "/lib/DateJS/build/date.js" was not modified (f1f8d725)
+2018-08-14T11:14:35.1090192+03:00 0HLG1NNNQ32QI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/moment/moment.js   (ca22a1cb)
+2018-08-14T11:14:35.1583967+03:00 0HLG1NNNQ32QL:00000001 [INF] Request finished in 283.063ms 304 application/javascript (791a596a)
+2018-08-14T11:14:35.1768917+03:00 0HLG1NNNQ32QG:00000001 [INF] The file "/lib/flot.orderbars/js/jquery.flot.orderBars.js" was not modified (f1f8d725)
+2018-08-14T11:14:35.2231046+03:00 0HLG1NNNQ32QK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap-daterangepicker/daterangepicker.js   (ca22a1cb)
+2018-08-14T11:14:35.3243498+03:00 0HLG1NNNQ32QM:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootbox/bootbox.js   (ca22a1cb)
+2018-08-14T11:14:35.3336336+03:00 0HLG1NNNQ32QN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0   (ca22a1cb)
+2018-08-14T11:14:35.3811329+03:00 0HLG1NNNQ32QK:00000001 [INF] The file "/lib/bootstrap-daterangepicker/daterangepicker.js" was not modified (f1f8d725)
+2018-08-14T11:14:35.3958654+03:00 0HLG1NNNQ32QG:00000001 [INF] Request finished in 512.928ms 304 application/javascript (791a596a)
+2018-08-14T11:14:35.4701376+03:00 0HLG1NNNQ32QI:00000001 [INF] The file "/lib/moment/moment.js" was not modified (f1f8d725)
+2018-08-14T11:14:35.4938658+03:00 0HLG1NNNQ32QJ:00000001 [INF] Request finished in 530.3276ms 304 application/javascript (791a596a)
+2018-08-14T11:14:35.5233029+03:00 0HLG1NNNQ32QM:00000001 [INF] The file "/lib/bootbox/bootbox.js" was not modified (f1f8d725)
+2018-08-14T11:14:35.5469056+03:00 0HLG1NNNQ32QK:00000001 [INF] Request finished in 385.4238ms 304 application/javascript (791a596a)
+2018-08-14T11:14:35.5628662+03:00 0HLG1NNNQ32QN:00000001 [INF] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified (f1f8d725)
+2018-08-14T11:14:35.6105148+03:00 0HLG1NNNQ32QN:00000001 [INF] Request finished in 386.6735ms 304 font/woff2 (791a596a)
+2018-08-14T11:14:35.6962482+03:00 0HLG1NNNQ32QI:00000001 [INF] Request finished in 635.9708ms 304 application/javascript (791a596a)
+2018-08-14T11:14:35.7339116+03:00 0HLG1NNNQ32QM:00000001 [INF] Request finished in 387.5724ms 304 application/javascript (791a596a)
+2018-08-14T11:14:37.8429306+03:00 0HLG1NNNQ32QA:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/index   (ca22a1cb)
+2018-08-14T11:14:37.8486213+03:00 0HLG1NNNQ32QA:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:14:37.8737458+03:00 0HLG1NNNQ32QA:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:38.0519235+03:00 0HLG1NNNQ32QA:00000003 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Product/Index.cshtml". (9707eebe)
+2018-08-14T11:14:38.2153593+03:00 0HLG1NNNQ32QA:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:14:38.2317746+03:00 0HLG1NNNQ32QA:00000003 [INF] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-14T11:14:38.2434202+03:00 0HLG1NNNQ32QA:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.Index (CongDoanCoreApp)" in 393.9385ms (afa2e885)
+2018-08-14T11:14:38.2498304+03:00 0HLG1NNNQ32QA:00000003 [INF] Request finished in 425.4459ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T11:14:38.3600796+03:00 0HLG1NNNQ32QC:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/bootstrap/easyui.css   (ca22a1cb)
+2018-08-14T11:14:38.4033393+03:00 0HLG1NNNQ32Q9:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/icon.css   (ca22a1cb)
+2018-08-14T11:14:38.4478557+03:00 0HLG1NNNQ32QE:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/app/controllers/product/index.js?v=pyCBgW62ZcHYREyHfEOjdYuTM3WIMkZGxld2QYqAIco   (ca22a1cb)
+2018-08-14T11:14:38.4697291+03:00 0HLG1NNNQ32QC:00000003 [INF] The file "/lib/jQuery-EasyUI/themes/bootstrap/easyui.css" was not modified (f1f8d725)
+2018-08-14T11:14:38.5636795+03:00 0HLG1NNNQ32Q9:00000004 [INF] The file "/lib/jQuery-EasyUI/themes/icon.css" was not modified (f1f8d725)
+2018-08-14T11:14:38.5867577+03:00 0HLG1NNNQ32QE:00000003 [INF] The file "/app/controllers/product/index.js" was not modified (f1f8d725)
+2018-08-14T11:14:38.6144889+03:00 0HLG1NNNQ32Q9:00000004 [INF] Request finished in 272.7406ms 304 text/css (791a596a)
+2018-08-14T11:14:38.6400952+03:00 0HLG1NNNQ32QB:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/jquery.easyui.min.js   (ca22a1cb)
+2018-08-14T11:14:38.7152841+03:00 0HLG1NNNQ32QB:00000004 [INF] The file "/lib/jQuery-EasyUI/jquery.easyui.min.js" was not modified (f1f8d725)
+2018-08-14T11:14:38.7396060+03:00 0HLG1NNNQ32QE:00000003 [INF] Request finished in 273.688ms 304 application/javascript (791a596a)
+2018-08-14T11:14:38.7781476+03:00 0HLG1NNNQ32QB:00000004 [INF] Request finished in 402.0361ms 304 application/javascript (791a596a)
+2018-08-14T11:14:38.8110866+03:00 0HLG1NNNQ32QC:00000003 [INF] Request finished in 181.5064ms 304 text/css (791a596a)
+2018-08-14T11:14:39.0767624+03:00 0HLG1NNNQ32QD:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/GetAllCategories   (ca22a1cb)
+2018-08-14T11:14:39.0987602+03:00 0HLG1NNNQ32Q5:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/getallpaging?categoryId=&keyword=&page=1&pageSize=10   (ca22a1cb)
+2018-08-14T11:14:39.1030094+03:00 0HLG1NNNQ32Q6:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/config.js?t=I639   (ca22a1cb)
+2018-08-14T11:14:39.1318251+03:00 0HLG1NNNQ32Q6:00000007 [INF] Sending file. Request path: '"/lib/ckeditor/config.js"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\lib\ckeditor\config.js"' (27b0a520)
+2018-08-14T11:14:39.1380355+03:00 0HLG1NNNQ32Q5:00000007 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:14:39.1709301+03:00 0HLG1NNNQ32QD:00000004 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:14:39.2190177+03:00 0HLG1NNNQ32Q5:00000007 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" with arguments (["", "", "1", "10"]) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:39.2190198+03:00 0HLG1NNNQ32QD:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllCategories (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:39.2239699+03:00 0HLG1NNNQ32QD:00000004 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:14:39.2487637+03:00 0HLG1NNNQ32Q5:00000007 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:14:39.2561965+03:00 0HLG1NNNQ32Q6:00000007 [INF] Request finished in 173.6466ms 200 application/javascript (791a596a)
+2018-08-14T11:14:39.2990721+03:00 0HLG1NNNQ32Q5:00000007 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2018-08-14T11:14:39.3034635+03:00 0HLG1NNNQ32Q7:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/skins/moono-lisa/editor.css?t=I639   (ca22a1cb)
+2018-08-14T11:14:39.3318916+03:00 0HLG1NNNQ32Q7:00000007 [INF] The file "/lib/ckeditor/skins/moono-lisa/editor.css" was not modified (f1f8d725)
+2018-08-14T11:14:39.3768926+03:00 0HLG1NNNQ32QF:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/lang/en.js?t=I639   (ca22a1cb)
+2018-08-14T11:14:39.4027432+03:00 0HLG1NNNQ32Q7:00000007 [INF] Request finished in 57.5154ms 304 text/css (791a596a)
+2018-08-14T11:14:39.4581731+03:00 0HLG1NNNQ32QF:00000003 [INF] The file "/lib/ckeditor/lang/en.js" was not modified (f1f8d725)
+2018-08-14T11:14:39.4938242+03:00 0HLG1NNNQ32QF:00000003 [INF] Request finished in 183.7797ms 304 application/javascript (791a596a)
+2018-08-14T11:14:39.5647283+03:00 0HLG1NNNQ32Q8:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/styles.js?t=I639   (ca22a1cb)
+2018-08-14T11:14:39.5898024+03:00 0HLG1NNNQ32QD:00000004 [INF] Executed DbCommand ("52"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-14T11:14:39.6029415+03:00 0HLG1NNNQ32Q8:00000005 [INF] The file "/lib/ckeditor/styles.js" was not modified (f1f8d725)
+2018-08-14T11:14:39.6527822+03:00 0HLG1NNNQ32QD:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:14:39.6569306+03:00 0HLG1NNNQ32QH:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/plugins/colorbutton/plugin.js?t=I639   (ca22a1cb)
+2018-08-14T11:14:39.6647905+03:00 0HLG1NNNQ32QH:00000002 [INF] The file "/lib/ckeditor/plugins/colorbutton/plugin.js" was not modified (f1f8d725)
+2018-08-14T11:14:39.6814859+03:00 0HLG1NNNQ32QH:00000002 [INF] Request finished in 38.0908ms 304 application/javascript (791a596a)
+2018-08-14T11:14:39.7115528+03:00 0HLG1NNNQ32Q8:00000005 [INF] Request finished in 111.5964ms 304 application/javascript (791a596a)
+2018-08-14T11:14:39.7377432+03:00 0HLG1NNNQ32QL:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/plugins/panelbutton/plugin.js?t=I639   (ca22a1cb)
+2018-08-14T11:14:39.7423089+03:00 0HLG1NNNQ32QL:00000002 [INF] The file "/lib/ckeditor/plugins/panelbutton/plugin.js" was not modified (f1f8d725)
+2018-08-14T11:14:39.7495762+03:00 0HLG1NNNQ32QL:00000002 [INF] Request finished in 56.2343ms 304 application/javascript (791a596a)
+2018-08-14T11:14:39.8736776+03:00 0HLG1NNNQ32QJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css   (ca22a1cb)
+2018-08-14T11:14:39.9454182+03:00 0HLG1NNNQ32QD:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllCategories (CongDoanCoreApp)" in 654.9524ms (afa2e885)
+2018-08-14T11:14:40.0202782+03:00 0HLG1NNNQ32QK:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/plugins/tableselection/styles/tableselection.css   (ca22a1cb)
+2018-08-14T11:14:40.0385346+03:00 0HLG1NNNQ32QJ:00000002 [INF] The file "/lib/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" was not modified (f1f8d725)
+2018-08-14T11:14:40.0891384+03:00 0HLG1NNNQ32QM:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css   (ca22a1cb)
+2018-08-14T11:14:40.1158769+03:00 0HLG1NNNQ32QI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/plugins/colorbutton/lang/en.js?t=I639   (ca22a1cb)
+2018-08-14T11:14:40.1471381+03:00 0HLG1NNNQ32QG:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/plugins/scayt/dialogs/dialog.css   (ca22a1cb)
+2018-08-14T11:14:40.1568245+03:00 0HLG1NNNQ32QD:00000004 [INF] Request finished in 919.5611ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:14:40.1651661+03:00 0HLG1NNNQ32QK:00000002 [INF] The file "/lib/ckeditor/plugins/tableselection/styles/tableselection.css" was not modified (f1f8d725)
+2018-08-14T11:14:40.2123223+03:00 0HLG1NNNQ32QK:00000002 [INF] Request finished in 402.4091ms 304 text/css (791a596a)
+2018-08-14T11:14:40.2242408+03:00 0HLG1NNNQ32QI:00000002 [INF] The file "/lib/ckeditor/plugins/colorbutton/lang/en.js" was not modified (f1f8d725)
+2018-08-14T11:14:40.2408426+03:00 0HLG1NNNQ32QM:00000002 [INF] The file "/lib/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" was not modified (f1f8d725)
+2018-08-14T11:14:40.2919866+03:00 0HLG1NNNQ32QI:00000002 [INF] Request finished in 397.043ms 304 application/javascript (791a596a)
+2018-08-14T11:14:40.3396507+03:00 0HLG1NNNQ32QG:00000002 [INF] The file "/lib/ckeditor/plugins/scayt/dialogs/dialog.css" was not modified (f1f8d725)
+2018-08-14T11:14:40.3575635+03:00 0HLG1NNNQ32QJ:00000002 [INF] Request finished in 277.0988ms 304 text/css (791a596a)
+2018-08-14T11:14:40.3663674+03:00 0HLG1NNNQ32Q5:00000007 [INF] Executed DbCommand ("29"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Id], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], CASE
+    WHEN [x].[CategoryId] IS NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[DateCreated] AS [DateCreated0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[ParentId], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x].[PromotionPrice], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoDescription] AS [SeoDescription0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[Status] AS [Status0], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2018-08-14T11:14:40.3846320+03:00 0HLG1NNNQ32QN:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/skins/moono-lisa/icons.png?t=I639   (ca22a1cb)
+2018-08-14T11:14:40.4112717+03:00 0HLG1NNNQ32QA:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/contents.css?t=I639   (ca22a1cb)
+2018-08-14T11:14:40.4706743+03:00 0HLG1NNNQ32QN:00000002 [INF] The file "/lib/ckeditor/skins/moono-lisa/icons.png" was not modified (f1f8d725)
+2018-08-14T11:14:40.4876375+03:00 0HLG1NNNQ32QM:00000002 [INF] Request finished in 397.8186ms 304 text/css (791a596a)
+2018-08-14T11:14:40.5032164+03:00 0HLG1NNNQ32QG:00000002 [INF] Request finished in 552.9413ms 304 text/css (791a596a)
+2018-08-14T11:14:40.5470405+03:00 0HLG1NNNQ32Q5:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:14:40.5582487+03:00 0HLG1NNNQ32QN:00000002 [INF] Request finished in 182.2084ms 304 image/png (791a596a)
+2018-08-14T11:14:40.5653296+03:00 0HLG1NNNQ32QA:00000004 [INF] The file "/lib/ckeditor/contents.css" was not modified (f1f8d725)
+2018-08-14T11:14:40.5795638+03:00 0HLG1NNNQ32QA:00000004 [INF] Request finished in 254.1583ms 304 text/css (791a596a)
+2018-08-14T11:14:40.6027764+03:00 0HLG1NNNQ32Q5:00000007 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" in 1462.714ms (afa2e885)
+2018-08-14T11:14:40.6090116+03:00 0HLG1NNNQ32Q5:00000007 [INF] Request finished in 1575.9186ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:14:40.6737023+03:00 0HLG1NNNQ32Q9:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/client-side/images/products/product-1.jpg   (ca22a1cb)
+2018-08-14T11:14:40.6776656+03:00 0HLG1NNNQ32QE:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin-side/images/user.png   (ca22a1cb)
+2018-08-14T11:14:40.6825154+03:00 0HLG1NNNQ32QE:00000004 [INF] The file "/admin-side/images/user.png" was not modified (f1f8d725)
+2018-08-14T11:14:40.7345568+03:00 0HLG1NNNQ32QE:00000004 [INF] Request finished in 57.7247ms 304 image/png (791a596a)
+2018-08-14T11:14:40.7564251+03:00 0HLG1NNNQ32Q9:00000005 [INF] Request finished in 57.7251ms 404  (791a596a)
+2018-08-14T11:14:40.7824314+03:00 0HLG1NNNQ32QC:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/getallpaging?categoryId=&keyword=&page=1&pageSize=10   (ca22a1cb)
+2018-08-14T11:14:40.7867811+03:00 0HLG1NNNQ32QC:00000004 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:14:40.7908214+03:00 0HLG1NNNQ32QC:00000004 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" with arguments (["", "", "1", "10"]) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:40.8144106+03:00 0HLG1NNNQ32QC:00000004 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:14:40.8380042+03:00 0HLG1NNNQ32QC:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2018-08-14T11:14:40.8478154+03:00 0HLG1NNNQ32QC:00000004 [INF] Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Id], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], CASE
+    WHEN [x].[CategoryId] IS NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[DateCreated] AS [DateCreated0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[ParentId], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x].[PromotionPrice], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoDescription] AS [SeoDescription0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[Status] AS [Status0], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2018-08-14T11:14:40.8524912+03:00 0HLG1NNNQ32QC:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:14:40.8591268+03:00 0HLG1NNNQ32QC:00000004 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" in 69.6623ms (afa2e885)
+2018-08-14T11:14:40.8642716+03:00 0HLG1NNNQ32QC:00000004 [INF] Request finished in 234.4054ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:14:40.8892543+03:00 0HLG1NNNQ32QB:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/client-side/images/products/product-1.jpg   (ca22a1cb)
+2018-08-14T11:14:40.8980166+03:00 0HLG1NNNQ32QB:00000005 [INF] Request finished in 14.7962ms 404  (791a596a)
+2018-08-14T11:14:41.6701982+03:00 0HLG1NNNQ32Q6:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productCategory/getall   (ca22a1cb)
+2018-08-14T11:14:41.6989191+03:00 0HLG1NNNQ32Q6:00000008 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:14:41.7053935+03:00 0HLG1NNNQ32Q6:00000008 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:41.7302499+03:00 0HLG1NNNQ32Q6:00000008 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:14:41.7567230+03:00 0HLG1NNNQ32Q6:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-14T11:14:41.7819124+03:00 0HLG1NNNQ32Q6:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:14:41.7861901+03:00 0HLG1NNNQ32Q6:00000008 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 109.6279ms (afa2e885)
+2018-08-14T11:14:41.7909727+03:00 0HLG1NNNQ32Q6:00000008 [INF] Request finished in 120.0521ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:14:41.8319667+03:00 0HLG1NNNQ32Q7:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/jQuery-EasyUI/themes/bootstrap/images/combo_arrow.png   (ca22a1cb)
+2018-08-14T11:14:41.8461805+03:00 0HLG1NNNQ32Q7:00000008 [INF] The file "/lib/jQuery-EasyUI/themes/bootstrap/images/combo_arrow.png" was not modified (f1f8d725)
+2018-08-14T11:14:41.8516794+03:00 0HLG1NNNQ32Q7:00000008 [INF] Request finished in 38.6509ms 304 image/png (791a596a)
+2018-08-14T11:14:47.2257386+03:00 0HLG1NNNQ32QF:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/plugins/image/dialogs/image.js?t=I639   (ca22a1cb)
+2018-08-14T11:14:47.2353750+03:00 0HLG1NNNQ32QF:00000004 [INF] The file "/lib/ckeditor/plugins/image/dialogs/image.js" was not modified (f1f8d725)
+2018-08-14T11:14:47.2899378+03:00 0HLG1NNNQ32Q8:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/skins/moono-lisa/dialog.css?t=I639   (ca22a1cb)
+2018-08-14T11:14:47.3141710+03:00 0HLG1NNNQ32QF:00000004 [INF] Request finished in 25.7568ms 304 application/javascript (791a596a)
+2018-08-14T11:14:47.3585852+03:00 0HLG1NNNQ32Q8:00000006 [INF] The file "/lib/ckeditor/skins/moono-lisa/dialog.css" was not modified (f1f8d725)
+2018-08-14T11:14:47.3641407+03:00 0HLG1NNNQ32Q8:00000006 [INF] Request finished in 149.6792ms 304 text/css (791a596a)
+2018-08-14T11:14:47.4869038+03:00 0HLG1NNNQ32QL:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/skins/moono-lisa/images/lock.png   (ca22a1cb)
+2018-08-14T11:14:47.4979920+03:00 0HLG1NNNQ32QD:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/skins/moono-lisa/images/close.png   (ca22a1cb)
+2018-08-14T11:14:47.5465493+03:00 0HLG1NNNQ32QL:00000003 [INF] The file "/lib/ckeditor/skins/moono-lisa/images/lock.png" was not modified (f1f8d725)
+2018-08-14T11:14:47.5688045+03:00 0HLG1NNNQ32QD:00000005 [INF] The file "/lib/ckeditor/skins/moono-lisa/images/close.png" was not modified (f1f8d725)
+2018-08-14T11:14:47.6148110+03:00 0HLG1NNNQ32QH:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/skins/moono-lisa/images/refresh.png   (ca22a1cb)
+2018-08-14T11:14:47.6366278+03:00 0HLG1NNNQ32QL:00000003 [INF] Request finished in 160.3477ms 304 image/png (791a596a)
+2018-08-14T11:14:47.6801009+03:00 0HLG1NNNQ32QD:00000005 [INF] Request finished in 179.6309ms 304 image/png (791a596a)
+2018-08-14T11:14:47.6905170+03:00 0HLG1NNNQ32QH:00000003 [INF] The file "/lib/ckeditor/skins/moono-lisa/images/refresh.png" was not modified (f1f8d725)
+2018-08-14T11:14:47.6952351+03:00 0HLG1NNNQ32QH:00000003 [INF] Request finished in 304.7348ms 304 image/png (791a596a)
+2018-08-14T11:14:51.9703415+03:00 0HLG1NNNQ32QJ:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:44361/Admin/Upload/UploadImageForCKEditor?CKEditor=txtContentM&CKEditorFuncNum=0&langCode=en multipart/form-data; boundary=----WebKitFormBoundary0C1SAnYzrONL8WQn 84513 (ca22a1cb)
+2018-08-14T11:14:51.9976390+03:00 0HLG1NNNQ32QJ:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:14:52.0743571+03:00 0HLG1NNNQ32QJ:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" with arguments (["System.Collections.Generic.List`1[Microsoft.AspNetCore.Http.IFormFile]", "0", "txtContentM", "en"]) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:14:52.0900128+03:00 0HLG1NNNQ32QJ:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" in 112.4373ms (afa2e885)
+2018-08-14T11:14:52.0971958+03:00 0HLG1NNNQ32QJ:00000003 [INF] Request finished in 125.6957ms 200  (791a596a)
+2018-08-14T11:14:52.1322215+03:00 0HLG1NNNQ32QK:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/uploaded/images/20180814/31952722_1501090403332677_6081908067501342720_n.jpg   (ca22a1cb)
+2018-08-14T11:14:52.1376442+03:00 0HLG1NNNQ32QK:00000003 [INF] Sending file. Request path: '"/uploaded/images/20180814/31952722_1501090403332677_6081908067501342720_n.jpg"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\uploaded\images\20180814\31952722_1501090403332677_6081908067501342720_n.jpg"' (27b0a520)
+2018-08-14T11:14:52.1886309+03:00 0HLG1NNNQ32QK:00000003 [INF] Request finished in 24.3798ms 200 image/jpeg (791a596a)
+2018-08-14T11:14:52.2115620+03:00 0HLG1NNNQ32QI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/uploaded/images/20180814/31952722_1501090403332677_6081908067501342720_n.jpg   (ca22a1cb)
+2018-08-14T11:14:52.2359655+03:00 0HLG1NNNQ32QI:00000003 [INF] The file "/uploaded/images/20180814/31952722_1501090403332677_6081908067501342720_n.jpg" was not modified (f1f8d725)
+2018-08-14T11:14:52.2395305+03:00 0HLG1NNNQ32QI:00000003 [INF] Request finished in 75.6801ms 304 image/jpeg (791a596a)
+2018-08-14T11:14:55.3919740+03:00 0HLG1NNNQ32QM:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/bootstrap/dist/css/bootstrap.css.map   (ca22a1cb)
+2018-08-14T11:14:55.4002623+03:00 0HLG1NNNQ32QM:00000003 [INF] The file "/lib/bootstrap/dist/css/bootstrap.css.map" was not modified (f1f8d725)
+2018-08-14T11:14:55.4377517+03:00 0HLG1NNNQ32QM:00000003 [INF] Request finished in 21.8989ms 304 text/plain (791a596a)
+2018-08-14T11:15:02.7789655+03:00 0HLG1NNNQ32QG:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/index   (ca22a1cb)
+2018-08-14T11:15:02.7839093+03:00 0HLG1NNNQ32QG:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:15:02.7876115+03:00 0HLG1NNNQ32QG:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.Index (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:15:02.7913648+03:00 0HLG1NNNQ32QG:00000003 [INF] Executing ViewResult, running view at path "/Areas/admin/Views/Product/Index.cshtml". (9707eebe)
+2018-08-14T11:15:02.7971623+03:00 0HLG1NNNQ32QG:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:15:02.8041619+03:00 0HLG1NNNQ32QG:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-14T11:15:02.8299431+03:00 0HLG1NNNQ32QG:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.Index (CongDoanCoreApp)" in 25.3743ms (afa2e885)
+2018-08-14T11:15:02.8352053+03:00 0HLG1NNNQ32QG:00000003 [INF] Request finished in 54.8033ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-14T11:15:03.5994663+03:00 0HLG1NNNQ32QN:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/GetAllCategories   (ca22a1cb)
+2018-08-14T11:15:03.6038063+03:00 0HLG1NNNQ32QA:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/getallpaging?categoryId=&keyword=&page=1&pageSize=10   (ca22a1cb)
+2018-08-14T11:15:03.6259685+03:00 0HLG1NNNQ32QN:00000003 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:15:03.6913788+03:00 0HLG1NNNQ32QN:00000003 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllCategories (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:15:03.7128973+03:00 0HLG1NNNQ32Q5:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:44361/lib/ckeditor/config.js?t=I639   (ca22a1cb)
+2018-08-14T11:15:03.7807374+03:00 0HLG1NNNQ32QA:00000005 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:15:03.8092221+03:00 0HLG1NNNQ32QN:00000003 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:15:03.8312672+03:00 0HLG1NNNQ32QA:00000005 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" with arguments (["", "", "1", "10"]) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:15:03.8534215+03:00 0HLG1NNNQ32Q5:00000008 [INF] The file "/lib/ckeditor/config.js" was not modified (f1f8d725)
+2018-08-14T11:15:03.9097317+03:00 0HLG1NNNQ32QA:00000005 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:15:03.9447794+03:00 0HLG1NNNQ32QN:00000003 [INF] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-14T11:15:04.0062282+03:00 0HLG1NNNQ32QA:00000005 [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2018-08-14T11:15:04.0092546+03:00 0HLG1NNNQ32QN:00000003 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:15:04.0403422+03:00 0HLG1NNNQ32QN:00000003 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllCategories (CongDoanCoreApp)" in 409.5892ms (afa2e885)
+2018-08-14T11:15:04.0763956+03:00 0HLG1NNNQ32Q5:00000008 [INF] Request finished in 229.6421ms 304 application/javascript (791a596a)
+2018-08-14T11:15:04.0992551+03:00 0HLG1NNNQ32QN:00000003 [INF] Request finished in 487.3673ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:15:04.1228669+03:00 0HLG1NNNQ32QA:00000005 [INF] Executed DbCommand ("8"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Id], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], CASE
+    WHEN [x].[CategoryId] IS NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[DateCreated] AS [DateCreated0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[ParentId], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x].[PromotionPrice], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoDescription] AS [SeoDescription0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[Status] AS [Status0], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2018-08-14T11:15:04.1475247+03:00 0HLG1NNNQ32QA:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:15:04.1524551+03:00 0HLG1NNNQ32QA:00000005 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" in 542.6131ms (afa2e885)
+2018-08-14T11:15:04.1575350+03:00 0HLG1NNNQ32QA:00000005 [INF] Request finished in 599.1414ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:15:04.2179185+03:00 0HLG1NNNQ32QE:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/client-side/images/products/product-1.jpg   (ca22a1cb)
+2018-08-14T11:15:04.2185330+03:00 0HLG1NNNQ32Q9:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/product/getallpaging?categoryId=&keyword=&page=1&pageSize=10   (ca22a1cb)
+2018-08-14T11:15:04.2665787+03:00 0HLG1NNNQ32QE:00000005 [INF] Request finished in 46.6343ms 404  (791a596a)
+2018-08-14T11:15:04.2692645+03:00 0HLG1NNNQ32Q9:00000006 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:15:04.2954163+03:00 0HLG1NNNQ32Q9:00000006 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" with arguments (["", "", "1", "10"]) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:15:04.3056865+03:00 0HLG1NNNQ32Q9:00000006 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:15:04.3306455+03:00 0HLG1NNNQ32Q9:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT COUNT(*)
+FROM [Products] AS [x]
+WHERE [x].[Status] = 1" (0723d8ff)
+2018-08-14T11:15:04.3582902+03:00 0HLG1NNNQ32Q9:00000006 [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[CategoryId], [x].[Content], [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HotFlag], [x].[Id], [x].[Image], [x].[Name], [x].[OriginalPrice], [x].[Price], CASE
+    WHEN [x].[CategoryId] IS NULL
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END, [x.ProductCategory].[DateCreated] AS [DateCreated0], [x.ProductCategory].[DateModified] AS [DateModified0], [x.ProductCategory].[Description] AS [Description0], [x.ProductCategory].[HomeFlag] AS [HomeFlag0], [x.ProductCategory].[HomeOrder], [x.ProductCategory].[Image] AS [Image0], [x.ProductCategory].[Name] AS [Name0], [x.ProductCategory].[ParentId], [x.ProductCategory].[SeoAlias], [x.ProductCategory].[SeoDescription], [x.ProductCategory].[SeoKeywords], [x.ProductCategory].[SeoPageTitle], [x.ProductCategory].[SortOrder], [x.ProductCategory].[Status], [x].[PromotionPrice], [x].[SeoAlias] AS [SeoAlias0], [x].[SeoDescription] AS [SeoDescription0], [x].[SeoKeywords] AS [SeoKeywords0], [x].[SeoPageTitle] AS [SeoPageTitle0], [x].[Status] AS [Status0], [x].[Tags], [x].[Unit], [x].[ViewCount]
+FROM [Products] AS [x]
+INNER JOIN [ProductCategories] AS [x.ProductCategory] ON [x].[CategoryId] = [x.ProductCategory].[Id]
+WHERE [x].[Status] = 1
+ORDER BY [x].[DateCreated] DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY" (0723d8ff)
+2018-08-14T11:15:04.3621365+03:00 0HLG1NNNQ32Q9:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:15:04.3679114+03:00 0HLG1NNNQ32Q9:00000006 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductController.GetAllPaging (CongDoanCoreApp)" in 143.3813ms (afa2e885)
+2018-08-14T11:15:04.3819837+03:00 0HLG1NNNQ32Q9:00000006 [INF] Request finished in 195.7764ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:15:04.4105442+03:00 0HLG1NNNQ32QC:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/client-side/images/products/product-1.jpg   (ca22a1cb)
+2018-08-14T11:15:04.4157448+03:00 0HLG1NNNQ32QC:00000005 [INF] Request finished in 24.2952ms 404  (791a596a)
+2018-08-14T11:15:23.7584457+03:00 0HLG1NNNQ32QB:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/productCategory/getall   (ca22a1cb)
+2018-08-14T11:15:23.7629699+03:00 0HLG1NNNQ32QB:00000006 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:15:23.7876239+03:00 0HLG1NNNQ32QB:00000006 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:15:23.7913108+03:00 0HLG1NNNQ32QB:00000006 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-14T11:15:23.7985204+03:00 0HLG1NNNQ32QB:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[DateCreated], [x].[DateModified], [x].[Description], [x].[HomeFlag], [x].[HomeOrder], [x].[Id], [x].[Image], [x].[Name], [x].[ParentId], [x].[SeoAlias], [x].[SeoDescription], [x].[SeoKeywords], [x].[SeoPageTitle], [x].[SortOrder], [x].[Status]
+FROM [ProductCategories] AS [x]
+ORDER BY [x].[ParentId]" (0723d8ff)
+2018-08-14T11:15:23.8069961+03:00 0HLG1NNNQ32QB:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-14T11:15:23.8118174+03:00 0HLG1NNNQ32QB:00000006 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.ProductCategoryController.GetAll (CongDoanCoreApp)" in 48.0281ms (afa2e885)
+2018-08-14T11:15:23.8178400+03:00 0HLG1NNNQ32QB:00000006 [INF] Request finished in 58.6926ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-14T11:15:34.9227349+03:00 0HLG1NNNQ32Q6:00000009 [INF] Request starting HTTP/1.1 POST http://localhost:44361/Admin/Upload/UploadImageForCKEditor?CKEditor=txtContentM&CKEditorFuncNum=0&langCode=en multipart/form-data; boundary=----WebKitFormBoundary3TYnI8YqBYZ19PQN 271021 (ca22a1cb)
+2018-08-14T11:15:34.9276729+03:00 0HLG1NNNQ32Q6:00000009 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-14T11:15:34.9636894+03:00 0HLG1NNNQ32Q6:00000009 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" with arguments (["System.Collections.Generic.List`1[Microsoft.AspNetCore.Http.IFormFile]", "0", "txtContentM", "en"]) - ModelState is Valid (ba7f4ac2)
+2018-08-14T11:15:35.0032356+03:00 0HLG1NNNQ32Q6:00000009 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.UploadController.UploadImageForCKEditor (CongDoanCoreApp)" in 55.2891ms (afa2e885)
+2018-08-14T11:15:35.0145263+03:00 0HLG1NNNQ32Q6:00000009 [INF] Request finished in 85.302ms 200  (791a596a)
+2018-08-14T11:15:35.0784337+03:00 0HLG1NNNQ32Q7:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:44361/uploaded/images/20180814/cau%20vang.jpg   (ca22a1cb)
+2018-08-14T11:15:35.0847053+03:00 0HLG1NNNQ32Q7:00000009 [INF] Sending file. Request path: '"/uploaded/images/20180814/cau vang.jpg"'. Physical path: '"E:\Xây dựng ứng dụng web với ASP.NET Core\CongDoanCoreApp\CongDoanCoreApp\wwwroot\uploaded\images\20180814\cau vang.jpg"' (27b0a520)
+2018-08-14T11:15:35.1150987+03:00 0HLG1NNNQ32QF:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44361/uploaded/images/20180814/cau%20vang.jpg   (ca22a1cb)
+2018-08-14T11:15:35.1381829+03:00 0HLG1NNNQ32Q7:00000009 [INF] Request finished in 27.4587ms 200 image/jpeg (791a596a)
+2018-08-14T11:15:35.1642989+03:00 0HLG1NNNQ32QF:00000005 [INF] The file "/uploaded/images/20180814/cau vang.jpg" was not modified (f1f8d725)
+2018-08-14T11:15:35.1685207+03:00 0HLG1NNNQ32QF:00000005 [INF] Request finished in 69.2874ms 304 image/jpeg (791a596a)
+2018-08-14T11:15:58.9078292+03:00 0HLG1NNNQ32QG:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44361/uploaded/images/20180814/cau%20vang.jpg   (ca22a1cb)
+2018-08-14T11:15:58.9105172+03:00 0HLG1NNNQ32QG:00000004 [INF] The file "/uploaded/images/20180814/cau vang.jpg" was not modified (f1f8d725)
+2018-08-14T11:15:58.9139389+03:00 0HLG1NNNQ32QG:00000004 [INF] Request finished in 27.2177ms 304 image/jpeg (791a596a)
