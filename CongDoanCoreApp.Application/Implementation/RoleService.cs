@@ -54,9 +54,9 @@ namespace CongDoanCoreApp.Application.Implementation
             return query.AnyAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
-            var role = await _roleManager.FindByIdAsync(id.ToString());
+            var role = await _roleManager.FindByIdAsync(id);
             await _roleManager.DeleteAsync(role);
         }
 
@@ -87,9 +87,9 @@ namespace CongDoanCoreApp.Application.Implementation
             return paginationSet;
         }
 
-        public async Task<AppRoleViewModel> GetByIdAsync(Guid id)
+        public async Task<AppRoleViewModel> GetByIdAsync(string id)
         {
-            var role = await _roleManager.FindByIdAsync(id.ToString());
+            var role = await _roleManager.FindByIdAsync(id);
             return Mapper.Map<AppRole, AppRoleViewModel>(role);
         }
 

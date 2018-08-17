@@ -20,6 +20,9 @@ namespace CongDoanCoreApp.Application.AutoMapper
 
             CreateMap<AppUserViewModel, AppUser>().ConstructUsing(
                 x => new AppUser(x.Id.Value, x.FullName, x.UserName, x.Email, x.PhoneNumber, x.Avatar, x.Status));
+
+            CreateMap<AppRoleViewModel, AppRole>().ConstructUsing(
+                x => new AppRole(x.Name, x.Description));
         }
     }
 }

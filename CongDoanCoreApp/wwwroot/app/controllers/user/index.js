@@ -181,7 +181,6 @@
             }
         });
     }
-
     function loadData(isPageChanged) {
         $.ajax({
             type: "GET",

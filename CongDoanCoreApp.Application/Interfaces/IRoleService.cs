@@ -10,13 +10,13 @@ namespace CongDoanCoreApp.Application.Interfaces
     {
         Task<bool> AddAsync(AppRoleViewModel appRoleViewModel);
 
-        Task DeleteAsync(Guid id);
+        Task DeleteAsync(string id);
 
         Task<List<AppRoleViewModel>> GetAllAsync();
 
         PageResult<AppRoleViewModel> GetAllPagingAsync(string keyword, int page, int pageSize);
 
-        Task<AppRoleViewModel> GetByIdAsync(Guid id);
+        Task<AppRoleViewModel> GetByIdAsync(string id);
 
         Task UpdateAsync(AppRoleViewModel appRoleViewModel);
 
