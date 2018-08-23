@@ -241,6 +241,7 @@
                     });
                 });
                 var treeArr = congdoan.unflattern(data);
+
                 treeArr.sort(function (a, b) {
                     return a.sortOrder - b.sortOrder;
                 });
@@ -250,7 +251,7 @@
                     onContextMenu: function (e, node) {
                         e.preventDefault();
                         // select the node
-                        //$('#tt').tree('select', node.target);
+                        $('#treeProductCategory').tree('select', node.target);
                         $('#hidIdM').val(node.id);
                         // display context menu
                         $('#contextMenu').menu('show', {
@@ -258,6 +259,8 @@
                             top: e.pageY
                         });
                     },
+                    lines: true,
+                    animate:true,
                     onDrop: function (target, source, point) {
                         var targetNode = $(this).tree('getNode', target);
                         if (point === 'append') {

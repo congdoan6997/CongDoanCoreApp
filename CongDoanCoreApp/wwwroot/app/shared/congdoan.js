@@ -132,7 +132,7 @@ var congdoan = {
             node.children = [];
             map[node.id] = i; // use map to look-up the parents
             if (node.parentId !== null) {
-                arr[map[node.ParentId]].children.push(node);
+                arr[map[node.parentId]].children.push(node);
             } else {
                 roots.push(node);
             }

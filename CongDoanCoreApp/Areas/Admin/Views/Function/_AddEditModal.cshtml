@@ -1,0 +1,77 @@
+﻿@*Button trigger modal
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        Launch demo modal
+    </button>*@
+
+<!-- Modal -->
+<div class="modal fade" id="modalAddEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Function Update</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" id="frmMaintainance">
+                        <div class="form-group">
+
+                            <label for="txtIdM" class="col-sm-2 control-label no-padding-right">Id</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="txtIdM" class="form-control" id="txtIdM" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="txtNameM" class="col-sm-2 control-label no-padding-right">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="txtNameM" class="form-control" id="txtNameM" placeholder="Name of function">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label no-padding-right">Parent</label>
+                            <div class="col-sm-10">
+                                <input style="width:200px;" id="ddlFunctionIdM" class="form-control easyui-combotree" name="ddlFunctionIdM" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtUrlM" class="col-sm-2 control-label no-padding-right">Url</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="txtUrlM" class="form-control" id="txtUrlM">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtIconM" class="col-sm-2 control-label no-padding-right">IconCss</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="txtIconM" class="form-control" id="txtIconM">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtOrderM" class="col-sm-2 control-label no-padding-right">Sort Order</label>
+                            <div class="col-sm-10">
+                                <input type="number" name="txtOrderM" class="form-control" id="txtOrderM">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked="checked" id="ckStatusM">
+                                        <span class="text">Active.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="btnSave" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

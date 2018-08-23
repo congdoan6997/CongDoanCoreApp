@@ -11,9 +11,11 @@ namespace CongDoanCoreApp.Areas.Admin.Controllers
     public class RoleController : BaseController
     {
         private readonly IRoleService _roleService;
-        public RoleController(IRoleService roleService)
+        private readonly IFunctionService _functionService;
+        public RoleController(IRoleService roleService, IFunctionService functionService)
         {
             _roleService = roleService;
+            _functionService = functionService;
         }
         public IActionResult Index()
         {
@@ -66,7 +68,19 @@ namespace CongDoanCoreApp.Areas.Admin.Controllers
             return new OkObjectResult(true);
         }
 
-        
+        [HttpPost]
+        public IActionResult ListAllFunction(Guid roleId)
+        {
+            var functions = _roleService.GetListFunctionWithRole(roleId);
+            return new OkObjectResult(functions);
+        }
+
+        [HttpPost]
+        public IActionResult SavePermission(List<PermissionViewModel> permissionViewModels, Guid roleId)
+        {
+            _roleService.SavePermission(permissionViewModels, roleId);
+            return new OkObjectResult(true);
+        }
 
     }
 }

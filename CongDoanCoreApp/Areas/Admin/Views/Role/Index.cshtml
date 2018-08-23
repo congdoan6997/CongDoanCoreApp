@@ -3,6 +3,8 @@
     ViewData["Title"] = "Role List";
 }
 @section Scripts{
+    <script src="~/lib/jquery-treegrid/js/jquery.treegrid.js"></script>
+    <script src="~/lib/jquery-treegrid/js/jquery.treegrid.bootstrap3.js"></script>
     <script src="~/app/controllers/role/index.js" asp-append-version="true"></script>
     <script>
         var roleController = new roleController();
@@ -10,6 +12,7 @@
     </script>
 }
 @section Styles{
+    <link href="~/lib/jquery-treegrid/css/jquery.treegrid.css" rel="stylesheet" />
 
 }
 <div class="page-title">
@@ -78,6 +81,8 @@
         <td>{{Name}}</td>
         <td>{{Description}}</td>
         <td>
+            <a href="#" id="{{Id}}" class="btn btn-sm btn-primary btn-grant"><i class="fa fa-eye-slash"></i></a>
+
             <a href="#" id="{{Id}}" class="btn btn-sm btn-info btn-edit"><i class="fa fa-pencil-square-o"></i></a>
             <a href="#" id="{{Id}}" class="btn btn-sm btn-danger btn-delete"><i class="fa fa-trash-o"></i></a>
         </td>
@@ -87,3 +92,4 @@
 
 
 @Html.Partial("_AddEditModal")
+@Html.Partial("_AssignPermission")
