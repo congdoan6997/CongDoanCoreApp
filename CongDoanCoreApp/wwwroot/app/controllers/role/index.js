@@ -129,7 +129,7 @@
                     congdoan.notify('Has an error in save permission progress', 'error');
                 }
             })
-        })
+        });
     }
 
     function loadFunctionList() {

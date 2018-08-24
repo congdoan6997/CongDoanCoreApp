@@ -28,8 +28,8 @@ var loginController = function () {
             }
         });
         $('body').keypress(function (e) {
-            e.preventDefault();
             if (e.which === 13) {
+                e.preventDefault();
                 $('#btnLogin').click();
             }
         })

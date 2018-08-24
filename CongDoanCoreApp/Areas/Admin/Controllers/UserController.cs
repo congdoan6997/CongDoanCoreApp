@@ -1,5 +1,7 @@
 ﻿using CongDoanCoreApp.Application.Interfaces;
 using CongDoanCoreApp.Application.ViewModels.System;
+using CongDoanCoreApp.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
@@ -10,14 +12,20 @@ namespace CongDoanCoreApp.Areas.Admin.Controllers
     public class UserController : BaseController
     {
         private readonly IUserService _userService;
-
-        public UserController(IUserService userService)
+        private readonly IAuthorizationService _authorizationService;
+        public UserController(IUserService userService,IAuthorizationService authorizationService)
         {
             _userService = userService;
+            _authorizationService = authorizationService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var result = await _authorizationService.AuthorizeAsync(User, "USER", Operations.Read);
+            if (!result.Succeeded)
+            {
+                return new RedirectResult("/Admin/Login/Index");
+            }
             return View();
         }
 

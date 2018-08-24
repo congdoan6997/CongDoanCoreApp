@@ -2,6 +2,7 @@
 using CongDoanCoreApp.Application.AutoMapper;
 using CongDoanCoreApp.Application.Implementation;
 using CongDoanCoreApp.Application.Interfaces;
+using CongDoanCoreApp.Authorization;
 using CongDoanCoreApp.Data.EF;
 using CongDoanCoreApp.Data.EF.Repositories;
 using CongDoanCoreApp.Data.Entities;
@@ -9,6 +10,7 @@ using CongDoanCoreApp.Data.IRepositories;
 using CongDoanCoreApp.Helpers;
 using CongDoanCoreApp.Infrastructure.Interfaces;
 using CongDoanCoreApp.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -97,10 +99,10 @@ namespace CongDoanCoreApp
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
 
-         
+            services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
             services.AddMvc().AddJsonOptions(op =>
-           op.SerializerSettings.ContractResolver = new DefaultContractResolver());
+                op.SerializerSettings.ContractResolver = new DefaultContractResolver());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

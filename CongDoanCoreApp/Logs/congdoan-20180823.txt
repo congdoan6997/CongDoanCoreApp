@@ -3291,3 +3291,123 @@ WHERE [p].[Id] IS NOT NULL AND ([p].[RoleId] = @__roleId_0)" (0723d8ff)
 2018-08-23T11:02:00.6579274+03:00 0HLG8GFSBN7U4:0000000B [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
 2018-08-23T11:02:00.6580668+03:00 0HLG8GFSBN7U4:0000000B [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.RoleController.ListAllFunction (CongDoanCoreApp)" in 6.2293ms (afa2e885)
 2018-08-23T11:02:00.6581481+03:00 0HLG8GFSBN7U4:0000000B [INF] Request finished in 7.2916ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-23T11:21:07.1834706+03:00 0HLG8GFSBN7U6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/function/getall   (ca22a1cb)
+2018-08-23T11:21:07.1837623+03:00 0HLG8GFSBN7U7:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/role/listallfunction application/x-www-form-urlencoded; charset=UTF-8 43 (ca22a1cb)
+2018-08-23T11:21:07.1844778+03:00 0HLG8GFSBN7U6:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-23T11:21:07.1845113+03:00 0HLG8GFSBN7U7:00000001 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-23T11:21:07.1907338+03:00 0HLG8GFSBN7U7:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-08-23T11:21:07.1920626+03:00 0HLG8GFSBN7U6:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[Avatar], [e].[Balance], [e].[BirthDay], [e].[ConcurrencyStamp], [e].[DateCreated], [e].[DateModified], [e].[Email], [e].[EmailConfirmed], [e].[FullName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[Status], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AppUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-08-23T11:21:07.1927347+03:00 0HLG8GFSBN7U7:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-23T11:21:07.1927770+03:00 0HLG8GFSBN7U6:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AppUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-08-23T11:21:07.1955959+03:00 0HLG8GFSBN7U7:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-23T11:21:07.1956568+03:00 0HLG8GFSBN7U6:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-23T11:21:07.1970984+03:00 0HLG8GFSBN7U7:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-23T11:21:07.1971676+03:00 0HLG8GFSBN7U6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Description], [r].[Name], [r].[NormalizedName]
+FROM [AppRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-23T11:21:07.1985859+03:00 0HLG8GFSBN7U7:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-23T11:21:07.1985936+03:00 0HLG8GFSBN7U6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AppRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-08-23T11:21:07.1992302+03:00 0HLG8GFSBN7U6:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-23T11:21:07.1996099+03:00 0HLG8GFSBN7U6:00000001 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-23T11:21:07.1997711+03:00 0HLG8GFSBN7U6:00000001 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.FunctionController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-23T11:21:07.2015189+03:00 0HLG8GFSBN7U6:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-23T11:21:07.2019540+03:00 0HLG8GFSBN7U6:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-23T11:21:07.2022932+03:00 0HLG8GFSBN7U7:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AppUserRoles] AS [userRole]
+INNER JOIN [AppRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-08-23T11:21:07.2022921+03:00 0HLG8GFSBN7U6:00000001 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.FunctionController.GetAll (CongDoanCoreApp)" in 2.7915ms (afa2e885)
+2018-08-23T11:21:07.2023840+03:00 0HLG8GFSBN7U6:00000001 [INF] Request finished in 19.1208ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-23T11:21:07.2026458+03:00 0HLG8GFSBN7U7:00000001 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-23T11:21:07.2031082+03:00 0HLG8GFSBN7U7:00000001 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.RoleController.ListAllFunction (CongDoanCoreApp)" with arguments (["60c0126e-d7f7-4ba7-e121-08d5fbb44630"]) - ModelState is Valid (ba7f4ac2)
+2018-08-23T11:21:07.2073552+03:00 0HLG8GFSBN7U7:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__roleId_1='?' (DbType = Guid), @__roleId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT @__roleId_1 AS [RoleId], [f].[Id] AS [FunctionId], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanCreate] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanCreate], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanDelete] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanDelete], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanRead] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanRead], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanUpdate] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanUpdate]
+FROM [Functions] AS [f]
+LEFT JOIN [Permissions] AS [p] ON [f].[Id] = [p].[FunctionId]
+WHERE [p].[Id] IS NOT NULL AND ([p].[RoleId] = @__roleId_0)" (0723d8ff)
+2018-08-23T11:21:07.2075568+03:00 0HLG8GFSBN7U7:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-23T11:21:07.2078493+03:00 0HLG8GFSBN7U7:00000001 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.RoleController.ListAllFunction (CongDoanCoreApp)" in 5.2443ms (afa2e885)
+2018-08-23T11:21:07.2079379+03:00 0HLG8GFSBN7U7:00000001 [INF] Request finished in 24.4199ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-23T11:21:08.8961271+03:00 0HLG8GFSBN7U6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44361/admin/function/getall   (ca22a1cb)
+2018-08-23T11:21:08.8967828+03:00 0HLG8GFSBN7U6:00000002 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-23T11:21:08.8968798+03:00 0HLG8GFSBN7U6:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.FunctionController.GetAll (CongDoanCoreApp)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-23T11:21:08.8971897+03:00 0HLG8GFSBN7U7:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:44361/admin/role/listallfunction application/x-www-form-urlencoded; charset=UTF-8 43 (ca22a1cb)
+2018-08-23T11:21:08.8971879+03:00 0HLG8GFSBN7U6:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-23T11:21:08.8975868+03:00 0HLG8GFSBN7U7:00000002 [INF] Authorization was successful for user: "admin". (d7eb274a)
+2018-08-23T11:21:08.8977466+03:00 0HLG8GFSBN7U7:00000002 [INF] Executing action method "CongDoanCoreApp.Areas.Admin.Controllers.RoleController.ListAllFunction (CongDoanCoreApp)" with arguments (["b2a55240-3791-4ced-e122-08d5fbb44630"]) - ModelState is Valid (ba7f4ac2)
+2018-08-23T11:21:08.8979231+03:00 0HLG8GFSBN7U6:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [dtoFunction].[IconCss], [dtoFunction].[Id], [dtoFunction].[Name], [dtoFunction].[ParentId], [dtoFunction].[SortOrder], [dtoFunction].[Status], [dtoFunction].[Url]
+FROM [Functions] AS [dtoFunction]" (0723d8ff)
+2018-08-23T11:21:08.8979738+03:00 0HLG8GFSBN7U7:00000002 [INF] Entity Framework Core "2.1.1-rtm-30846" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=CongDoanCoreApp.Data.EF " (9958f5bb)
+2018-08-23T11:21:08.8983154+03:00 0HLG8GFSBN7U6:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-23T11:21:08.8984518+03:00 0HLG8GFSBN7U6:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.FunctionController.GetAll (CongDoanCoreApp)" in 1.7376ms (afa2e885)
+2018-08-23T11:21:08.8985178+03:00 0HLG8GFSBN7U6:00000002 [INF] Request finished in 2.6095ms 200 application/json; charset=utf-8 (791a596a)
+2018-08-23T11:21:08.8989201+03:00 0HLG8GFSBN7U7:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__roleId_1='?' (DbType = Guid), @__roleId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT @__roleId_1 AS [RoleId], [f].[Id] AS [FunctionId], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanCreate] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanCreate], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanDelete] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanDelete], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanRead] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanRead], CASE
+    WHEN [p].[Id] IS NOT NULL AND ([p].[CanUpdate] = 1)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END AS [CanUpdate]
+FROM [Functions] AS [f]
+LEFT JOIN [Permissions] AS [p] ON [f].[Id] = [p].[FunctionId]
+WHERE [p].[Id] IS NOT NULL AND ([p].[RoleId] = @__roleId_0)" (0723d8ff)
+2018-08-23T11:21:08.8990765+03:00 0HLG8GFSBN7U7:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-08-23T11:21:08.8993613+03:00 0HLG8GFSBN7U7:00000002 [INF] Executed action "CongDoanCoreApp.Areas.Admin.Controllers.RoleController.ListAllFunction (CongDoanCoreApp)" in 1.7146ms (afa2e885)
+2018-08-23T11:21:08.8994970+03:00 0HLG8GFSBN7U7:00000002 [INF] Request finished in 2.3725ms 200 application/json; charset=utf-8 (791a596a)
