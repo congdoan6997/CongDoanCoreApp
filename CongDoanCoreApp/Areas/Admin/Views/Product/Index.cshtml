@@ -5,7 +5,15 @@
 
     <link href="~/lib/jQuery-EasyUI/themes/bootstrap/easyui.css" rel="stylesheet" />
     <link href="~/lib/jQuery-EasyUI/themes/icon.css" rel="stylesheet" />
+    <style>
+        .page-title .title_left {
+            width: 25%;
+        }
 
+        .page-title .title_right {
+            width: 75%;
+        }
+    </style>
 
 }
 @section Scripts{
@@ -23,7 +31,7 @@
     </div>
 
     <div class="title_right">
-        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right ">
+        <div class="col-md-4 col-sm-4 col-xs-12 form-group pull-right ">
             <div class="input-group">
                 <input type="text" class="form-control" id="txtSearchKeyword" placeholder="Search for...">
                 <span class="input-group-btn">
@@ -32,13 +40,15 @@
             </div>
         </div>
 
-        <div class="col-md-4 col-sm-12 pull-right ">
+        <div class="col-md-4 col-sm-12 form-group pull-right ">
             <select class="form-control " id="ddlCategorySearch">
                 <option value="">--Select category--</option>
             </select>
         </div>
-        <div class="col-md-2 col-sm-2 col-xs-12  pull-right ">
+        <div class="col-md-3 col-sm-3 col-xs-12 form-group  pull-right ">
             <button class="btn btn-success" id="btnCreate" type="button">Create</button>
+            <a class="btn btn-danger" href="~/templates/ProductImportTemplate.xlsx">Template</a>
+            <button class="btn btn-primary" id="btnImport" type="button">Import</button>
         </div>
     </div>
 </div>
@@ -93,7 +103,7 @@
 <script id="table-template" type="x-tmpl-mustache">
     <tr>
         <th scope="row">
-            <button id="{{Id}}"  class=" btn btn-default btn-sm btnEdit"><i class="fa fa-pencil"></i></button>
+            <button id="{{Id}}" class=" btn btn-default btn-sm btnEdit"><i class="fa fa-pencil"></i></button>
             <button id="{{Id}}" class="btn btn-danger btn-sm btnDelete"><i class="fa fa-trash"></i></button>
         </th>
         <td>{{Name}}</td>
@@ -106,3 +116,4 @@
 </script>
 
 @Html.Partial("_AddEditModal");
+@Html.Partial("_ImportExcelModal");

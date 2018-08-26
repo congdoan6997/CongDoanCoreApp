@@ -8,6 +8,7 @@ using CongDoanCoreApp.Infrastructure.Interfaces;
 using CongDoanCoreApp.Utilities.Constants;
 using CongDoanCoreApp.Utilities.Dtos;
 using CongDoanCoreApp.Utilities.Helpers;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -113,6 +114,44 @@ namespace CongDoanCoreApp.Application.Implementation
             return Mapper.Map<Product, ProductViewModel>(_productRepository.FindById(id));
         }
 
+        public void ImportExcel(string filePath, int categoryId)
+        {
+            using (var package = new ExcelPackage(new System.IO.FileInfo(filePath)))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                Product product;
+                for (int i = worksheet.Dimension.Start.Row + 1; i <= worksheet.Dimension.End.Row; i++)
+                {
+                    decimal.TryParse(worksheet.Cells[i, 3].Value.ToString(), out var originalPrice);
+
+                    decimal.TryParse(worksheet.Cells[i, 4].Value.ToString(), out var price);
+
+                    decimal.TryParse(worksheet.Cells[i, 5].Value.ToString(), out var promotionPrice);
+
+                    bool.TryParse(worksheet.Cells[i, 9].Value.ToString(), out var hotFlag);
+
+                    bool.TryParse(worksheet.Cells[i, 10].Value.ToString(), out var homeFlag);
+                    product = new Product()
+                    {
+                        CategoryId = categoryId,
+                        Name = worksheet.Cells[i, 1].Value.ToString(),
+                        Description = worksheet.Cells[i, 2].Value.ToString(),
+                        OriginalPrice = originalPrice,
+                        Price = price,
+                        PromotionPrice = promotionPrice,
+                        Content = worksheet.Cells[i, 6].Value.ToString(),
+                        SeoKeywords = worksheet.Cells[i, 7].Value.ToString(),
+                        SeoDescription = worksheet.Cells[i, 8].Value.ToString(),
+                        HotFlag = hotFlag,
+                        HomeFlag = homeFlag,
+                        Status = Data.Enums.Status.Active
+                    };
+
+                    _productRepository.Add(product);
+                }
+            }
+        }
+
         public void Save()
         {
             _unitOfWork.Commit();
@@ -148,7 +187,7 @@ namespace CongDoanCoreApp.Application.Implementation
                 {
                     product.ProductTags.Add(item);
                 }
-                
+
                 _productRepository.Update(product);
             }
         }

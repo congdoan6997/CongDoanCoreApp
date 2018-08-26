@@ -26,24 +26,29 @@ var productController = function () {
                 ddlCategoryIdM: { required: true }
             }
         });
+
         $("#ddlShowPage").on('change', function () {
             congdoan.configs.pageSize = $(this).val();
             congdoan.configs.pageIndex = 1;
             loadData(true);
         });
+
         $('#btnSearch').on('click', function () {
             loadData();
         });
+
         $('#txtSearchKeyword').on('keypress', function (e) {
             if (e.which === 13) {
                 loadData();
             }
         });
+
         $('#btnCreate').on('click', function (e) {
             e.preventDefault();
             resetFormMaintainance();
             $('#modalAddEdit').modal('show');
         });
+
         $('body').on('click', '.btnEdit', function (e) {
             e.preventDefault();
             var that = this.id;
@@ -113,6 +118,7 @@ var productController = function () {
                 });
             });
         });
+
         $('#btnSave').on('click', function (e) {
             if ($('#frmMaintainance').valid()) {
                 e.preventDefault();
@@ -153,7 +159,7 @@ var productController = function () {
                         OriginalPrice: originalPrice,
                         PromotionPrice: promotionPrice,
                         Description: description,
-                  
+
                         HomeFlag: showHome,
                         HotFlag: hot,
                         Content: content,
@@ -185,14 +191,17 @@ var productController = function () {
                 return false;
             }
         });
+
         $('body').on('click', 'btnCancel', function (e) {
             e.preventDefault();
             resetFormMaintainance();
         });
+
         $('#btnSelectImg').on('click', function (e) {
             e.preventDefault();
             $('#fileInputImage').click();
         });
+
         $('#fileInputImage').on('change', function () {
             var fileUpload = $(this).get(0);
             var files = fileUpload.files;
@@ -217,11 +226,47 @@ var productController = function () {
                 }
             });
         });
+
+        $('#btnImport').on('click', function (e) {
+            e.preventDefault();
+            initTreeDropDownCategory();
+            $('#modalImportExcel').modal('show');
+        });
+        $('#btnImportExcel').on('click', function () {
+            var fileUpload = $('#fileInputExcel').get(0);
+
+            var files = fileUpload.files;
+
+            //create formData object
+            var fileData = new FormData();
+            //looping over all files and add iy yo FormData object
+            for (var i = 0; i < files.length; i++) {
+                fileData.append('files', files[i]);
+            }
+
+            //adding one more key to formdata object
+            fileData.append('categoryId', $('#ddlCategoryIdImportExcel').combotree('getValue'));
+
+            $.ajax({
+                url: '/admin/product/ImportExcel',
+                type: 'POST',
+                data: fileData,
+                processData: false,//tell jquery not to process the data
+                contentType: false,//tell jquery not to set contenttype
+                success: function (result) {
+                    congdoan.notify('Add product successful', 'success');
+                    $('#modalImportExcel').modal('hide');
+                    loadData();
+                }, error: function (error) {
+                    congdoan.notify('Has an error in save product progress', 'error');
+                    console.log(error);
+                }
+            });
+        });
     }
     function registerControls() {
         CKEDITOR.replace('txtContentM', {
-            extraPlugins : 'colorbutton'
-
+            extraPlugins: 'colorbutton'
         });
         // bootstrap-ckeditor-fix.js
         // hack to fix ckeditor/bootstrap compatiability bug when ckeditor appears in a bootstrap modal dialog
@@ -238,6 +283,7 @@ var productController = function () {
             });
         };
     }
+
     function initTreeDropDownCategory(selectedId) {
         $.ajax({
             url: '/admin/productCategory/getall',
@@ -257,12 +303,16 @@ var productController = function () {
                 $('#ddlCategoryIdM').combotree({
                     data: arr
                 });
+                $('#ddlCategoryIdImportExcel').combotree({
+                    data: arr
+                });
                 if (selectedId !== undefined) {
                     $('#ddlCategoryIdM').combotree('setValue', selectedId);
                 }
             }
         });
     }
+
     function resetFormMaintainance() {
         $('#hidIdM').val(0);
         $('#txtNameM').val('');
@@ -285,6 +335,7 @@ var productController = function () {
         $('#ckHotM').prop('checked', false);
         $('#ckShowHomeM').prop('checked', false);
     }
+
     function loadCategories() {
         $.ajax({
             type: 'GET',
@@ -303,6 +354,7 @@ var productController = function () {
             }
         });
     }
+
     function loadData(isPageChanged) {
         var template = $('#table-template').html();
         var render = "";

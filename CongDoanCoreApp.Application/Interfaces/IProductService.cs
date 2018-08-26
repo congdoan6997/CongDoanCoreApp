@@ -19,5 +19,7 @@ namespace CongDoanCoreApp.Application.Interfaces
 
         ProductViewModel Add(ProductViewModel productViewModel);
         void Save();
+
+        void ImportExcel(string filePath, int categoryId);
     }
 }
