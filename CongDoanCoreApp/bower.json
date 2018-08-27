@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "gentelella": "~1.4.0",
-    "font-awesome": "~4.7.0",
+    "font-awesome": "~5.2.0",
     "nprogress": "~0.2.0",
     "bootstrap-daterangepicker": "~3.0.3",
     "fastclick": "~1.0.6",

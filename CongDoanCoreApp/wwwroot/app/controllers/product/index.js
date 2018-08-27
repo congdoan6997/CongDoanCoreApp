@@ -263,6 +263,20 @@ var productController = function () {
                 }
             });
         });
+
+        $('#btnExport').on('click', function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '/admin/product/exportExcel',
+                success: function (result) {
+                    window.location.href = result;
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        });
     }
     function registerControls() {
         CKEDITOR.replace('txtContentM', {

@@ -4,6 +4,8 @@ using CongDoanCoreApp.Utilities.Helpers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http.Headers;
@@ -100,6 +102,7 @@ namespace CongDoanCoreApp.Areas.Admin.Controllers
                 return new OkObjectResult(productviewmodel);
             }
         }
+
         [HttpPost]
         public IActionResult ImportExcel(IList<IFormFile> files, int categoryId)
         {
@@ -129,6 +132,38 @@ namespace CongDoanCoreApp.Areas.Admin.Controllers
                 return new OkObjectResult(true);
             }
             return new NoContentResult();
+        }
+
+        [HttpPost]
+        public IActionResult ExportExcel()
+        {
+            var webRootFolder = _hostingEnvironment.WebRootPath;
+            var directory = Path.Combine(webRootFolder, "export-files");
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+            string fileName = $"Product_{DateTime.Now:yyyyMMddhhmmss}.xlsx";
+            string fileUrl = $"{Request.Scheme}://{Request.Host}/export-files/{fileName}";
+
+            FileInfo fileInfo = new FileInfo(Path.Combine(directory, fileName));
+
+            if (fileInfo.Exists)
+            {
+                fileInfo.Delete();
+                fileInfo = new FileInfo(Path.Combine(webRootFolder, fileName));
+            }
+
+            var products = _productService.GetAll();
+
+            using (var package = new ExcelPackage(fileInfo))
+            {
+                var worksheet = package.Workbook.Worksheets.Add("Products");
+                worksheet.Cells["A1"].LoadFromCollection(products, true, OfficeOpenXml.Table.TableStyles.Light1);
+                worksheet.Cells.AutoFitColumns();
+                package.Save();
+            }
+            return new OkObjectResult(fileUrl);
         }
 
         #endregion ajax api
